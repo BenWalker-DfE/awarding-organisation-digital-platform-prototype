@@ -10,12 +10,12 @@ https://prototype-kit.service.gov.uk/docs/how-to-use-layouts
 {{ header({
     "showNav": "true",
     "showSearch": "false",
-    "showHeaderActionLinks": "true",
+    "showHeaderActionLinks": "false",
     "logoPath": "public/images",
     "searchAction": "/search/",
     "searchInputName": "q",
     "logoAltText": "Department for Education",
-    "homeHref": "https://gov.uk",
+    "homeHref": "index",
     "selectedNav": view,
     "service": {
       "name": "[Service name]",
@@ -33,14 +33,11 @@ https://prototype-kit.service.gov.uk/docs/how-to-use-layouts
     ],
     "primaryLinks": [
         {
-        "url"  : "#",
+        "url"  : "/index",
         "label" : "Home"
       }, {
-        "url"  : "#",
-        "label" : "About"
-      }, {
-        "url"  : "#",
-        "label" : "News"
+        "url"  : "application-form",
+        "label" : "Apply"
       }
     ]
   })
