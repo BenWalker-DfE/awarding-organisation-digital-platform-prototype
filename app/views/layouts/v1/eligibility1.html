@@ -20,13 +20,14 @@
         Heading or question goes here [Q1]
       </h1>
 
-      <form class="form" action="/path/of/next/page" method="post">
+      <form class="form" action="/eligibility1-answers" method="post">
 
         <p>
           {% from "govuk/components/radios/macro.njk" import govukRadios %}
 
 {{ govukRadios({
   name: "eligibility1",
+  value: data['eligibility1'],
   fieldset: {
     legend: {
       text: "What...?",
