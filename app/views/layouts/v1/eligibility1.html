@@ -24,8 +24,9 @@
 
         <p>
           {% from "govuk/components/radios/macro.njk" import govukRadios %}
-
+<!--
 {{ govukRadios({
+
   name: "eligibility1",
   value: data['eligibility1'],
   fieldset: {
@@ -58,15 +59,30 @@
   ]
 }) }}
         </p>
-
-        {{ govukButton({
-          text: "Save and continue"
-        }) }}
+-->
+       
 
 
 
 
 
+        <div class="govuk-radios" data-module="govuk-radios">
+          <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="eligibility1a" name="eligibility1" type="radio"
+                  value="Yes">
+              <label class="govuk-label govuk-radios__label" for="eligibility1a">
+                  Yes
+              </label>
+          </div>
+          <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="eligibility1b" name="eligibility1" type="radio"
+                  value="No" >
+              <label class="govuk-label govuk-radios__label" for="eligibility1b">
+                  No
+              </label>
+          </div>
+         </div>
+<!--
         <div class="govuk-radios" data-module="govuk-radios">
           <div class="govuk-radios__item">
               <input class="govuk-radios__input" id="course-type-1" name="course-type" type="radio"
@@ -89,10 +105,17 @@
                   T Level (Funding model 25)
               </label>
           </div>
-      </div>
+        </div>
+ -->
+  {{ govukButton({
+    text: "Save and continue"
+  }) }}
+
+
       </form>
 
-    </div>
+   
   </div>
+</div>
 
 {% endblock %}
