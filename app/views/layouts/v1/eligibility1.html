@@ -1,4 +1,4 @@
-{% extends "layouts/main.html" %}
+{% extends "layouts/main-dfe.html" %}
 
 {% block pageTitle %}
   Question page template – {{ serviceName }} – GOV.UK Prototype Kit
@@ -20,7 +20,7 @@
         Heading or question goes here [Q1]
       </h1>
 
-      <form class="form" action="/layouts/v1/eligibility-check-answers" method="post">
+      <form class="form" action="/eligibility-route" method="post">
 
         <p>
           {% from "govuk/components/radios/macro.njk" import govukRadios %}
@@ -60,10 +60,36 @@
         </p>
 
         {{ govukButton({
-          text: "Save and continue",
-          href: "/layouts/v1/eligibility2"
+          text: "Save and continue"
         }) }}
 
+
+
+
+
+        <div class="govuk-radios" data-module="govuk-radios">
+          <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="course-type-1" name="course-type" type="radio"
+                  value="Apprenticeship standard">
+              <label class="govuk-label govuk-radios__label" for="course-type-1">
+                  Apprenticeship standard (Funding model 36)
+              </label>
+          </div>
+          <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="course-type-2" name="course-type" type="radio"
+                  value="Study programme">
+              <label class="govuk-label govuk-radios__label" for="course-type-2">
+                  Study programme (Funding model 25)
+              </label>
+          </div>
+          <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="course-type-3" name="course-type" type="radio"
+                  value="T Level">
+              <label class="govuk-label govuk-radios__label" for="course-type-3">
+                  T Level (Funding model 25)
+              </label>
+          </div>
+      </div>
       </form>
 
     </div>

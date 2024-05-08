@@ -54,61 +54,110 @@
 
       {# To switch between the completed and incomplete statues, use some inline logic within the component below, like this: "status: (completedStatus if ... else incompleteStatus)" #}
 
-      {{ govukTaskList({
-        idPrefix: "first-section",
-        items: [
-        {
-          title: {
-            text: "Name of first task"
-          },
-          href: "eligibility",
-          status: notStartedStatus
-        },
-        {
-          title: {
-            text: "Name of second task"
-          },
-          href: "#",
-          status: notStartedStatus
-        },
-        {
-            title: {
-              text: "Name of third task"
-            },
-            href: "#",
-            status: notStartedStatus
-          }
-        ]
-      }) }}
+      <ul class="govuk-task-list">
+  
+        <li class="govuk-task-list__item govuk-task-list__item--with-link">
+          <div class="govuk-task-list__name-and-hint">
+          
+            <a class="govuk-link govuk-task-list__link" href="eligibility" aria-describedby="first-section-1-status">
+              Name of first task
+            </a>
+          
+          
+          </div>
+          <div class="govuk-task-list__status" id="first-section-1-status">
+          
+            <strong class="govuk-tag govuk-tag--grey">
+              Not started
+            </strong>
+          
+          </div>
+        </li>
+        
+        <li class="govuk-task-list__item govuk-task-list__item--with-link">
+          <div class="govuk-task-list__name-and-hint">
+          
+            <a class="govuk-link govuk-task-list__link" href="#" aria-describedby="first-section-2-status">
+              Name of second task
+            </a>
+          
+          
+          </div>
+          <div class="govuk-task-list__status" id="first-section-2-status">
+          
+            <strong class="govuk-tag govuk-tag--grey">
+              Not started
+            </strong>
+          
+          </div>
+        </li>
+        
+        <li class="govuk-task-list__item govuk-task-list__item--with-link">
+          <div class="govuk-task-list__name-and-hint">
+          
+            <a class="govuk-link govuk-task-list__link" href="#" aria-describedby="first-section-3-status">
+              Name of third task
+            </a>
+          
+          
+          </div>
+          <div class="govuk-task-list__status" id="first-section-3-status">
+          
+            <strong class="govuk-tag govuk-tag--grey">
+              Not started
+            </strong>
+          
+          </div>
+        </li>
+        
+      </ul>
 
       <h2 class="govuk-heading-m govuk-!-margin-top-5">Contact information</h2>
 
-      {{ govukTaskList({
-        idPrefix: "second-section",
-        items: [
-          {
-            title: {
-              text: "Name of fourth task"
-            },
-            href: "#",
-            status: notStartedStatus
-          },
-          {
-            title: {
-              text: "Name of sixth task"
-            },
-            href: "#",
-            status: notStartedStatus
-          },
-          {
-              title: {
-                text: "Name of seventh task"
-              },
-              href: "#",
-              status: notStartedStatus
-            }
-        ]
-      }) }}
+      <ul class="govuk-task-list">
+        <li class="govuk-task-list__item govuk-task-list__item--with-link">
+          <div class="govuk-task-list__name-and-hint">
+            <a class="govuk-link govuk-task-list__link" href="eligibility" aria-describedby="first-section-1-status">
+              Name of first task
+            </a>
+          </div>
+          <div class="govuk-task-list__status" id="first-section-1-status">
+            {% if data['course-type'] %}
+            <strong class="govuk-tag govuk-tag--blue">
+              In progress
+            </strong>
+            {% else %}
+            <strong class="govuk-tag govuk-tag--grey">
+              Not started
+            </strong>
+            {% endif %}
+          </div>
+        </li>
+        <li class="govuk-task-list__item govuk-task-list__item--with-link">
+          <div class="govuk-task-list__name-and-hint">
+            <a class="govuk-link govuk-task-list__link" href="#" aria-describedby="first-section-2-status">
+              Name of second task
+            </a>
+          </div>
+          <div class="govuk-task-list__status" id="first-section-2-status">
+            <strong class="govuk-tag govuk-tag--grey">
+              Not started
+            </strong>
+          </div>
+        </li>
+        <li class="govuk-task-list__item govuk-task-list__item--with-link">
+          <div class="govuk-task-list__name-and-hint">
+            <a class="govuk-link govuk-task-list__link" href="#" aria-describedby="first-section-3-status">
+              Name of third task
+            </a>
+          </div>
+          <div class="govuk-task-list__status" id="first-section-3-status">
+            <strong class="govuk-tag govuk-tag--grey">
+              Not started
+            </strong>
+          </div>
+        </li>
+      </ul>
 
       <div class="govuk-!-margin-top-5">
         {{ govukButton({ text: "Apply", href: "/layout/v1/application-form-check-answers" }) }}
