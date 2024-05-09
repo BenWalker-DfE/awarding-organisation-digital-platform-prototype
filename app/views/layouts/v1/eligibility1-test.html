@@ -1,0 +1,81 @@
+{% extends "layouts/main-dfe.html" %}
+
+{% block pageTitle %}
+  Question page template – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block beforeContent %}
+{% from "govuk/components/phase-banner/macro.njk" import govukPhaseBanner %}
+
+{{ govukPhaseBanner({
+  tag: {
+    text: "Prototype"
+  },
+  html: 'This is a prototype. Content is likely to change rapidly.'
+}) }}
+
+{{ govukBackLink({
+  text: "Back",
+  href: "javascript:window.history.back()"
+}) }}
+
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      <form class="form" action="/eligibility-route" method="post">
+        <div class="govuk-form-group">
+          <fieldset class="govuk-fieldset" aria-describedby="eligibility1-hint">
+            <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+      
+              <h1 class="govuk-fieldset__heading">
+        Heading or question goes here [Q1]
+      </h1>
+    </legend>
+
+
+          {% set myArray = [
+            'Answer a',
+            'Answer b'
+    ] %}
+
+    {% set answerArray = data['eligibility1'] %}
+    
+    <div class="govuk-radios" data-module="govuk-radios">
+      {% for option in myArray %}
+      {% if answerArray and option == answerArray %}
+      <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="elegibility-{{ loop.index }}" name="eligibility1"
+          type="radio" value="{{ option }}">
+        <label class="govuk-label govuk-radios__label" for="elegibility-{{ loop.index }}">
+          {{ option }}
+        </label>
+      </div>
+      {% else %}
+      <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="elegibility-{{ loop.index }}" name="eligibility1"
+          type="radio" value="{{ option }}">
+        <label class="govuk-label govuk-radios__label" for="elegibility-{{ loop.index }}">
+          {{ option }}
+        </label>
+      </div>
+      {% endif %}
+      {% endfor %}
+    </div>
+  </fieldset>
+</div>
+      
+        <button type="submit" class="govuk-button" data-module="govuk-button">
+          Save and continue
+        </button>
+      
+      
+      </form>
+      
+         
+    </div>
+  </div>
+      
+{% endblock %}
