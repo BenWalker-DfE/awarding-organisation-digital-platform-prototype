@@ -5,10 +5,20 @@
 {% endblock %}
 
 {% block beforeContent %}
-  {{ govukBackLink({
+{% from "govuk/components/phase-banner/macro.njk" import govukPhaseBanner %}
+
+{{ govukPhaseBanner({
+  tag: {
+    text: "Prototype"
+  },
+  html: 'This is a prototype. Content is likely to change rapidly.'
+}) }}
+
+{{ govukBackLink({
   text: "Back",
   href: "javascript:window.history.back()"
 }) }}
+
 {% endblock %}
 
 {% block content %}
