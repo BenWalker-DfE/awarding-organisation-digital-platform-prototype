@@ -22,50 +22,8 @@
 
       <form class="form" action="/eligibility-route" method="post">
 
-        <p>
           {% from "govuk/components/radios/macro.njk" import govukRadios %}
-<!--
-{{ govukRadios({
-
-  name: "eligibility1",
-  value: data['eligibility1'],
-  fieldset: {
-    legend: {
-      text: "What...?",
-      isPageHeading: true,
-      classes: "govuk-fieldset__legend--l"
-    }
-  },
-  hint: {
-    text: "[Hint text]"
-  },
-  items: [
-    {
-      value: "X",
-      text: "X",
-      checked: checked("eligibility1", "X"),
-      hint: {
-        text: "[Hint text]"
-      }
-    },
-    {
-      value: "y",
-      text: "Y",
-      checked: checked("eligibility1", "Y"),
-      hint: {
-        text: "[Hint text]"
-      }
-    }
-  ]
-}) }}
-        </p>
--->
-       
-
-
-
-
-
+ 
         <div class="govuk-radios" data-module="govuk-radios">
           <div class="govuk-radios__item">
               <input class="govuk-radios__input" id="eligibility1a" name="eligibility1" type="radio"
@@ -81,41 +39,16 @@
                   No
               </label>
           </div>
-         </div>
-<!--
-        <div class="govuk-radios" data-module="govuk-radios">
-          <div class="govuk-radios__item">
-              <input class="govuk-radios__input" id="course-type-1" name="course-type" type="radio"
-                  value="Apprenticeship standard">
-              <label class="govuk-label govuk-radios__label" for="course-type-1">
-                  Apprenticeship standard (Funding model 36)
-              </label>
-          </div>
-          <div class="govuk-radios__item">
-              <input class="govuk-radios__input" id="course-type-2" name="course-type" type="radio"
-                  value="Study programme">
-              <label class="govuk-label govuk-radios__label" for="course-type-2">
-                  Study programme (Funding model 25)
-              </label>
-          </div>
-          <div class="govuk-radios__item">
-              <input class="govuk-radios__input" id="course-type-3" name="course-type" type="radio"
-                  value="T Level">
-              <label class="govuk-label govuk-radios__label" for="course-type-3">
-                  T Level (Funding model 25)
-              </label>
-          </div>
         </div>
- -->
-  {{ govukButton({
-    text: "Save and continue"
-  }) }}
-
-
+         {{ govukButton({
+          text: "Save and continue"
+        }) }}
+      
+      
       </form>
-
-   
+      
+         
+    </div>
   </div>
-</div>
-
+      
 {% endblock %}
