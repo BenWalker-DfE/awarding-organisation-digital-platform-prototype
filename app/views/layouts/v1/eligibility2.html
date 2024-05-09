@@ -13,26 +13,27 @@
 
 {% block content %}
 
-  <div class="govuk-grid-row">
+  
+    <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">
 
-      <h1 class="govuk-heading-l">
-        Heading or question goes here [Q2]
-      </h1>
+      <form class="form" action="/eligibility-route" method="post">
 
-      <form class="form" action="/path/of/next/page" method="post">
+      <div class="govuk-form-group">
+        <h1 class="govuk-label-wrapper">
+          <label class="govuk-label govuk-label--l" for="eligibility2">
+            What is ...? (Eligibility question 2)
+          </label>
+        </h1>
+        <div id="eligibility2-hint" class="govuk-hint">
+          This is hint text
+        </div>
+        <input class="govuk-input govuk-!-margin-bottom-5" id="eligibility2" name="eligibility2" type="text" aria-describedby="eligibility2-hint">
+      </div>
 
-        <p>
-          [Insert question content here - see the
-          <a href="https://design-system.service.gov.uk">GOV.UK Design System</a>
-          for examples]
-        </p>
-
-        {{ govukButton({
-          text: "Save and continue",
-          href: "/layouts/v1/eligibility3"
-        }) }}
-
+      <button type="submit" class="govuk-button" data-module="govuk-button">
+        Save and continue
+      </button>
       </form>
 
     </div>

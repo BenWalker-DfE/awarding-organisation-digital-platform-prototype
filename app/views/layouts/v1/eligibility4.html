@@ -16,26 +16,79 @@
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">
 
+      <form class="form" action="/eligibility-route" method="post">
+
+      <div class="govuk-form-group">
+        <fieldset class="govuk-fieldset" aria-describedby="eligibility4-hint">
+          <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+            <h1 class="govuk-fieldset__heading">
+              What is...? (Eligibility question 4)
+            </h1>
+          </legend>
+          <div id="eligibility4-hint" class="govuk-hint">
+            [Hint]
+          </div>
+          <div class="govuk-checkboxes" data-module="govuk-checkboxes">
+            <div class="govuk-checkboxes__item">
+              <input class="govuk-checkboxes__input" id="eligibility4" name="eligibility4" type="checkbox" value="eligibility4a" aria-describedby="eligibility4a-item-hint">
+              <label class="govuk-label govuk-checkboxes__label" for="eligibility4a">
+                Answer a
+              </label>
+              <div id="eligibility4a-item-hint" class="govuk-hint govuk-checkboxes__hint">
+                [Item hint text]
+              </div>
+            </div>
+            <div class="govuk-checkboxes__item">
+              <input class="govuk-checkboxes__input" id="eligibility4b" name="eligibility4" type="checkbox" value="eligibility4b">
+              <label class="govuk-label govuk-checkboxes__label" for="eligibility4b">
+                Answer b
+              </label>
+            </div>
+            <div class="govuk-checkboxes__item">
+              <input class="govuk-checkboxes__input" id="eligibility4c" name="eligibility4" type="checkbox" value="eligibility4c">
+              <label class="govuk-label govuk-checkboxes__label" for="eligibility4c">
+                Answer c
+              </label>
+            </div>
+          </div>
+        </fieldset>
+      </div>
+      <!--
       <h1 class="govuk-heading-l">
-        Heading or question goes here [Q4]
+        Heading or question goes here [Q1]
       </h1>
 
-      <form class="form" action="/path/of/next/page" method="post">
+      <form class="form" action="/eligibility-route" method="post">
 
-        <p>
-          [Insert question content here - see the
-          <a href="https://design-system.service.gov.uk">GOV.UK Design System</a>
-          for examples]
-        </p>
+          {% from "govuk/components/radios/macro.njk" import govukRadios %}
+ 
+        <div class="govuk-radios" data-module="govuk-radios">
+          <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="eligibility4a" name="eligibility4" type="radio"
+                  value="Yes">
+              <label class="govuk-label govuk-radios__label" for="eligibility4a">
+                  Yes
+              </label>
+          </div>
+          <div class="govuk-radios__item govuk-!-margin-bottom-5">
+              <input class="govuk-radios__input" id="eligibility4b" name="eligibility4" type="radio"
+                  value="No" >
+              <label class="govuk-label govuk-radios__label" for="eligibility4b">
+                  No
+              </label>
+          </div>
+        </div>
 
-        {{ govukButton({
-          text: "Save and complete section",
-          href: "/layouts/v1/eligibility"
-        }) }}
-
+      -->
+        <button type="submit" class="govuk-button" data-module="govuk-button">
+          Save and continue
+        </button>
+      
+      
       </form>
-
+      
+         
     </div>
   </div>
-
+      
 {% endblock %}

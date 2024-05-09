@@ -1,161 +1,121 @@
 {% extends "layouts/main.html" %}
 
+{% extends "layouts/main-dfe.html" %}
+
 {% block pageTitle %}
-  Check your answers template – {{ serviceName }} – GOV.UK Prototype Kit
+  Task list template – {{ serviceName }} – GOV.UK Prototype Kit
 {% endblock %}
+
 
 {% block beforeContent %}
-  {{ govukBackLink({
-    text: "Back",
-    href: "javascript:window.history.back()"
-  }) }}
+{% from "govuk/components/phase-banner/macro.njk" import govukPhaseBanner %}
+
+{{ govukPhaseBanner({
+  tag: {
+    text: "Prototype"
+  },
+  html: 'This is a prototype. Content is likely to change rapidly.'
+}) }}
+
 {% endblock %}
 
+
 {% block content %}
+
   <div class="govuk-grid-row">
-    <div class="govuk-grid-column-two-thirds-from-desktop">
+    <div class="govuk-grid-column-two-thirds">
 
-      <h1 class="govuk-heading-xl">
-        Check you have completed all questions before sending your application
-      </h1>
+      <h1 class="govuk-heading-l">{{ serviceName }}</h1>
 
-      <h2 class="govuk-heading-l">
-        Eligibility questions
-      </h2>
-      {{ govukSummaryList({
-        rows: [
+      <h2 class="govuk-heading-m">Application form sections</h2>
+
+      {% set completedStatus = {
+        text: "Completed"
+      } %}
+
+      {% set incompleteStatus = {
+        tag: {
+          text: "Incomplete",
+          classes: "govuk-tag--blue"
+        }
+      } %}
+
+      {% set notStartedStatus = {
+        tag: {
+          text: "Not started",
+          classes: "govuk-tag--grey"
+        }
+      } %}
+
+      {% set inProgressStatus = {
+        tag: {
+          text: "In progress",
+          classes: "govuk-tag--light-blue"
+        }
+      } %}
+
+      {# To switch between the completed and incomplete statues, use some inline logic within the component below, like this: "status: (completedStatus if ... else incompleteStatus)" #}
+
+      {{ govukTaskList({
+        idPrefix: "first-section",
+        items: [
+        {
+          title: {
+            text: "Eligibility"
+          },
+          href: "eligibility",
+          status: notStartedStatus
+        },
+        {
+          title: {
+            text: "Contact details"
+          },
+          href: "#",
+          status: notStartedStatus
+        },
+        {
+            title: {
+              text: "Qualification details"
+            },
+            href: "#",
+            status: notStartedStatus
+          },
           {
-            key: {
-              text: "Question 1"
+              title: {
+                text: "Provider demand"
+              },
+              href: "#",
+              status: notStartedStatus
             },
-            value: {
-              text: "Answer 1"
-            },
-            actions: {
-              items: [
-                {
+            {
+                title: {
+                  text: "Qualification type criteria: AAQ"
+                },
+                href: "#",
+                status: notStartedStatus
+              },
+              {
+                  title: {
+                    text: "Provider demand"
+                  },
                   href: "#",
-                  text: "Change",
-                  visuallyHiddenText: "Question 1"
-                }
-              ]
-            }
-          }
-          ,
-          {
-            key: {
-              text: "Question 2"
-            },
-            value: {
-              text: "Answer 2"
-            },
-            actions: {
-              items: [
+                  status: notStartedStatus
+                },
                 {
-                  href: "#",
-                  text: "Change",
-                  visuallyHiddenText: "Question 2"
-                }
-              ]
-            }
-          }
-          ,
-          {
-            key: {
-              text: "Question 3"
-            },
-            value: {
-              text: "Answer 3"
-            },
-            actions: {
-              items: [
-                {
-                  href: "#",
-                  text: "Change",
-                  visuallyHiddenText: "Question 3"
-                }
-              ]
-            }
-          }
+                    title: {
+                      text: "Evidence"
+                    },
+                    href: "#",
+                    status: notStartedStatus
+                  }
         ]
       }) }}
 
-      <h2 class="govuk-heading-l">
-        Contact details
-      </h2>
-      {{ govukSummaryList({
-        rows: [
-          {
-            key: {
-              text: "Question 1"
-            },
-            value: {
-              text: "Answer 1"
-            },
-            actions: {
-              items: [
-                {
-                  href: "#",
-                  text: "Change",
-                  visuallyHiddenText: "Question 1"
-                }
-              ]
-            }
-          }
-          ,
-          {
-            key: {
-              text: "Question 2"
-            },
-            value: {
-              text: "Answer 2"
-            },
-            actions: {
-              items: [
-                {
-                  href: "#",
-                  text: "Change",
-                  visuallyHiddenText: "Question 2"
-                }
-              ]
-            }
-          }
-          ,
-          {
-            key: {
-              text: "Question 3"
-            },
-            value: {
-              text: "Answer 3"
-            },
-            actions: {
-              items: [
-                {
-                  href: "#",
-                  text: "Change",
-                  visuallyHiddenText: "Question 3"
-                }
-              ]
-            }
-          }
-        ]
-      }) }}
+      
 
-      <h2 class="govuk-heading-m">
-        Now send your application
-      </h2>
-
-      <p>
-        By submitting this application you are confirming that, to the best of your knowledge, the details you are providing are correct.
-      </p>
-
-      <form action="/confirmation" method="post" novalidate>
-
-        {{ govukButton({
-          text: "Accept and send"
-        }) }}
-
-      </form>
+      <div class="govuk-!-margin-top-5">
+        {{ govukButton({ text: "Apply", href: "/layout/v1/application-form-check-answers" }) }}
+      </div>
 
     </div>
   </div>

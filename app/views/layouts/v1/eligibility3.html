@@ -13,26 +13,31 @@
 
 {% block content %}
 
-  <div class="govuk-grid-row">
+  
+    <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">
 
-      <h1 class="govuk-heading-l">
-        Heading or question goes here [Q3]
-      </h1>
+      <form class="form" action="/eligibility-route" method="post">
 
-      <form class="form" action="/path/of/next/page" method="post">
+        <div class="govuk-form-group govuk-character-count" data-module="govuk-character-count" data-maxlength="500">
+          <h1 class="govuk-label-wrapper">
+            <label class="govuk-label govuk-label--l" for="eligibility3">
+              What is ...? (Eligibility question 3)
+            </label>
+          </h1>
+          <div id="eligibility3-hint" class="govuk-hint">
+            [Hint]
+          </div>
+          <textarea class="govuk-textarea govuk-js-character-count" id="eligibility3" name="eligibility3" rows="10" aria-describedby="with-hint-info with-hint-hint"></textarea>
+          <div id="with-hint-info" class="govuk-hint govuk-character-count__message">
+            You can enter up to 500 characters
+          </div>
+        </div>
 
-        <p>
-          [Insert question content here - see the
-          <a href="https://design-system.service.gov.uk">GOV.UK Design System</a>
-          for examples]
-        </p>
 
-        {{ govukButton({
-          text: "Save and continue",
-          href: "/layouts/v1/eligibility4"
-        }) }}
-
+      <button type="submit" class="govuk-button" data-module="govuk-button">
+        Save and continue
+      </button>
       </form>
 
     </div>
