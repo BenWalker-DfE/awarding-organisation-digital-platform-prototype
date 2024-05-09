@@ -1,32 +1,32 @@
 {% extends "layouts/main-dfe.html" %}
 
 {% block pageTitle %}
-  Question page template – {{ serviceName }} – GOV.UK Prototype Kit
+Question page template – {{ serviceName }} – GOV.UK Prototype Kit
 {% endblock %}
 
 {% block beforeContent %}
 {% from "govuk/components/phase-banner/macro.njk" import govukPhaseBanner %}
 
 {{ govukPhaseBanner({
-  tag: {
-    text: "Prototype"
-  },
-  html: 'This is a prototype. Content is likely to change rapidly.'
+tag: {
+text: "Prototype"
+},
+html: 'This is a prototype. Content is likely to change rapidly.'
 }) }}
 
 {{ govukBackLink({
-  text: "Back",
-  href: "javascript:window.history.back()"
+text: "Back",
+href: "javascript:window.history.back()"
 }) }}
 
 {% endblock %}
 
 {% block content %}
 
-  <div class="govuk-grid-row">
-    <div class="govuk-grid-column-two-thirds">
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
 
-      <form class="form" action="/eligibility-route" method="post">
+    <form class="form" action="/eligibility-route" method="post">
 
       <div class="govuk-form-group">
         <fieldset class="govuk-fieldset" aria-describedby="eligibility4-hint">
@@ -39,27 +39,25 @@
             [Hint]
           </div>
           <div class="govuk-checkboxes" data-module="govuk-checkboxes">
+            {% for option in myArray %}
+            {% if data['eligibility4'] and option in data['eligibilty4'] %}
             <div class="govuk-checkboxes__item">
-              <input class="govuk-checkboxes__input" id="eligibility4" name="eligibility4" type="checkbox" value="eligibility4a" aria-describedby="eligibility4a-item-hint">
-              <label class="govuk-label govuk-checkboxes__label" for="eligibility4a">
-                Answer a
-              </label>
-              <div id="eligibility4a-item-hint" class="govuk-hint govuk-checkboxes__hint">
-                [Item hint text]
-              </div>
-            </div>
-            <div class="govuk-checkboxes__item">
-              <input class="govuk-checkboxes__input" id="eligibility4b" name="eligibility4" type="checkbox" value="eligibility4b">
-              <label class="govuk-label govuk-checkboxes__label" for="eligibility4b">
-                Answer b
+              <input checked class="govuk-checkboxes__input" id="elegibility-{{ loop.index }}" name="eligibility4" type="checkbox"
+                value="{{ option }}">
+              <label class="govuk-label govuk-checkboxes__label" for="elegibility-{{ loop.index }}">
+                {{ option }}
               </label>
             </div>
+            {% else %}
             <div class="govuk-checkboxes__item">
-              <input class="govuk-checkboxes__input" id="eligibility4c" name="eligibility4" type="checkbox" value="eligibility4c">
-              <label class="govuk-label govuk-checkboxes__label" for="eligibility4c">
-                Answer c
+              <input class="govuk-checkboxes__input" id="elegibility-{{ loop.index }}" name="eligibility4" type="checkbox"
+                value="{{ option }}">
+              <label class="govuk-label govuk-checkboxes__label" for="elegibility-{{ loop.index }}">
+                {{ option }}
               </label>
             </div>
+            {% endif %}
+            {% endfor %}
           </div>
         </fieldset>
       </div>
@@ -90,15 +88,15 @@
         </div>
 
       -->
-        <button type="submit" class="govuk-button" data-module="govuk-button">
-          Save and continue
-        </button>
-      
-      
-      </form>
-      
-         
-    </div>
+      <button type="submit" class="govuk-button" data-module="govuk-button">
+        Save and continue
+      </button>
+
+
+    </form>
+
+
   </div>
-      
+</div>
+
 {% endblock %}
