@@ -14,7 +14,7 @@ var course = request.session.data['course-type']
 if (course){
     request.session.data['question-answered'] = 'yes'
 }
-        response.redirect("/layouts/v1/eligibility-check-answers")
+        response.redirect("/layouts/v1/eligibility")
     })
 
 router.post('/eligibility-route', function(request, response) {
@@ -23,5 +23,5 @@ var course = request.session.data['eligibility1']
 if (course){
     request.session.data['question-answered'] = 'yes'
  }
-        response.redirect("/layouts/v1/eligibility-check-answers")
+        response.redirect("/layouts/v1/eligibility")
     })

@@ -1,9 +1,8 @@
 {% extends "layouts/main-dfe.html" %}
 
 {% block pageTitle %}
-  Task list template – {{ serviceName }} – GOV.UK Prototype Kit
+  Check your answers template – {{ serviceName }} – GOV.UK Prototype Kit
 {% endblock %}
-
 
 {% block beforeContent %}
 {% from "govuk/components/phase-banner/macro.njk" import govukPhaseBanner %}
@@ -22,83 +21,62 @@
 
 {% endblock %}
 
-
 {% block content %}
-
   <div class="govuk-grid-row">
-    <div class="govuk-grid-column-two-thirds">
+    <div class="govuk-grid-column-two-thirds-from-desktop">
 
       <h1 class="govuk-heading-l">Eligibility</h1>
+      <dl class="govuk-summary-list govuk-!-margin-bottom-9">
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Question 1
+            <p class="govuk-summary-list__value">
+              {{ data['eligibility1'] }}
+            </p>
+          </dt>
+          
+          <dd class="govuk-summary-list__actions">
+            <a class="govuk-link" href="/layouts/v1/eligibility1">Change<span class="govuk-visually-hidden"> name</span></a>
+          </dd>
+        </div>
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Question 2
+            <p class="govuk-summary-list__value">
+              {{ data['eligibility2'] }}
+            </p>
+          </dt>
+          <dd class="govuk-summary-list__actions">
+            <a class="govuk-link" href="/layouts/v1/eligibility2">Change<span class="govuk-visually-hidden"> date of birth</span></a>
+          </dd>
+        </div>
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Question 3
+            <p class="govuk-summary-list__value">
+              {{ data['eligibility3'] }}
+            </p>
+          </dt>
+           <dd class="govuk-summary-list__actions">
+            <a class="govuk-link" href="/layouts/v1/eligibility3">Change<span class="govuk-visually-hidden"> customer reference</span></a>
+          </dd>
+        </div>
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Question 4
+            <p class="govuk-summary-list__value">
+              {{ data['eligibility4'] }}
+            </p>
+          </dt>
+          <dd class="govuk-summary-list__actions">
+            <a class="govuk-link" href="/layouts/v1/eligibility4">Change<span class="govuk-visually-hidden"> address</span></a>
+          </dd>
+        </div>
+      </dl>
 
-      <h2 class="govuk-heading-m">Questions</h2>
-
-      {% set completedStatus = {
-        text: "Completed"
-      } %}
-
-      {% set incompleteStatus = {
-        tag: {
-          text: "Incomplete",
-          classes: "govuk-tag--blue"
-        }
-      } %}
-
-      {% set notStartedStatus = {
-        tag: {
-          text: "Not started",
-          classes: "govuk-tag--grey"
-        }
-      } %}
-
-      {% set inProgressStatus = {
-        tag: {
-          text: "In progress",
-          classes: "govuk-tag--light-blue"
-        }
-      } %}
-
-      {# To switch between the completed and incomplete statues, use some inline logic within the component below, like this: "status: (completedStatus if ... else incompleteStatus)" #}
-
-      {{ govukTaskList({
-        idPrefix: "first-section",
-        items: [
-        {
-          title: {
-            text: "Question 1...."
-          },
-          href: "/layouts/v1/eligibility1",
-          status: notStartedStatus
-        },
-        {
-          title: {
-            text: "Question 2...."
-          },
-          href: "/layouts/v1/eligibility2",
-          status: notStartedStatus
-        },
-        {
-            title: {
-              text: "Question 3...."
-            },
-            href: "/layouts/v1/eligibility3",
-            status: notStartedStatus
-          },
-          {
-              title: {
-                text: "Question 4...."
-              },
-              href: "/layouts/v1/eligibility4",
-              status: notStartedStatus
-            }
-        ]
+      {{ govukButton({
+        text: "Back to application overview",
+        href: "/layouts/v1/application-form"
       }) }}
-
-
-
-      <div class="govuk-!-margin-top-5">
-        {{ govukButton({ text: "Apply", href: "#" }) }}
-      </div>
-
-    </div>
-  </div>
+      
 {% endblock %}
