@@ -38,20 +38,28 @@ href: "javascript:window.history.back()"
           <div id="eligibility4-hint" class="govuk-hint">
             [Hint]
           </div>
+          {% set myArray = [
+                  'Answer a',
+                  'Answer b',
+                  'Answer c'
+          ] %}
+
+          {% set answerArray = data['eligibility4'] %}
+          
           <div class="govuk-checkboxes" data-module="govuk-checkboxes">
             {% for option in myArray %}
-            {% if data['eligibility4'] and option in data['eligibilty4'] %}
+            {% if answerArray and option in answerArray %}
             <div class="govuk-checkboxes__item">
-              <input checked class="govuk-checkboxes__input" id="elegibility-{{ loop.index }}" name="eligibility4" type="checkbox"
-                value="{{ option }}">
+              <input checked class="govuk-checkboxes__input" id="elegibility-{{ loop.index }}" name="eligibility4"
+                type="checkbox" value="{{ option }}">
               <label class="govuk-label govuk-checkboxes__label" for="elegibility-{{ loop.index }}">
                 {{ option }}
               </label>
             </div>
             {% else %}
             <div class="govuk-checkboxes__item">
-              <input class="govuk-checkboxes__input" id="elegibility-{{ loop.index }}" name="eligibility4" type="checkbox"
-                value="{{ option }}">
+              <input class="govuk-checkboxes__input" id="elegibility-{{ loop.index }}" name="eligibility4"
+                type="checkbox" value="{{ option }}">
               <label class="govuk-label govuk-checkboxes__label" for="elegibility-{{ loop.index }}">
                 {{ option }}
               </label>
