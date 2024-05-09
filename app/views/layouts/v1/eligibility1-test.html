@@ -1,7 +1,7 @@
 {% extends "layouts/main-dfe.html" %}
 
 {% block pageTitle %}
-  Question page template – {{ serviceName }} – GOV.UK Prototype Kit
+Question page template – {{ serviceName }} – GOV.UK Prototype Kit
 {% endblock %}
 
 {% block beforeContent %}
@@ -23,59 +23,68 @@
 
 {% block content %}
 
-  <div class="govuk-grid-row">
-    <div class="govuk-grid-column-two-thirds">
-      <form class="form" action="/eligibility-route" method="post">
-        <div class="govuk-form-group">
-          <fieldset class="govuk-fieldset" aria-describedby="eligibility1-hint">
-            <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
-      
-              <h1 class="govuk-fieldset__heading">
-        Heading or question goes here [Q1]
-      </h1>
-    </legend>
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    <form class="form" action="/eligibility-route" method="post">
+      <div class="govuk-form-group">
+        <fieldset class="govuk-fieldset" aria-describedby="eligibility1-hint">
+          <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+
+            <h1 class="govuk-fieldset__heading">
+              Heading or question goes here [Q1]
+            </h1>
+          </legend>
 
 
           {% set myArray = [
             'Answer a',
             'Answer b'
-    ] %}
+          ] %}
+          
+          <!-- We don't need to store the radio answer in variable because it's saved as a string.
+            Only checkbox answers are saved as an array. -->
+          <!-- {% set answerArray = data['eligibility4'] %} -->
 
-    {% set answerArray = data['eligibility1'] %}
-    
-    <div class="govuk-radios" data-module="govuk-radios">
-      {% for option in myArray %}
-      {% if answerArray and option == answerArray %}
-      <div class="govuk-radios__item">
-        <input class="govuk-radios__input" id="elegibility-{{ loop.index }}" name="eligibility1"
-          type="radio" value="{{ option }}">
-        <label class="govuk-label govuk-radios__label" for="elegibility-{{ loop.index }}">
-          {{ option }}
-        </label>
+          <div class="govuk-radios" data-module="govuk-radios">
+            {% for option in myArray %}
+           
+            <!-- Have changed the 'in' to an '==' because we're checking if option equals a string.
+            With checkboxes we need to see if option is one of the values in the array  -->
+            <!-- We don't need to check if data["eligibility1"] exists because we aren't using 'in' anymore -->
+            {% if option == data["eligibility1"] %}
+            <div class="govuk-radios__item">
+             
+              <!-- added a 'checked' property when the values -->
+              <input checked class="govuk-radios__input" id="elegibility-{{ loop.index }}" name="eligibility1"
+                type="radio" value="{{ option }}">
+              <label class="govuk-label govuk-radios__label" for="elegibility-{{ loop.index }}">
+                {{ option }}
+              </label>
+            </div>
+            {% else %}
+
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="elegibility-{{ loop.index }}" name="eligibility1" type="radio"
+                value="{{ option }}">
+              <label class="govuk-label govuk-radios__label" for="elegibility-{{ loop.index }}">
+                {{ option }}
+              </label>
+            </div>
+            {% endif %}
+            {% endfor %}
+          </div>
+        </fieldset>
       </div>
-      {% else %}
-      <div class="govuk-radios__item">
-        <input class="govuk-radios__input" id="elegibility-{{ loop.index }}" name="eligibility1"
-          type="radio" value="{{ option }}">
-        <label class="govuk-label govuk-radios__label" for="elegibility-{{ loop.index }}">
-          {{ option }}
-        </label>
-      </div>
-      {% endif %}
-      {% endfor %}
-    </div>
-  </fieldset>
-</div>
-      
-        <button type="submit" class="govuk-button" data-module="govuk-button">
-          Save and continue
-        </button>
-      
-      
-      </form>
-      
-         
-    </div>
+
+      <button type="submit" class="govuk-button" data-module="govuk-button">
+        Save and continue
+      </button>
+
+
+    </form>
+
+
   </div>
-      
+</div>
+
 {% endblock %}
