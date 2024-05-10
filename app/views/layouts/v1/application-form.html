@@ -57,7 +57,7 @@ Task list template – {{ serviceName }} – GOV.UK Prototype Kit
           <strong class="govuk-tag govuk-tag--grey">
             Not started
           </strong>
-          {% elif eligibilityArray | filter >= 1 and eligibilityArray | filter > eligibilityArray | length %}
+          {% elif eligibilityArray | filter >= 1 and eligibilityArray | filter < eligibilityArray | length %}
           <strong class="govuk-tag govuk-tag--blue">
             In progress
           </strong>
