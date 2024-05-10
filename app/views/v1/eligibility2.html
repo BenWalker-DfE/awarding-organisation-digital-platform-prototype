@@ -41,9 +41,16 @@
         <input class="govuk-input govuk-!-margin-bottom-5" id="eligibility2" name="eligibility2" value="{{data['eligibility2']}}" type="text" aria-describedby="eligibility2-hint">
       </div>
 
-      <button type="submit" class="govuk-button" data-module="govuk-button">
-        Save and continue
-      </button>
+      <div class="govuk-button-group">
+        <button name="button" value="primary" type="submit" class="govuk-button" data-module="govuk-button">
+          Save and continue
+        </button>
+        <button name="button" value="secondary" type="submit" class="govuk-button govuk-button--secondary"
+          data-module="govuk-button">
+          Save and review
+        </button>
+      </div>
+
       </form>
 
     </div>
