@@ -25,9 +25,18 @@
 
       <h1 class="govuk-heading-l">{{ serviceName }}</h1>
 
-      <h2 class="govuk-heading-m">Application form sections</h2>
-
-      {% set completedStatus = {
+        <dl class="govuk-summary-list">
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+              Reference number
+            </dt>
+            <dd class="govuk-summary-list__value">
+              [XXXXXX]
+            </dd>
+          </div>
+        </dl>
+        
+       {% set completedStatus = {
         text: "Completed"
       } %}
 
