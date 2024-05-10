@@ -1,7 +1,7 @@
 {% extends "layouts/main-dfe.html" %}
 
 {% block pageTitle %}
-  Task list template – {{ serviceName }} – GOV.UK Prototype Kit
+Task list template – {{ serviceName }} – GOV.UK Prototype Kit
 {% endblock %}
 
 
@@ -20,110 +20,168 @@
 
 {% block content %}
 
-  <div class="govuk-grid-row">
-    <div class="govuk-grid-column-two-thirds">
+<!-- This is an array that contains all the answers to the eligibility questions -->
+{% set eligibilityArray = [
+  data['eligibility1'],
+  data['eligibility2'],
+  data['eligibility3'],
+  data['eligibility4']
+  ] %}
 
-      <h1 class="govuk-heading-l">{{ serviceName }}</h1>
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
 
-        <dl class="govuk-summary-list">
-          <div class="govuk-summary-list__row">
-            <dt class="govuk-summary-list__key">
-              Reference number
-            </dt>
-            <dd class="govuk-summary-list__value">
-              [XXXXXX]
-            </dd>
-          </div>
-        </dl>
-        
-       {% set completedStatus = {
-        text: "Completed"
-      } %}
+    <h1 class="govuk-heading-l">{{ serviceName }}</h1>
 
-      {% set incompleteStatus = {
-        tag: {
-          text: "Incomplete",
-          classes: "govuk-tag--blue"
-        }
-      } %}
+    <dl class="govuk-summary-list">
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          Reference number
+        </dt>
+        <dd class="govuk-summary-list__value">
+          [XXXXXX]
+        </dd>
+      </div>
+    </dl>
 
-      {% set notStartedStatus = {
-        tag: {
-          text: "Not started",
-          classes: "govuk-tag--grey"
-        }
-      } %}
+    <ul class="govuk-task-list">
+      <li class="govuk-task-list__item govuk-task-list__item--with-link">
+        <div class="govuk-task-list__name-and-hint">
+          <a class="govuk-link govuk-task-list__link" href="eligibility" aria-describedby="first-section-1-status">
+            Eligibility
+          </a>
+        </div>
+        <div class="govuk-task-list__status" id="first-section-1-status">
+          <!-- Using our 'filter' filter- we check how many values there are in the eligibility array -->
+          {% if eligibilityArray | filter == 0 %}
+          <strong class="govuk-tag govuk-tag--grey">
+            Not started
+          </strong>
+          {% elif eligibilityArray | filter >= 1 and eligibilityArray | filter > eligibilityArray | length %}
+          <strong class="govuk-tag govuk-tag--blue">
+            In progress
+          </strong>
+          {% elif eligibilityArray | filter == eligibilityArray | length %}
+          <strong class="govuk-tag govuk-tag--green">
+            Complete
+          </strong>
+          {% endif %}
+        </div>
+      </li>
 
-      {% set inProgressStatus = {
-        tag: {
-          text: "In progress",
-          classes: "govuk-tag--light-blue"
-        }
-      } %}
+      <li class="govuk-task-list__item govuk-task-list__item--with-link">
+        <div class="govuk-task-list__name-and-hint">
+          <a class="govuk-link govuk-task-list__link" href="#" aria-describedby="first-section-2-status">
+            Contact details
+          </a>
+        </div>
+        <div class="govuk-task-list__status" id="first-section-2-status">
 
-      {# To switch between the completed and incomplete statues, use some inline logic within the component below, like this: "status: (completedStatus if ... else incompleteStatus)" #}
+          <strong class="govuk-tag govuk-tag--grey">
+            Not started
+          </strong>
 
-      {{ govukTaskList({
-        idPrefix: "first-section",
-        items: [
-        {
-          title: {
-            text: "Eligibility"
-          },
-          href: "eligibility",
-          status: notStartedStatus
-        },
-        {
-          title: {
-            text: "Contact details"
-          },
-          href: "#",
-          status: notStartedStatus
-        },
-        {
-            title: {
-              text: "Qualification details"
-            },
-            href: "#",
-            status: notStartedStatus
-          },
-          {
-              title: {
-                text: "Provider demand"
-              },
-              href: "#",
-              status: notStartedStatus
-            },
-            {
-                title: {
-                  text: "Qualification type criteria: AAQ"
-                },
-                href: "#",
-                status: notStartedStatus
-              },
-              {
-                  title: {
-                    text: "Provider demand"
-                  },
-                  href: "#",
-                  status: notStartedStatus
-                },
-                {
-                    title: {
-                      text: "Evidence"
-                    },
-                    href: "#",
-                    status: notStartedStatus
-                  }
-        ]
-      }) }}
+        </div>
+      </li>
 
-      
+      <li class="govuk-task-list__item govuk-task-list__item--with-link">
+        <div class="govuk-task-list__name-and-hint">
+
+          <a class="govuk-link govuk-task-list__link" href="#" aria-describedby="first-section-3-status">
+            Qualification details
+          </a>
+
+
+        </div>
+        <div class="govuk-task-list__status" id="first-section-3-status">
+
+          <strong class="govuk-tag govuk-tag--grey">
+            Not started
+          </strong>
+
+        </div>
+      </li>
+
+      <li class="govuk-task-list__item govuk-task-list__item--with-link">
+        <div class="govuk-task-list__name-and-hint">
+
+          <a class="govuk-link govuk-task-list__link" href="#" aria-describedby="first-section-4-status">
+            Provider demand
+          </a>
+
+
+        </div>
+        <div class="govuk-task-list__status" id="first-section-4-status">
+
+          <strong class="govuk-tag govuk-tag--grey">
+            Not started
+          </strong>
+
+        </div>
+      </li>
+
+      <li class="govuk-task-list__item govuk-task-list__item--with-link">
+        <div class="govuk-task-list__name-and-hint">
+
+          <a class="govuk-link govuk-task-list__link" href="#" aria-describedby="first-section-5-status">
+            Qualification type criteria: AAQ
+          </a>
+
+
+        </div>
+        <div class="govuk-task-list__status" id="first-section-5-status">
+
+          <strong class="govuk-tag govuk-tag--grey">
+            Not started
+          </strong>
+
+        </div>
+      </li>
+
+      <li class="govuk-task-list__item govuk-task-list__item--with-link">
+        <div class="govuk-task-list__name-and-hint">
+
+          <a class="govuk-link govuk-task-list__link" href="#" aria-describedby="first-section-6-status">
+            Provider demand
+          </a>
+
+
+        </div>
+        <div class="govuk-task-list__status" id="first-section-6-status">
+
+          <strong class="govuk-tag govuk-tag--grey">
+            Not started
+          </strong>
+
+        </div>
+      </li>
+
+      <li class="govuk-task-list__item govuk-task-list__item--with-link">
+        <div class="govuk-task-list__name-and-hint">
+
+          <a class="govuk-link govuk-task-list__link" href="#" aria-describedby="first-section-7-status">
+            Evidence
+          </a>
+
+
+        </div>
+        <div class="govuk-task-list__status" id="first-section-7-status">
+
+          <strong class="govuk-tag govuk-tag--grey">
+            Not started
+          </strong>
+
+        </div>
+      </li>
+
+    </ul>
+
+
 
       <div class="govuk-!-margin-top-5">
         {{ govukButton({ text: "Apply", href: "/layouts/v1/application-form-check-answers" }) }}
       </div>
 
-    </div>
   </div>
+</div>
 {% endblock %}

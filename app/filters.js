@@ -8,3 +8,8 @@ const addFilter = govukPrototypeKit.views.addFilter
 
 // Add your filters here
 
+addFilter('filter', function (arr) {
+    const cleanedArray = arr.flat().filter(Boolean);
+    return cleanedArray.length
+  })
+
