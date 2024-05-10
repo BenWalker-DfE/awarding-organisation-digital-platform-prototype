@@ -14,9 +14,9 @@ router.post('/eligibility-route', function (request, response) {
     if (course) {
         request.session.data['question-answered'] = 'yes'
     }
-    if (button == primary) {
+    if (button == 'primary') {
         response.redirect("/layouts/v1/eligibility")
-    } else if (button == secondary) {
+    } else if (button == 'secondary') {
         response.redirect("/layouts/v1/eligibility")
 
     }
