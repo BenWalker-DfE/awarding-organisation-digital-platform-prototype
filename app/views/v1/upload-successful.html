@@ -1,0 +1,57 @@
+{% extends "layouts/main-dfe.html" %}
+
+{% block pageTitle %}
+  Content page template – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block beforeContent %}
+  {{ govukBackLink({
+    text: "Back",
+    href: "javascript:window.history.back()"
+  }) }}
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <h1 class="govuk-heading-l">
+        Upload successful
+      </h1>
+
+      <p>
+        [Text about successfully uploading documents...]
+      </p>
+
+
+      <section class="gem-c-attachment">
+        <div class="gem-c-attachment__thumbnail">
+            <a class="govuk-link" target="_self" tabindex="-1" aria-hidden="true" href="/tlevels-registration-data-format-and-rules">
+                <svg class="gem-c-attachment__thumbnail-image" version="1.1" viewBox="0 0 99 140" width="99" height="140" aria-hidden="true">
+                    <path d="M12 12h75v27H12zM12 59h9v9h-9zM12 77h9v9h-9zM12 95h9v9h-9zM12 113h9v9h-9zM30 59h57v9H30zM30 77h39v9H30zM30 95h57v9H30zM30 113h48v9H30z" stroke-width="0"></path>
+                </svg>
+            </a>
+        </div>
+        <h3 class="govuk-heading-s">
+            <a class="govuk-link" target="_self" href="/tlevels-registration-data-format-and-rules">
+                Download T Levels registrations data format and rules (XLSX, 290KB)
+            </a>
+        </h3>
+        <p class="govuk-body-s">Version 1.9, published 16 May 2023</p>
+    </section>
+
+      <div class="govuk-form-group">
+        <label class="govuk-label" for="file-upload-1">
+          Upload a file
+        </label>
+        <input class="govuk-file-upload" id="file-upload-1" name="fileUpload1" type="file">
+      </div>
+
+      <button type="submit" class="govuk-button" data-module="govuk-button">
+        Upload
+      </button>
+    </div>
+  </div>
+
+{% endblock %}
