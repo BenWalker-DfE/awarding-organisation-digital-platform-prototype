@@ -31,48 +31,5 @@ router.post('/eligibility-route', function (request, response) {
     response.redirect("/v1/eligibility")
 })
 
-router.post('/eligibility-route', function (request, response) {
-    const button = request.session.data['button']
-    const course = request.session.data['course-type']
-    if (course) {
-        request.session.data['question-answered'] = 'yes'
-    }
-    if (button == 'primary') {
-        response.redirect("/v1/eligibility3")
-    } else if (button == 'secondary') {
-        response.redirect("/v1/eligibility")
 
-    }
-})
 
-router.post('/eligibility-route', function (request, response) {
-
-    var course = request.session.data['eligibility2']
-    if (course) {
-        request.session.data['question-answered'] = 'yes'
-    }
-    response.redirect("/v1/eligibility")
-})
-
-router.post('/eligibility-route', function (request, response) {
-    const button = request.session.data['button']
-    const course = request.session.data['course-type']
-    if (course) {
-        request.session.data['question-answered'] = 'yes'
-    }
-    if (button == 'primary') {
-        response.redirect("/v1/eligibility4")
-    } else if (button == 'secondary') {
-        response.redirect("/v1/eligibility")
-
-    }
-})
-
-router.post('/eligibility-route', function (request, response) {
-
-    var course = request.session.data['eligibility3']
-    if (course) {
-        request.session.data['question-answered'] = 'yes'
-    }
-    response.redirect("/v1/eligibility")
-})
