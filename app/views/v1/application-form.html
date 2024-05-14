@@ -37,9 +37,10 @@ Task list template – {{ serviceName }} – GOV.UK Prototype Kit
 
     <h1 class="govuk-heading-xl">[Page heading]</h1>
 
+    eligibilityArray | filter result: {{ eligibilityArray | filter }}
    
     <dl class="govuk-summary-list">
-      {% if eligibilityArray | filter > 1 %}
+      {% if eligibilityArray | filter >= 1 %}
       <div class="govuk-summary-list__row">
         <dt class="govuk-summary-list__key">
           Reference number

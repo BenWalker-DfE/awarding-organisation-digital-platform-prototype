@@ -8,27 +8,26 @@ const router = govukPrototypeKit.requests.setupRouter()
 
 // Add your routes here
 
-router.post('/eligibility-route', function (request, response) {
-    const button = request.session.data['button']
-    const course = request.session.data['course-type']
-    if (course) {
-        request.session.data['question-answered'] = 'yes'
-    }
+router.post('/eligibility-1', function (request, response) {
+    const data = request.session.data
+    const button = data['button']
+
     if (button == 'primary') {
         response.redirect("/v1/eligibility2")
     } else if (button == 'secondary') {
         response.redirect("/v1/eligibility")
-
     }
 })
 
-router.post('/eligibility-route', function (request, response) {
+router.post('/eligibility-2', function (request, response) {
+    const data = request.session.data
+    const button = data['button']
 
-    var course = request.session.data['eligibility1']
-    if (course) {
-        request.session.data['question-answered'] = 'yes'
+    if (button == 'primary') {
+        response.redirect("/v1/eligibility3")
+    } else if (button == 'secondary') {
+        response.redirect("/v1/eligibility")
     }
-    response.redirect("/v1/eligibility")
 })
 
 
