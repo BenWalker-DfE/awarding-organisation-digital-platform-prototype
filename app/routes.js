@@ -30,5 +30,25 @@ router.post('/eligibility-2', function (request, response) {
     }
 })
 
+router.post('/eligibility-3', function (request, response) {
+    const data = request.session.data
+    const button = data['button']
+
+    if (button == 'primary') {
+        response.redirect("/v1/eligibility4")
+    } else if (button == 'secondary') {
+        response.redirect("/v1/eligibility")
+    }
+})
+
+router.post('/eligibility-4', function (request, response) {
+    const data = request.session.data
+    const button = data['button']
+
+    if (button == 'primary') {
+        response.redirect("/v1/eligibility")
+    }
+})
+
 
 
