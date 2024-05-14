@@ -71,7 +71,7 @@ Task list template – {{ serviceName }} – GOV.UK Prototype Kit
           <strong class="govuk-tag govuk-tag--blue">
             In progress
           </strong>
-          {% elif eligibilityArray | filter == eligibilityArray | length %}
+          {% elif eligibilityArray | filter >= eligibilityArray | length %}
           <strong class="govuk-tag govuk-tag--green">
             Complete
           </strong>
@@ -185,7 +185,7 @@ Task list template – {{ serviceName }} – GOV.UK Prototype Kit
           <div class="govuk-task-list__name-and-hint">
             {% if eligibilityArray | filter < eligibilityArray | length %}
             Apply
-            {% elif eligibilityArray | filter == eligibilityArray | length %}
+            {% elif eligibilityArray | filter >= eligibilityArray | length %}
             <a class="govuk-link govuk-task-list__link" href="application-form-check-answers.html" aria-describedby="seventh-section-7-status">
               Apply
             </a>
@@ -197,7 +197,7 @@ Task list template – {{ serviceName }} – GOV.UK Prototype Kit
           <strong class="govuk-tag govuk-tag--grey">
             Cannot start
           </strong>
-          {% elif eligibilityArray | filter == eligibilityArray | length %}
+          {% elif eligibilityArray | filter >= eligibilityArray | length %}
           <strong class="govuk-tag govuk-tag--green">
             Ready to apply
           </strong>
