@@ -1,0 +1,192 @@
+{% extends "layouts/main-dfe.html" %}
+
+{% block pageTitle %}
+  Content page template – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block beforeContent %}
+{% from "govuk/components/phase-banner/macro.njk" import govukPhaseBanner %}
+
+{{ govukPhaseBanner({
+  tag: {
+    text: "Prototype"
+  },
+  html: 'This is a prototype. Content is likely to change rapidly.'
+}) }}
+
+{% from "govuk/components/back-link/macro.njk" import govukBackLink %}
+
+{{ govukBackLink({
+  text: "Back",
+  href: "javascript:window.history.back()"
+}) }}
+
+{% endblock %}
+
+{% block content %}
+  
+       <h1 class="govuk-heading-xl">
+        Withdrawals
+       </h1>
+          <div class="govuk-tabs" data-module="govuk-tabs">
+            <h2 class="govuk-tabs__title">
+              Contents
+            </h2>
+            <ul class="govuk-tabs__list">
+              <li class="govuk-tabs__list-item govuk-tabs__list-item--selected">
+                <a class="govuk-tabs__tab" href="#new">
+                  New
+                </a>
+              </li>
+              <li class="govuk-tabs__list-item">
+                <a class="govuk-tabs__tab" href="#in-progress">
+                  In progress
+                </a>
+              </li>
+              <li class="govuk-tabs__list-item">
+                <a class="govuk-tabs__tab" href="#feedback">
+                  Feedback
+                </a>
+              </li>
+              <li class="govuk-tabs__list-item">
+                <a class="govuk-tabs__tab" href="#approved">
+                  Approved
+                </a>
+              </li>
+            </ul>
+            <div class="govuk-tabs__panel" id="new">
+              <h2 class="govuk-heading-l">New</h2>
+              <table class="govuk-table">
+                <thead class="govuk-table__head">
+                  <tr class="govuk-table__row">
+                    <th scope="col" class="govuk-table__header">Organisation</th>
+                    <th scope="col" class="govuk-table__header">Details</th>
+                    <th scope="col" class="govuk-table__header">Status</th>
+                    <th scope="col" class="govuk-table__header">Date</th>
+                  </tr>
+                </thead>
+                <tbody class="govuk-table__body">
+                  <tr class="govuk-table__row">
+                    <td class="govuk-table__cell">City & Guilds</td>
+                    <td class="govuk-table__cell">?</td>
+                    <td class="govuk-table__cell">?</td>
+                    <td class="govuk-table__cell">[XX Mon XXXX]</td>
+                  </tr>
+                  <tr class="govuk-table__row">
+                    <td class="govuk-table__cell">City & Guilds</td>
+                    <td class="govuk-table__cell">?</td>
+                    <td class="govuk-table__cell">?</td>
+                    <td class="govuk-table__cell">[XX Mon XXXX]</td>
+                  </tr>
+                  <tr class="govuk-table__row">
+                    <td class="govuk-table__cell">City & Guilds</td>
+                    <td class="govuk-table__cell">?</td>
+                    <td class="govuk-table__cell">?</td>
+                    <td class="govuk-table__cell">[XX Mon XXXX]</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="govuk-tabs__panel govuk-tabs__panel--hidden" id="in-progress">
+              <h2 class="govuk-heading-l">In progress</h2>
+              <table class="govuk-table">
+                <thead class="govuk-table__head">
+                  <tr class="govuk-table__row">
+                    <th scope="col" class="govuk-table__header">Organisation</th>
+                    <th scope="col" class="govuk-table__header">Details</th>
+                    <th scope="col" class="govuk-table__header">Date submitted</th>
+                  </tr>
+                </thead>
+                <tbody class="govuk-table__body">
+                  <tr class="govuk-table__row">
+                    <td class="govuk-table__cell">City & Guilds</td>
+                    <td class="govuk-table__cell">?</td>
+                    <td class="govuk-table__cell">[XX Mon XXXX]</td>
+                  </tr>
+                  <tr class="govuk-table__row">
+                    <td class="govuk-table__cell">City & Guilds</td>
+                    <td class="govuk-table__cell">?</td>
+                    <td class="govuk-table__cell">[XX Mon XXXX]</td>
+                  </tr>
+                  <tr class="govuk-table__row">
+                    <td class="govuk-table__cell">City & Guilds</td>
+                    <td class="govuk-table__cell">?</td>
+                    <td class="govuk-table__cell">[XX Mon XXXX]</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+
+            <div class="govuk-tabs__panel govuk-tabs__panel--hidden" id="feedback">
+              <h2 class="govuk-heading-l">Feedback</h2>
+              <table class="govuk-table">
+                <thead class="govuk-table__head">
+                  <tr class="govuk-table__row">
+                    <th scope="col" class="govuk-table__header">Organisation</th>
+                    <th scope="col" class="govuk-table__header">Details</th>
+                    <th scope="col" class="govuk-table__header">Date submitted</th>
+                  </tr>
+                </thead>
+                <tbody class="govuk-table__body">
+                  <tr class="govuk-table__row">
+                    <td class="govuk-table__cell">City & Guilds</td>
+                    <td class="govuk-table__cell">?</td>
+                    <td class="govuk-table__cell">[XX Mon XXXX]</td>
+                  </tr>
+                  <tr class="govuk-table__row">
+                    <td class="govuk-table__cell">City & Guilds</td>
+                    <td class="govuk-table__cell">?</td>
+                    <td class="govuk-table__cell">[XX Mon XXXX]</td>
+                  </tr>
+                  <tr class="govuk-table__row">
+                    <td class="govuk-table__cell">City & Guilds</td>
+                    <td class="govuk-table__cell">?</td>
+                    <td class="govuk-table__cell">[XX Mon XXXX]</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="govuk-tabs__panel govuk-tabs__panel--hidden" id="approved">
+              <h2 class="govuk-heading-l">Approved</h2>
+              <table class="govuk-table">
+                <thead class="govuk-table__head">
+                  <tr class="govuk-table__row">
+                    <th scope="col" class="govuk-table__header">Organisation</th>
+                    <th scope="col" class="govuk-table__header">Details</th>
+                    <th scope="col" class="govuk-table__header">Date submitted</th>
+                  </tr>
+                </thead>
+                <tbody class="govuk-table__body">
+                  <tr class="govuk-table__row">
+                    <td class="govuk-table__cell">City & Guilds</td>
+                    <td class="govuk-table__cell">?</td>
+                    <td class="govuk-table__cell">[XX Mon XXXX]</td>
+
+                  </tr>
+                  <tr class="govuk-table__row">
+                    <td class="govuk-table__cell">City & Guilds</td>
+                    <td class="govuk-table__cell">?</td>
+                    <td class="govuk-table__cell">[XX Mon XXXX]</td>
+                  </tr>
+                  <tr class="govuk-table__row">
+                    <td class="govuk-table__cell">City & Guilds</td>
+                    <td class="govuk-table__cell">?</td>
+                    <td class="govuk-table__cell">[XX Mon XXXX]</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+
+          <div class="govuk-form-group">
+
+            <select class="govuk-select applications-per-page" id="sort" name="sort">
+              <option value="published" selected>10</option>
+              <option value="updated">25?</option>
+              <option value="views">50?</option>
+            </select>              
+
+            <label class="govuk-label govuk-!-display-inline" for="sort">
+              Applications per page </label>
+          </div>
+{% endblock %}

@@ -1,0 +1,151 @@
+{% extends "layouts/main-dfe.html" %}
+
+{% block pageTitle %}
+  Content page template – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block beforeContent %}
+{% from "govuk/components/phase-banner/macro.njk" import govukPhaseBanner %}
+
+{{ govukPhaseBanner({
+  tag: {
+    text: "Prototype"
+  },
+  html: 'This is a prototype. Content is likely to change rapidly.'
+}) }}
+
+{{ govukBackLink({
+  text: "Back",
+  href: "javascript:window.history.back()"
+}) }}
+{% endblock %}
+
+{% block content %}
+<div class="govuk-width-container">
+  <h1 class="govuk-heading-xl">
+    Application questions
+  </h1>
+  <dl class="govuk-summary-list">
+    <div class="govuk-summary-list__row">
+      <dt class="govuk-summary-list__key">
+        [Question topic]
+      </dt>
+      <dd class="govuk-summary-list__value">
+        <strong>[Question 1]</strong>
+        <br>[Answer]
+      </dd>
+        <dd class="govuk-summary-list__actions">
+        <a class="govuk-link" href="#">Add feedback<span class="govuk-visually-hidden"> for question 1</span></a>
+      </dd>
+    </div>
+    <div class="govuk-summary-list__row">
+      <dt class="govuk-summary-list__key">
+        [Question topic]
+      </dt>
+      <dd class="govuk-summary-list__value">
+        <strong>[Question 2]</strong>
+        <br>[Answer]      </dd>
+      <dd class="govuk-summary-list__actions">
+        <a class="govuk-link" href="#">Add feedback<span class="govuk-visually-hidden"> for question 2</span></a>
+      </dd>
+    </div>
+
+    <div class="govuk-summary-list__row">
+      <dt class="govuk-summary-list__key">
+        [Question topic]
+      </dt>
+      <dd class="govuk-summary-list__value">
+        <strong>[Question topic]</strong>
+        <details class="govuk-details">
+          <summary class="govuk-details__summary">
+            <span class="govuk-details__summary-text">
+              View question details
+            </span>
+          </summary>
+          <div class="govuk-details__text">
+            [Question details]
+          </div>
+        </details>
+      </dd>
+      <dd class="govuk-summary-list__actions">
+        <a class="govuk-link" href="#">Add feedback<span class="govuk-visually-hidden"> for question 3</span></a>
+      </dd>
+    </div>
+    <div class="govuk-summary-list__row">
+      <dt class="govuk-summary-list__key">
+        [Question topic]
+      </dt>
+      <dd class="govuk-summary-list__value">
+        <strong>[Question topic]</strong>
+        <details class="govuk-details">
+          <summary class="govuk-details__summary">
+            <span class="govuk-details__summary-text">
+              View question details
+            </span>
+          </summary>
+          <div class="govuk-details__text">
+            [Question details]
+          </div>
+        </details>
+      </dd>
+      <dd class="govuk-summary-list__actions">
+        <a class="govuk-link" href="#">Add feedback<span class="govuk-visually-hidden"> for question 4</span></a>
+      </dd>
+    </div>
+    <div class="govuk-summary-list__row">
+      <dt class="govuk-summary-list__key">
+        [Question topic]
+      </dt>
+      <dd class="govuk-summary-list__value">
+        <strong>[Question topic]</strong>
+        <details class="govuk-details">
+          <summary class="govuk-details__summary">
+            <span class="govuk-details__summary-text">
+              View question details
+            </span>
+          </summary>
+          <div class="govuk-details__text">
+            [Question details]
+          </div>
+        </details>
+      </dd>
+      <dd class="govuk-summary-list__actions">
+        <a class="govuk-link" href="#">Add feedback<span class="govuk-visually-hidden"> for question 5</span></a>
+      </dd>
+    </div>
+  </dl>   
+
+
+  <div class="govuk-form-group">
+    <fieldset class="govuk-fieldset" aria-describedby="changedName-hint">
+      <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+        <h2 class="govuk-fieldset__heading">
+          Is this section complete?
+        </h2>
+      </legend>
+      <div class="govuk-radios govuk-radios--inline" data-module="govuk-radios">
+        <div class="govuk-radios__item">
+          <input class="govuk-radios__input" id="changedName" name="changedName" type="radio" value="yes">
+          <label class="govuk-label govuk-radios__label" for="changedName">
+            Yes
+          </label>
+        </div>
+        <div class="govuk-radios__item">
+          <input class="govuk-radios__input" id="changedName-2" name="changedName" type="radio" value="no">
+          <label class="govuk-label govuk-radios__label" for="changedName-2">
+            No
+          </label>
+        </div>
+      </div>
+    </fieldset>
+  </div>
+
+  <a href="application-overview-updated.html"><button type="submit" class="govuk-button" data-module="govuk-button">
+    Save
+  </button></a>
+
+  <p class="govuk-body">
+    <a href="" class="govuk-link">Return to application overview</a>
+  </p>
+</div>
+{% endblock %}

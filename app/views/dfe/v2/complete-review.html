@@ -1,0 +1,34 @@
+{% extends "layouts/main-dfe.html" %}
+
+{% block pageTitle %}
+  Content page template – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block beforeContent %}
+{% from "govuk/components/phase-banner/macro.njk" import govukPhaseBanner %}
+
+{{ govukPhaseBanner({
+  tag: {
+    text: "Prototype"
+  },
+  html: 'This is a prototype. Content is likely to change rapidly.'
+}) }}
+
+{{ govukBackLink({
+  text: "Back",
+  href: "javascript:window.history.back()"
+}) }}
+{% endblock %}
+
+{% block content %}
+  
+       <h1 class="govuk-heading-xl">
+        Complete review
+       </h1>
+          
+       <p class="govuk-body">You are about to approve the second stage of this application. You are also satisfied with the information that the applicant has provided so far, and require no further information. </p>
+
+       <a href="confirmation.html"><button type="submit" class="govuk-button" data-module="govuk-button">
+        Approve application
+      </button></a>
+{% endblock %}

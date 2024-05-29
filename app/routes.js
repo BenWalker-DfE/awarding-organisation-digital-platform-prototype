@@ -13,9 +13,9 @@ router.post('/eligibility-1', function (request, response) {
     const button = data['button']
 
     if (button == 'primary') {
-        response.redirect("/v1/eligibility2")
+        response.redirect("/ao/v1/eligibility2")
     } else if (button == 'secondary') {
-        response.redirect("/v1/eligibility")
+        response.redirect("/ao/v1/eligibility")
     }
 })
 
@@ -24,9 +24,9 @@ router.post('/eligibility-2', function (request, response) {
     const button = data['button']
 
     if (button == 'primary') {
-        response.redirect("/v1/eligibility3")
+        response.redirect("/ao/v1/eligibility3")
     } else if (button == 'secondary') {
-        response.redirect("/v1/eligibility")
+        response.redirect("/ao/v1/eligibility")
     }
 })
 
@@ -35,9 +35,9 @@ router.post('/eligibility-3', function (request, response) {
     const button = data['button']
 
     if (button == 'primary') {
-        response.redirect("/v1/eligibility4")
+        response.redirect("/ao/v1/eligibility4")
     } else if (button == 'secondary') {
-        response.redirect("/v1/eligibility")
+        response.redirect("/ao/v1/eligibility")
     }
 })
 
@@ -46,7 +46,7 @@ router.post('/eligibility-4', function (request, response) {
     const button = data['button']
 
     if (button == 'primary') {
-        response.redirect("/v1/eligibility")
+        response.redirect("/ao/v1/eligibility")
     }
 })
 
