@@ -1,0 +1,73 @@
+{% extends "layouts/main-dfe.html" %}
+
+{% block pageTitle %}
+  Content page template – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block beforeContent %}
+{% from "govuk/components/phase-banner/macro.njk" import govukPhaseBanner %}
+
+{{ govukPhaseBanner({
+  tag: {
+    text: "Prototype"
+  },
+  html: 'This is a prototype. Content is likely to change rapidly.'
+}) }}
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+
+     
+
+      <h1 class="govuk-heading-xl">
+        Staff dashboard
+      </h1>
+
+      <div class="govuk-grid-row">
+        <div class="govuk-grid-column-one-half">
+          <h2 class="govuk-heading-m">
+            Applications
+          </h2>
+          <p>Review and approve applications for funding, check on progress, send and receive feedback.</p>
+          <ul class="govuk-list">
+            <li>
+              <a class="govuk-link" href="applications">New (14)</a>
+            </li>
+            <li>
+              <a class="govuk-link" href="#">In progress (6)</a>
+            </li>
+            <li>
+              <a class="govuk-link" href="#">Feedback (11)</a>
+            </li>
+            <li>
+              <a class="govuk-link" href="#">Approved (333)</a>
+            </li>
+          </ul>
+        </div>
+
+        <div class="govuk-grid-column-one-half">
+          <h2 class="govuk-heading-m">
+            Withdrawal applications
+          </h2>
+          <p>Review and approve withdrawal applications, check on progress, send and receive feedback.</p>
+          <ul class="govuk-list">
+            <li>
+              <a class="govuk-link" href="withdrawals">New (4)</a>
+            </li>
+            <li>
+              <a class="govuk-link" href="#">In progress (4)</a>
+            </li>
+            <li>
+              <a class="govuk-link" href="#">Feedback (2)</a>
+            </li>
+            <li>
+              <a class="govuk-link" href="#">Approved (16)</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+  </div>
+
+{% endblock %}

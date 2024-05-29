@@ -1,0 +1,130 @@
+{% extends "layouts/main-dfe.html" %}
+
+{% block pageTitle %}
+  Content page template – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block beforeContent %}
+{% from "govuk/components/phase-banner/macro.njk" import govukPhaseBanner %}
+
+{{ govukPhaseBanner({
+  tag: {
+    text: "Prototype"
+  },
+  html: 'This is a prototype. Content is likely to change rapidly.'
+}) }}
+
+{{ govukBackLink({
+  text: "Back",
+  href: "javascript:window.history.back()"
+}) }}
+{% endblock %}
+
+{% block content %}
+<div class="govuk-width-container">
+       <h1 class="govuk-heading-xl">
+        Application overview
+       </h1>
+          
+       <dl class="govuk-summary-list">
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Application status
+          </dt>
+          <dd class="govuk-summary-list__value">
+            <strong class="govuk-tag govuk-tag--blue">
+              In review
+            </strong>
+          </dd>
+          <!--
+            <dd class="govuk-summary-list__actions">
+            <a class="govuk-link" href="#">Change<span class="govuk-visually-hidden"> address</span></a>
+          </dd>
+        -->
+        </div>
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Application reference
+          </dt>
+          <dd class="govuk-summary-list__value">
+            [XXXXXX]
+          </dd>
+         <!--
+          <dd class="govuk-summary-list__actions">
+            <a class="govuk-link" href="#">Change<span class="govuk-visually-hidden"> name</span></a>
+          </dd>
+          -->
+        </div>
+
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Application title
+          </dt>
+          <dd class="govuk-summary-list__value">
+            [Title]
+          </dd>
+          <!--
+          <dd class="govuk-summary-list__actions">
+            <a class="govuk-link" href="#">Change<span class="govuk-visually-hidden"> date of birth</span></a>
+          </dd>
+        -->
+        </div>
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Awarding organisation
+          </dt>
+          <dd class="govuk-summary-list__value">
+            [Awarding organisation name]
+          </dd>
+          <!--
+            <dd class="govuk-summary-list__actions">
+            <a class="govuk-link" href="#">Change<span class="govuk-visually-hidden"> address</span></a>
+          </dd>
+        -->
+        </div>
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Date of application
+          </dt>
+          <dd class="govuk-summary-list__value">
+            29 May 2024
+          </dd>
+         <!--
+           <dd class="govuk-summary-list__actions">
+            <ul class="govuk-summary-list__actions-list">
+              <li class="govuk-summary-list__actions-list-item">
+                <a class="govuk-link" href="#">Add<span class="govuk-visually-hidden"> contact details</span></a>
+              </li>
+              <li class="govuk-summary-list__actions-list-item">
+                <a class="govuk-link" href="#">Change<span class="govuk-visually-hidden"> contact details</span></a>
+              </li>
+            </ul>
+          </dd>
+        -->
+        </div>
+        
+
+        
+
+        </div>
+      </dl>
+
+      <h2 class="govuk-heading-m govuk-!-padding-top-9"><a href="application-questions">Review application</a></h2>
+        <span class="govuk-caption-m govuk-!-padding-bottom-5">30 of 30 questions completed</span>
+
+        <strong class="govuk-tag govuk-tag--blue">
+          Evaluated
+        </strong>
+        
+
+        <hr class="govuk-section-break govuk-section-break--xl govuk-section-break--visible">
+
+        <a href="complete-review.html"><button type="submit" class="govuk-button" data-module="govuk-button">
+          Complete review
+        </button></a>
+
+        <p class="govuk-body">
+          <a href="" class="govuk-link">Return to application overview</a>
+        </p>
+</div>
+{% endblock %}
