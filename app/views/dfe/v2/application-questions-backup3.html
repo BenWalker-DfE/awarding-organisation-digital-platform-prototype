@@ -1,0 +1,469 @@
+{% extends "layouts/main-dfe.html" %}
+
+{% block pageTitle %}
+  Content page template – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block beforeContent %}
+{% from "govuk/components/phase-banner/macro.njk" import govukPhaseBanner %}
+
+{{ govukPhaseBanner({
+  tag: {
+    text: "Prototype"
+  },
+  html: 'This is a prototype. Content is likely to change rapidly.'
+}) }}
+
+{{ govukBackLink({
+  text: "Back",
+  href: "javascript:window.history.back()"
+}) }}
+{% endblock %}
+
+{% block content %}
+<div class="govuk-width-container">
+  <h1 class="govuk-heading-xl">
+    Application questions
+  </h1>
+
+  <dl class="govuk-summary-list">
+    <div class="govuk-summary-list__row">
+      <dt class="govuk-summary-list__key govuk-!-width-one-half">
+        Question
+      </dt>
+      <dd class="govuk-summary-list__value">
+       <strong> Reviewer 1 (Name)</strong>
+      </dd>
+      <dd class="govuk-summary-list__value">
+        <strong>Reviewer 2 (Name)</strong>
+      </dd>
+        <dd class="govuk-summary-list__actions">
+          <strong>Actions</strong>
+        </dd>
+    </div>
+    
+    <div class="govuk-summary-list__row">
+      <dt class="govuk-summary-list__key govuk-!-width-one-half">
+        Qualification title
+      </dd>
+      <dd class="govuk-summary-list__value">
+        <strong class="govuk-tag govuk-tag--green">
+          Meets criteria
+        </strong>      </dd>
+      <dd class="govuk-summary-list__value">
+        <strong class="govuk-tag govuk-tag--green">
+          Meets criteria
+        </strong>
+      </dd>
+      <dd class="govuk-summary-list__actions">
+        <a class="govuk-link" href="#">Add feedback<span class="govuk-visually-hidden"> for question 1</span></a>
+      </dd>
+    </div>
+    
+    <div class="govuk-summary-list__row">
+      <dt class="govuk-summary-list__key">
+        Qualification offered in England
+
+      </dd>
+      <dd class="govuk-summary-list__value">
+        <strong class="govuk-tag govuk-tag--green">
+          Meets criteria
+        </strong>      </dd>
+      <dd class="govuk-summary-list__value">
+        <strong class="govuk-tag govuk-tag--green">
+          Meets criteria
+        </strong>
+      </dd>
+      <dd class="govuk-summary-list__actions">
+        <a class="govuk-link" href="#">Add feedback<span class="govuk-visually-hidden"> for question 1</span></a>
+      </dd>
+    </div>
+
+    <div class="govuk-summary-list__row">
+      <dt class="govuk-summary-list__key">
+        Qualification offered nationally in England
+        <br>
+        <strong class="govuk-tag govuk-tag--blue">
+          Feedback
+        </strong>
+      </dt>
+      <dd class="govuk-summary-list__value">
+        <strong class="govuk-tag govuk-tag--yellow">
+          Clarify with AO
+        </strong>      </dd>
+      <dd class="govuk-summary-list__value">
+        <strong class="govuk-tag govuk-tag--yellow">
+          Clarify with AO
+        </strong>
+      </dd>
+      <dd class="govuk-summary-list__actions">
+        <a class="govuk-link" href="#">Amend feedback<span class="govuk-visually-hidden"> for question 1</span></a>
+      </dd>
+    </div>
+
+    <div class="govuk-summary-list__row">
+      <dt class="govuk-summary-list__key">
+        Age range   
+      </dt>
+      <dd class="govuk-summary-list__value">
+        <strong class="govuk-tag govuk-tag--green">
+          Meets criteria
+        </strong>      </dd>
+      <dd class="govuk-summary-list__value">
+        <strong class="govuk-tag govuk-tag--green">
+          Meets criteria
+        </strong>
+      </dd>
+      <dd class="govuk-summary-list__actions">
+        <a class="govuk-link" href="#">Add feedback<span class="govuk-visually-hidden"> for question 1</span></a>
+      </dd>
+    </div>
+    <div class="govuk-summary-list__row">
+      <dt class="govuk-summary-list__key">
+        Scope of recognition      
+      </dt>
+      <dd class="govuk-summary-list__value">
+        <strong class="govuk-tag govuk-tag--green">
+          Meets criteria
+        </strong>      </dd>
+      <dd class="govuk-summary-list__value">
+        <strong class="govuk-tag govuk-tag--green">
+          Meets criteria
+        </strong>
+      </dd>
+      <dd class="govuk-summary-list__actions">
+        <a class="govuk-link" href="#">Add feedback<span class="govuk-visually-hidden"> for question 1</span></a>
+      </dd>
+    </div>
+    <div class="govuk-summary-list__row">
+      <dt class="govuk-summary-list__key">
+        Operational start date 
+      </dt>
+      <dd class="govuk-summary-list__value">
+        <strong class="govuk-tag govuk-tag--green">
+          Meets criteria
+        </strong>      </dd>
+      <dd class="govuk-summary-list__value">
+        <strong class="govuk-tag govuk-tag--green">
+          Meets criteria
+        </strong>
+      </dd>
+      <dd class="govuk-summary-list__actions">
+        <a class="govuk-link" href="#">Add feedback<span class="govuk-visually-hidden"> for question 1</span></a>
+      </dd>
+    </div>
+  
+    <div class="govuk-summary-list__row">
+      <dt class="govuk-summary-list__key govuk-!-width-one-half">
+        Provider demand 
+      </dt>
+      <dd class="govuk-summary-list__value">
+        <strong class="govuk-tag govuk-tag--green">
+          Meets criteria
+        </strong>      </dd>
+      <dd class="govuk-summary-list__value">
+        <strong class="govuk-tag govuk-tag--green">
+          Meets criteria
+        </strong>
+      </dd>
+      <dd class="govuk-summary-list__actions">
+        <a class="govuk-link" href="#">Add feedback<span class="govuk-visually-hidden"> for question 1</span></a>
+      </dd>
+    </div>
+
+   
+   <div class="govuk-summary-list__row">
+      <dt class="govuk-summary-list__key govuk-!-width-one-half">
+        Subject
+        
+      </dt>
+      <dd class="govuk-summary-list__value">
+        <strong class="govuk-tag govuk-tag--green">
+          Meets criteria
+        </strong>      </dd>
+      <dd class="govuk-summary-list__value">
+        <strong class="govuk-tag govuk-tag--green">
+          Meets criteria
+        </strong>
+      </dd>
+      <dd class="govuk-summary-list__actions">
+        <a class="govuk-link" href="#">Add feedback<span class="govuk-visually-hidden"> for question 1</span></a>
+      </dd>
+    </div>
+
+    <div class="govuk-summary-list__row">
+      <dt class="govuk-summary-list__key govuk-!-width-one-half">
+        Sector subject area
+        
+      </dt>
+      <dd class="govuk-summary-list__value">
+        <strong class="govuk-tag govuk-tag--green">
+          Meets criteria
+        </strong>      </dd>
+      <dd class="govuk-summary-list__value">
+        <strong class="govuk-tag govuk-tag--green">
+          Meets criteria
+        </strong>
+      </dd>
+      <dd class="govuk-summary-list__actions">
+        <a class="govuk-link" href="#">Add feedback<span class="govuk-visually-hidden"> for question 1</span></a>
+      </dd>
+
+    </div>
+
+    <div class="govuk-summary-list__row">
+      <dt class="govuk-summary-list__key govuk-!-width-one-half">
+        Qualification size (guided learning hours)
+      </dt>
+      <dd class="govuk-summary-list__value">
+        <strong class="govuk-tag govuk-tag--green">
+          Meets criteria
+        </strong>      </dd>
+      <dd class="govuk-summary-list__value">
+        <strong class="govuk-tag govuk-tag--green">
+          Meets criteria
+        </strong>
+      </dd>
+      <dd class="govuk-summary-list__actions">
+        <a class="govuk-link" href="#">Add feedback<span class="govuk-visually-hidden"> for question 1</span></a>
+      </dd>
+    </div>
+
+    <div class="govuk-summary-list__row">
+      <dt class="govuk-summary-list__key govuk-!-width-one-half">
+        Other qualifications submitted in the same suite
+      </dt>
+      <dd class="govuk-summary-list__value">
+        <strong class="govuk-tag govuk-tag--green">
+          Meets criteria
+        </strong>      </dd>
+      <dd class="govuk-summary-list__value">
+        <strong class="govuk-tag govuk-tag--green">
+          Meets criteria
+        </strong>
+      </dd>
+      <dd class="govuk-summary-list__actions">
+        <a class="govuk-link" href="#">Add feedback<span class="govuk-visually-hidden"> for question 1</span></a>
+      </dd>
+    </div>
+
+    
+
+    <div class="govuk-summary-list__row">
+      <dt class="govuk-summary-list__key govuk-!-width-one-half">
+       Total qualification time
+      </dt>
+      <dd class="govuk-summary-list__value">
+        <strong class="govuk-tag govuk-tag--green">
+          Meets criteria
+        </strong>      </dd>
+      <dd class="govuk-summary-list__value">
+        <strong class="govuk-tag govuk-tag--green">
+          Meets criteria
+        </strong>
+      </dd>
+      <dd class="govuk-summary-list__actions">
+        <a class="govuk-link" href="#">Add feedback<span class="govuk-visually-hidden"> for question 1</span></a>
+      </dd>
+    </div>
+
+  <div class="govuk-summary-list__row">
+    <dt class="govuk-summary-list__key govuk-!-width-one-half">
+      Purpose statement
+    </dt>
+      <dd class="govuk-summary-list__value">
+        <strong class="govuk-tag govuk-tag--green">
+          Meets criteria
+        </strong>      </dd>
+      <dd class="govuk-summary-list__value">
+        <strong class="govuk-tag govuk-tag--green">
+          Meets criteria
+        </strong>
+      </dd>
+      <dd class="govuk-summary-list__actions">
+        <a class="govuk-link" href="#">Add feedback<span class="govuk-visually-hidden"> for question 1</span></a>
+      </dd>
+  </div>
+
+  <div class="govuk-summary-list__row">
+    <dt class="govuk-summary-list__key govuk-!-width-one-half">
+      Letters of support
+      <br>
+      <strong class="govuk-tag govuk-tag--blue">
+        Feedback
+      </strong>
+    </dt>
+    <dd class="govuk-summary-list__value">
+      <strong class="govuk-tag govuk-tag--red">
+        Does not meet criteria
+      </strong>      </dd>
+    <dd class="govuk-summary-list__value">
+      <strong class="govuk-tag govuk-tag--red">
+        Does not meet criteria
+      </strong>
+    </dd>
+    <dd class="govuk-summary-list__actions">
+      <a class="govuk-link" href="#">Amend feedback<span class="govuk-visually-hidden"> for question 1</span></a>
+    </dd>
+    
+  </div>
+
+  <div class="govuk-summary-list__row">
+    <dt class="govuk-summary-list__key govuk-!-width-one-half">
+      Replacing a similar previously funded qualification
+    </dt>
+      <dd class="govuk-summary-list__value">
+        <strong class="govuk-tag govuk-tag--green">
+          Meets criteria
+        </strong>      </dd>
+      <dd class="govuk-summary-list__value">
+        <strong class="govuk-tag govuk-tag--green">
+          Meets criteria
+        </strong>
+      </dd>
+      <dd class="govuk-summary-list__actions">
+        <a class="govuk-link" href="#">Add feedback<span class="govuk-visually-hidden"> for question 1</span></a>
+      </dd>
+  </div>
+
+  <div class="govuk-summary-list__row">
+    <dt class="govuk-summary-list__key govuk-!-width-one-half">
+      Added value statement
+    </dt>
+    <dd class="govuk-summary-list__value">
+      <strong class="govuk-tag govuk-tag--green">
+        Meets criteria
+      </strong>      </dd>
+    <dd class="govuk-summary-list__value">
+      <strong class="govuk-tag govuk-tag--green">
+        Meets criteria
+      </strong>
+    </dd>
+    <dd class="govuk-summary-list__actions">
+      <a class="govuk-link" href="#">Add feedback<span class="govuk-visually-hidden"> for question 1</span></a>
+    </dd>
+  </div>
+
+  <div class="govuk-summary-list__row">
+    <dt class="govuk-summary-list__key govuk-!-width-one-half">
+      Enter HE progression statement
+      
+      </dt>
+      <dd class="govuk-summary-list__value">
+        <strong class="govuk-tag govuk-tag--green">
+          Meets criteria
+        </strong>      </dd>
+      <dd class="govuk-summary-list__value">
+        <strong class="govuk-tag govuk-tag--green">
+          Meets criteria
+        </strong>
+      </dd>
+      <dd class="govuk-summary-list__actions">
+        <a class="govuk-link" href="#">Add feedback<span class="govuk-visually-hidden"> for question 1</span></a>
+      </dd>
+  </div>
+
+  <div class="govuk-summary-list__row">
+    <dt class="govuk-summary-list__key govuk-!-width-one-half">
+      A Level difference statement
+    </dt>
+    <dd class="govuk-summary-list__value">
+      <strong class="govuk-tag govuk-tag--green">
+        Meets criteria
+      </strong>      </dd>
+    <dd class="govuk-summary-list__value">
+      <strong class="govuk-tag govuk-tag--green">
+        Meets criteria
+      </strong>
+    </dd>
+    <dd class="govuk-summary-list__actions">
+      <a class="govuk-link" href="#">Add feedback<span class="govuk-visually-hidden"> for question 1</span></a>
+    </dd>
+  </div>
+
+  <div class="govuk-summary-list__row">
+    <dt class="govuk-summary-list__key govuk-!-width-one-half">
+      Conditions ATQ 4.1 and 4.2.    </dt>
+      <dd class="govuk-summary-list__value">
+        <strong class="govuk-tag govuk-tag--green">
+          Meets criteria
+        </strong>      </dd>
+      <dd class="govuk-summary-list__value">
+        <strong class="govuk-tag govuk-tag--green">
+          Meets criteria
+        </strong>
+      </dd>
+      <dd class="govuk-summary-list__actions">
+        <a class="govuk-link" href="#">Add feedback<span class="govuk-visually-hidden"> for question 1</span></a>
+      </dd>
+  </div>
+
+  <div class="govuk-summary-list__row">
+    <dt class="govuk-summary-list__key govuk-!-width-one-half">
+      Mandatory content statement
+      </dt>
+      <dd class="govuk-summary-list__value">
+        <strong class="govuk-tag govuk-tag--green">
+          Meets criteria
+        </strong>      </dd>
+      <dd class="govuk-summary-list__value">
+        <strong class="govuk-tag govuk-tag--green">
+          Meets criteria
+        </strong>
+      </dd>
+      <dd class="govuk-summary-list__actions">
+        <a class="govuk-link" href="#">Add feedback<span class="govuk-visually-hidden"> for question 1</span></a>
+      </dd>
+  </div>
+
+  <div class="govuk-summary-list__row">
+    <dt class="govuk-summary-list__key govuk-!-width-one-half">
+      Any other information
+      </dt>
+      <dd class="govuk-summary-list__value">
+        <strong class="govuk-tag govuk-tag--green">
+          Meets criteria
+        </strong>      </dd>
+      <dd class="govuk-summary-list__value">
+        <strong class="govuk-tag govuk-tag--green">
+          Meets criteria
+        </strong>
+      </dd>
+      <dd class="govuk-summary-list__actions">
+        <a class="govuk-link" href="#">Add feedback<span class="govuk-visually-hidden"> for question 1</span></a>
+      </dd>
+  </div>
+
+  <div class="govuk-form-group">
+    <fieldset class="govuk-fieldset" aria-describedby="changedName-hint">
+      <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+        <h2 class="govuk-fieldset__heading">
+          Is this section complete?
+        </h2>
+      </legend>
+      <div class="govuk-radios govuk-radios--inline" data-module="govuk-radios">
+        <div class="govuk-radios__item">
+          <input class="govuk-radios__input" id="changedName" name="changedName" type="radio" value="yes">
+          <label class="govuk-label govuk-radios__label" for="changedName">
+            Yes
+          </label>
+        </div>
+        <div class="govuk-radios__item">
+          <input class="govuk-radios__input" id="changedName-2" name="changedName" type="radio" value="no">
+          <label class="govuk-label govuk-radios__label" for="changedName-2">
+            No
+          </label>
+        </div>
+      </div>
+    </fieldset>
+  </div>
+
+  <a href="application-overview-updated.html"><button type="submit" class="govuk-button" data-module="govuk-button">
+    Save
+  </button></a>
+
+  <p class="govuk-body">
+    <a href="" class="govuk-link">Return to application overview</a>
+  </p>
+</div>
+{% endblock %}
