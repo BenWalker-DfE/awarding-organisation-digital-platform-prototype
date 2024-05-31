@@ -21,8 +21,7 @@
 {% endblock %}
 
 {% block content %}
-<div class="govuk-grid-row">
-  <div class="govuk-grid-column-two-thirds">
+<div class="govuk-width-container">
        <h1 class="govuk-heading-xl">
         Application overview
        </h1>
@@ -33,8 +32,8 @@
             Application status
           </dt>
           <dd class="govuk-summary-list__value">
-            <strong class="govuk-tag govuk-tag--yellow">
-              Waiting on
+            <strong class="govuk-tag govuk-tag--blue">
+              In progress
             </strong>
           </dd>
           <!--
@@ -144,50 +143,27 @@
           <dd class="govuk-summary-list__value">
             29 May 2024
           </dd>
-
+         <!--
+           <dd class="govuk-summary-list__actions">
+            <ul class="govuk-summary-list__actions-list">
+              <li class="govuk-summary-list__actions-list-item">
+                <a class="govuk-link" href="#">Add<span class="govuk-visually-hidden"> contact details</span></a>
+              </li>
+              <li class="govuk-summary-list__actions-list-item">
+                <a class="govuk-link" href="#">Change<span class="govuk-visually-hidden"> contact details</span></a>
+              </li>
+            </ul>
+          </dd>
+        -->
         </div>
         
 
         
 
-        
+        </div>
       </dl>
 
-      <h2 class="govuk-heading-l">
-        Progress of application
-       </h2>
-
-      <ul class="govuk-task-list">
-        <li class="govuk-task-list__item govuk-task-list__item--with-link">
-          <div class="govuk-task-list__name-and-hint">
-            <a class="govuk-link govuk-task-list__link" href="application-questions.html" aria-describedby="company-details-1-status">
-              Common funding approval criteria
-            </a>
-          </div>
-          <div class="govuk-task-list__status" id="company-details-1-status">
-            <strong class="govuk-tag govuk-tag--yellow">
-              Waiting on
-            </strong>
-          </div>
-        </li>
-        <li class="govuk-task-list__item govuk-task-list__item--with-link">
-          <div class="govuk-task-list__name-and-hint">
-            
-              Offer-specific criteria 
-          </div>
-          <div class="govuk-task-list__status" id="company-details-2-status">
-              Cannot start
-          </div>
-        </li>
-      </ul>
-
-
-
-
-      <a href="applications.html"><button type="submit" class="govuk-button" data-module="govuk-button">
-        Return to applications
-      </button>
-    </a>
-</div>
+      <h2 class="govuk-heading-m govuk-!-padding-top-9"><a href="application-questions">Review application</a></h2>
+        <span class="govuk-caption-m">30 of 30 questions completed</span>
 </div>
 {% endblock %}

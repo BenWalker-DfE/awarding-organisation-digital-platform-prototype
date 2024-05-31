@@ -1,0 +1,109 @@
+{% extends "layouts/main-dfe.html" %}
+
+{% block pageTitle %}
+  Content page template – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block beforeContent %}
+{% from "govuk/components/phase-banner/macro.njk" import govukPhaseBanner %}
+
+{{ govukPhaseBanner({
+  tag: {
+    text: "Prototype"
+  },
+  html: 'This is a prototype. Content is likely to change rapidly.'
+}) }}
+
+{{ govukBackLink({
+  text: "Back",
+  href: "javascript:window.history.back()"
+}) }}
+{% endblock %}
+
+{% block content %}
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    <span class="govuk-caption-l">Common funding approval criteria</span>
+<h1 class="govuk-heading-xl">
+  Request further information on 1: The qualification must be within your scope of recognition
+</h1>
+
+<h2 class="govuk-heading-m">
+ 17. Is the qualification’s level and SSA within your awarding organisation’s scope of recognition?
+</h2>
+
+<details class="govuk-details govuk-!-padding-bottom-3">
+  <summary class="govuk-details__summary">
+    <span class="govuk-details__summary-text">
+      View assessment criteria
+    </span>
+  </summary>
+  <div class="govuk-details__text">
+    Please note that awarding organisations are able to check their scope of recognition within the AO portal or by contacting Ofqual: strategic.relationships@ofqual.gov.uk.
+    <br>
+    Ofqual will confirm whether the AO has the right scope of recognition.
+    <br>
+    Qualifications must be within your scope of recognition in order to be submitted.
+  </details>
+  <h2 class="govuk-heading-m">
+    Answer
+  </h2>
+  <p>
+   [Awarding organisation's answer goes here.] 
+  </p>
+
+  
+
+  <hr class="govuk-section-break govuk-section-break--xl govuk-section-break--visible">
+  <h2 class="govuk-heading-l">
+    Add request for further information
+  </h2>
+
+  <details class="govuk-details govuk-!-padding-bottom-3">
+    <summary class="govuk-details__summary">
+      <span class="govuk-details__summary-text">
+        View assessment criteria
+      </span>
+    </summary>
+    <div class="govuk-details__text">
+      For L3 AAQs and TQs, they must be recognised by Ofqual to offer qualifications at level 3 in the associated sector subject area (SSA). 
+      <br>
+      For L2 TQs, they must be recognised by Ofqual to offer qualifications at level 2 in the associated SSA.
+      <br>
+      Ofqual will have done this in their manual checks.
+    </details>
+
+    <h2 class="govuk-heading-m">
+      Outcome
+    </h2>
+    <p>
+      <strong class="govuk-tag govuk-tag--yellow">
+        Waiting on
+      </strong>
+    </p>
+    <h2 class="govuk-heading-m">
+      Rationale
+    </h2>
+    <p>
+      [Rationale that reviewer has added.]
+    </p>
+
+  <div class="govuk-form-group">
+    <h3 class="govuk-label-wrapper">
+      <label class="govuk-label govuk-label--m" for="more-detail">
+        Request for more information
+      </label>
+    </h3>
+    <div id="more-detail-hint" class="govuk-hint">
+        This text will go to the awarding organisation.
+      </div>
+      <textarea class="govuk-textarea" id="more-detail" name="moreDetail" rows="5" aria-describedby="more-detail-hint"></textarea>
+    </div>
+
+  <a href="question1-request.html"><button type="submit" class="govuk-button" data-module="govuk-button">
+    Send request
+  </button></a>
+
+</div>
+</div>
+{% endblock %}

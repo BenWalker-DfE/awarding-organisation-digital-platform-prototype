@@ -1,0 +1,203 @@
+{% extends "layouts/main-dfe.html" %}
+
+{% block pageTitle %}
+  Content page template – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block beforeContent %}
+{% from "govuk/components/phase-banner/macro.njk" import govukPhaseBanner %}
+
+{{ govukPhaseBanner({
+  tag: {
+    text: "Prototype"
+  },
+  html: 'This is a prototype. Content is likely to change rapidly.'
+}) }}
+
+{{ govukBackLink({
+  text: "Back",
+  href: "javascript:window.history.back()"
+}) }}
+{% endblock %}
+
+{% block content %}
+  
+       <h1 class="govuk-heading-xl">
+        Applications
+       </h1>
+          <div class="govuk-tabs" data-module="govuk-tabs">
+            <h2 class="govuk-tabs__title">
+              Contents
+            </h2>
+            <ul class="govuk-tabs__list">
+              <li class="govuk-tabs__list-item govuk-tabs__list-item--selected">
+                <a class="govuk-tabs__tab" href="#past-day">
+                  New
+                </a>
+              </li>
+              <li class="govuk-tabs__list-item">
+                <a class="govuk-tabs__tab" href="#past-week">
+                  In progress
+                </a>
+              </li>
+              <li class="govuk-tabs__list-item">
+                <a class="govuk-tabs__tab" href="#past-month">
+                  Feedback
+                </a>
+              </li>
+              <li class="govuk-tabs__list-item">
+                <a class="govuk-tabs__tab" href="#past-year">
+                  Approved
+                </a>
+              </li>
+            </ul>
+            <div class="govuk-tabs__panel" id="past-day">
+              <h2 class="govuk-heading-l">New</h2>
+              <table class="govuk-table">
+                <thead class="govuk-table__head">
+                  <tr class="govuk-table__row">
+                    <th scope="col" class="govuk-table__header">Reference</th>
+                    <th scope="col" class="govuk-table__header">Awarding organisation</th>
+                    <th scope="col" class="govuk-table__header">Reviewer 1</th>
+                    <th scope="col" class="govuk-table__header">Reviewer 2</th>
+                  </tr>
+                </thead>
+                <tbody class="govuk-table__body">
+                  <tr class="govuk-table__row">
+                    <td class="govuk-table__cell"><a href="application-overview">[XXXXXX]</a></td>
+                    <td class="govuk-table__cell">City & Guilds</td>
+                    <td class="govuk-table__cell">[Reviewer name]</td>
+                    <td class="govuk-table__cell">[Reviewer name]</td>
+
+                  </tr>
+                  <tr class="govuk-table__row">
+                    <td class="govuk-table__cell">[XXXXXX]</td>
+                    <td class="govuk-table__cell">City & Guilds</td>
+                    <td class="govuk-table__cell">[Reviewer name]</td>
+                    <td class="govuk-table__cell">[Reviewer name]</td>
+                  </tr>
+                  <tr class="govuk-table__row">
+                    <td class="govuk-table__cell">[XXXXXX]</td>
+                    <td class="govuk-table__cell">Pearson Edexcel</td>
+                    <td class="govuk-table__cell"></td>
+                    <td class="govuk-table__cell"></td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="govuk-tabs__panel govuk-tabs__panel--hidden" id="past-week">
+              <h2 class="govuk-heading-l">In progress</h2>
+              <table class="govuk-table">
+                <thead class="govuk-table__head">
+                  <tr class="govuk-table__row">
+                    <th scope="col" class="govuk-table__header">Reference</th>
+                    <th scope="col" class="govuk-table__header">Awarding organisation</th>
+                    <th scope="col" class="govuk-table__header">Reviewer 1</th>
+                    <th scope="col" class="govuk-table__header">Reviewer 2</th>
+                  </tr>
+                </thead>
+                <tbody class="govuk-table__body">
+                  <tr class="govuk-table__row">
+                    <td class="govuk-table__cell">[XXXXXX]</td>
+                    <td class="govuk-table__cell">City & Guilds</td>
+                    <td class="govuk-table__cell">[Reviewer name]</td>
+                    <td class="govuk-table__cell">[Reviewer name]</td>
+
+                  </tr>
+                  <tr class="govuk-table__row">
+                    <td class="govuk-table__cell">[XXXXXX]</td>
+                    <td class="govuk-table__cell">City & Guilds</td>
+                    <td class="govuk-table__cell">[Reviewer name]</td>
+                    <td class="govuk-table__cell">[Reviewer name]</td>
+                  </tr>
+                  <tr class="govuk-table__row">
+                    <td class="govuk-table__cell">[XXXXXX]</td>
+                    <td class="govuk-table__cell">Pearson Edexcel</td>
+                    <td class="govuk-table__cell"></td>
+                    <td class="govuk-table__cell"></td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="govuk-tabs__panel govuk-tabs__panel--hidden" id="past-month">
+              <h2 class="govuk-heading-l">Feedback</h2>
+              <table class="govuk-table">
+                <thead class="govuk-table__head">
+                  <tr class="govuk-table__row">
+                    <th scope="col" class="govuk-table__header">Reference</th>
+                    <th scope="col" class="govuk-table__header">Awarding organisation</th>
+                    <th scope="col" class="govuk-table__header">Reviewer 1</th>
+                    <th scope="col" class="govuk-table__header">Reviewer 2</th>
+                  </tr>
+                </thead>
+                <tbody class="govuk-table__body">
+                  <tr class="govuk-table__row">
+                    <td class="govuk-table__cell">[XXXXXX]</td>
+                    <td class="govuk-table__cell">City & Guilds</td>
+                    <td class="govuk-table__cell">[Reviewer name]</td>
+                    <td class="govuk-table__cell">[Reviewer name]</td>
+
+                  </tr>
+                  <tr class="govuk-table__row">
+                    <td class="govuk-table__cell">[XXXXXX]</td>
+                    <td class="govuk-table__cell">City & Guilds</td>
+                    <td class="govuk-table__cell">[Reviewer name]</td>
+                    <td class="govuk-table__cell">[Reviewer name]</td>
+                  </tr>
+                  <tr class="govuk-table__row">
+                    <td class="govuk-table__cell">[XXXXXX]</td>
+                    <td class="govuk-table__cell">Pearson Edexcel</td>
+                    <td class="govuk-table__cell"></td>
+                    <td class="govuk-table__cell"></td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="govuk-tabs__panel govuk-tabs__panel--hidden" id="past-year">
+              <h2 class="govuk-heading-l">Approved</h2>
+              <table class="govuk-table">
+                <thead class="govuk-table__head">
+                  <tr class="govuk-table__row">
+                    <th scope="col" class="govuk-table__header">Reference</th>
+                    <th scope="col" class="govuk-table__header">Awarding organisation</th>
+                    <th scope="col" class="govuk-table__header">Reviewer 1</th>
+                    <th scope="col" class="govuk-table__header">Reviewer 2</th>
+                  </tr>
+                </thead>
+                <tbody class="govuk-table__body">
+                  <tr class="govuk-table__row">
+                    <td class="govuk-table__cell">[XXXXXX]</td>
+                    <td class="govuk-table__cell">City & Guilds</td>
+                    <td class="govuk-table__cell">[Reviewer name]</td>
+                    <td class="govuk-table__cell">[Reviewer name]</td>
+
+                  </tr>
+                  <tr class="govuk-table__row">
+                    <td class="govuk-table__cell">[XXXXXX]</td>
+                    <td class="govuk-table__cell">City & Guilds</td>
+                    <td class="govuk-table__cell">[Reviewer name]</td>
+                    <td class="govuk-table__cell">[Reviewer name]</td>
+                  </tr>
+                  <tr class="govuk-table__row">
+                    <td class="govuk-table__cell">[XXXXXX]</td>
+                    <td class="govuk-table__cell">Pearson Edexcel</td>
+                    <td class="govuk-table__cell"></td>
+                    <td class="govuk-table__cell"></td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+
+          <div class="govuk-form-group">
+
+            <select class="govuk-select applications-per-page" id="sort" name="sort">
+              <option value="published" selected>10</option>
+              <option value="updated">25?</option>
+              <option value="views">50?</option>
+            </select>              
+
+            <label class="govuk-label govuk-!-display-inline" for="sort">
+              Applications per page </label>
+          </div>
+{% endblock %}
