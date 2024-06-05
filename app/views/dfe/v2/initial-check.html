@@ -1,0 +1,101 @@
+{% extends "layouts/main-dfe.html" %}
+
+{% block pageTitle %}
+  Content page template – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block beforeContent %}
+{% from "govuk/components/phase-banner/macro.njk" import govukPhaseBanner %}
+
+{{ govukPhaseBanner({
+  tag: {
+    text: "Prototype"
+  },
+  html: 'This is a prototype. Content is likely to change rapidly.'
+}) }}
+
+{{ govukBreadcrumbs({
+  items: [
+    {
+      text: "Home",
+      href: "applications"
+    },
+    {
+      text: "Application overview",
+      href: "application-overview"
+    },
+    {
+      text: "Initial check"
+    }
+  ]
+}) }}
+{% endblock %}
+
+{% block content %}
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    <span class="govuk-caption-l">Initial check</span>
+<h1 class="govuk-heading-xl">
+  Initial check overview
+</h1>
+
+<ul class="govuk-task-list">
+  <li class="govuk-task-list__item govuk-task-list__item--with-link">
+    <div class="govuk-task-list__name-and-hint">
+      <a class="govuk-link govuk-task-list__link" href="initial-check1.html" aria-describedby="company-details-1-status">
+        HEP letter signatory
+      </a>
+    </div>
+    <div class="govuk-task-list__status" id="company-details-1-status">
+      <strong class="govuk-tag govuk-tag--green">
+        Received
+      </strong>
+    </div>
+    
+  </li>
+  <li class="govuk-task-list__item govuk-task-list__item--with-link">
+    <div class="govuk-task-list__name-and-hint">
+      <a class="govuk-link govuk-task-list__link" href="initial-check2.html" aria-describedby="company-details-1-status">
+        Provider demand letters
+      </a>
+    </div>
+    <div class="govuk-task-list__status" id="company-details-1-status">
+      <strong class="govuk-tag govuk-tag--yellow">
+        Request information
+      </strong>
+    </div>
+  </li>
+  <li class="govuk-task-list__item govuk-task-list__item--with-link">
+    <div class="govuk-task-list__name-and-hint">
+      <a class="govuk-link govuk-task-list__link" href="initial-check3.html" aria-describedby="company-details-1-status">
+        AAQ criteria checks
+      </a>
+    </div>
+    <div class="govuk-task-list__status" id="company-details-1-status">
+      <strong class="govuk-tag govuk-tag--yellow">
+        Request information
+      </strong>
+    </div>
+  </li>
+  <li class="govuk-task-list__item govuk-task-list__item--with-link">
+    <div class="govuk-task-list__name-and-hint">
+ 
+        [Check 4] 
+    </div>
+    <div class="govuk-task-list__status" id="company-details-2-status">
+    </div>
+  </li>
+  <li class="govuk-task-list__item govuk-task-list__item--with-link">
+    <div class="govuk-task-list__name-and-hint">
+ 
+        [Check 5] 
+    </div>
+    <div class="govuk-task-list__status" id="company-details-2-status">
+    </div>
+  </li>
+</ul>
+
+
+</div>
+</div>
+{% endblock %}

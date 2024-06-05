@@ -1,0 +1,347 @@
+{% extends "layouts/main-dfe.html" %}
+
+{% block pageTitle %}
+  Content page template – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block beforeContent %}
+{% from "govuk/components/phase-banner/macro.njk" import govukPhaseBanner %}
+
+{{ govukPhaseBanner({
+  tag: {
+    text: "Prototype"
+  },
+  html: 'This is a prototype. Content is likely to change rapidly.'
+}) }}
+
+{{ govukBackLink({
+  text: "Back",
+  href: "javascript:window.history.back()"
+}) }}
+{% endblock %}
+
+{% block content %}
+<div class="govuk-width-container">
+  <h1 class="govuk-heading-xl">
+    Application form
+  </h1>
+
+  <h2>Qualification details</h2>
+  <dl class="govuk-summary-list">
+    <div class="govuk-summary-list__row">
+      <dt class="govuk-summary-list__key govuk-!-width-two-thirds">
+        1. What is the proposed title of the qualification?
+
+        <br>[Answer goes here]
+      </dt>
+      <dd class="govuk-summary-list__value">
+        
+      </dd>
+        <dd class="govuk-summary-list__actions">
+      </dd>
+    </div>
+    <div class="govuk-summary-list__row">
+      <dt class="govuk-summary-list__key">
+        2. Does this qualification replace an existing qualification or qualifications?
+      </dt>
+      <dd class="govuk-summary-list__value">
+        <br>[Yes]
+        </dd>
+      <dd class="govuk-summary-list__actions">
+      </dd>
+    </div>
+    <div class="govuk-summary-list__row">
+      <dt class="govuk-summary-list__key">
+        3. [This only shows if user answers 'Yes' to previous question] Please list the qualification or qualifications it replaces, including the qualification title and number. 
+      </dt>
+      <dd class="govuk-summary-list__value">
+
+        <br>[Answer goes here]
+      </dd>
+      <dd class="govuk-summary-list__actions">
+      </dd>
+    </div>
+    <div class="govuk-summary-list__row">
+      <dt class="govuk-summary-list__key">
+        4. Has the existing qualification or qualifications had funding removed from ESFA post 16 funded offers in England or will subsequently have funding approval removed as they overlap with T Levels?     
+      </dt>
+      <dd class="govuk-summary-list__value">
+        [Answer goes here]
+      </dd>
+      <dd class="govuk-summary-list__actions">
+      </dd>
+    </div>
+
+    <div class="govuk-summary-list__row">
+      <dt class="govuk-summary-list__key">
+        5. If the existing qualification or qualifications had funding removed from ESFA post 16 funded offers in England or will subsequently have funding approval removed as they overlap with T Levels, how has your new qualification significantly changed or why is it needed?
+      </dt>
+      <dd class="govuk-summary-list__value">
+        [Answer goes here]
+      </dd>
+      <dd class="govuk-summary-list__actions">
+      </dd>
+    </div>
+
+    <div class="govuk-summary-list__row">
+      <dt class="govuk-summary-list__key">
+        6. Is the qualification offered in England? 
+      </dt>
+      <dd class="govuk-summary-list__value">
+        [Answer goes here]
+      </dd>
+      <dd class="govuk-summary-list__actions">
+      </dd>
+    </div>
+    <div class="govuk-summary-list__row">
+      <dt class="govuk-summary-list__key">
+        7. Is the qualification offered nationally in England, so is not restricted to one provider of education or training or one employer?   
+      </dt>
+      <dd class="govuk-summary-list__value">
+        [Answer goes here]
+      </dd>
+      <dd class="govuk-summary-list__actions">
+      </dd>
+    </div>
+    <div class="govuk-summary-list__row">
+      <dt class="govuk-summary-list__key">
+        8. For which age range is this qualification suitable?   
+     </dt>
+      <dd class="govuk-summary-list__value">
+        [Answer will be one of these: 16-18 / 18+ / 19+]
+      </dd>
+      <dd class="govuk-summary-list__actions">
+      </dd>
+    </div>
+    <div class="govuk-summary-list__row">
+      <dt class="govuk-summary-list__key">
+        9. Is the qualification’s level and SSA within your awarding organisation’s scope of recognition?      
+      </dt>
+      <dd class="govuk-summary-list__value">
+        [Answer goes here]
+      </dd>
+      <dd class="govuk-summary-list__actions">
+      </dd>
+    </div>
+    <div class="govuk-summary-list__row">
+      <dt class="govuk-summary-list__key">
+        10. What is the operational start date of the qualification? 
+      </dt>
+      <dd class="govuk-summary-list__value">
+        [XX Month XXXX]
+      </dd>
+      <dd class="govuk-summary-list__actions">
+      </dd>
+    </div>
+  </dl>   
+
+  <h2>Provider demand</h2>
+  <dl class="govuk-summary-list">
+    <div class="govuk-summary-list__row">
+      <dt class="govuk-summary-list__key govuk-!-width-one-half">
+        11. How many post 16 publicly funded enrolments do you estimate for your qualification from the 2025 to 2026 funding year? If you are providing information for more than one funding year, please use more than one row. 
+      </dt>
+      <dd class="govuk-summary-list__value">
+        [Answer goes here]
+      </dd>
+        <dd class="govuk-summary-list__actions">
+      </dd>
+    </div>
+
+    <div class="govuk-summary-list__row">
+      <dt class="govuk-summary-list__key govuk-!-width-one-half">
+        12. We recognise that there may be circumstances where enrolments may not be 100 or more in each year once a qualification is established. For example, the qualification supports progression into a highly specialist area or into an occupation where there is occupational demand. If there will be less than 100 publicly funded post 16 enrolments each funding year, can you please explain why? If you have stated there will be 100 or more publicly funded post 16 enrolments, please state ‘Not applicable’. 
+        
+      </dt>
+      <dd class="govuk-summary-list__value">
+        [Answer goes here]
+      </dd>
+        <dd class="govuk-summary-list__actions">
+      </dd>
+    </div>
+
+
+
+
+
+
+  </dl>   
+
+  <h2>Qualification type criteria: Small AAQs</h2>
+  <dl class="govuk-summary-list">
+    <div class="govuk-summary-list__row">
+      <dt class="govuk-summary-list__key govuk-!-width-one-half">
+        13. Which subject are you submitting this qualification under?
+      </dt>
+      <dd class="govuk-summary-list__value">
+        [Answer goes here]
+      </dd>
+        <dd class="govuk-summary-list__actions">
+      </dd>
+    </div>
+
+    <div class="govuk-summary-list__row">
+      <dt class="govuk-summary-list__key govuk-!-width-one-half">
+        14. Please specify the sector subject area you are submitting this qualification under.
+        </dt>
+      <dd class="govuk-summary-list__value">
+        [Answer goes here]
+      </dd>
+        <dd class="govuk-summary-list__actions">
+      </dd>
+    </div>
+
+    <div class="govuk-summary-list__row">
+      <dt class="govuk-summary-list__key govuk-!-width-one-half">
+        15. What is the size of the qualification in guided learning hours? This must be between 150 and 420 guided learning hours.
+        </dt>
+      <dd class="govuk-summary-list__value">
+        [Answer goes here]
+      </dd>
+        <dd class="govuk-summary-list__actions">
+      </dd>
+    </div>
+
+    <div class="govuk-summary-list__row">
+      <dt class="govuk-summary-list__key govuk-!-width-one-half">
+        16. Please indicate if you have submitted any other qualifications for approval that would sit in the same qualification suite as this one.
+        
+      </dt>
+      <dd class="govuk-summary-list__value">
+        [Answer goes here]
+      </dd>
+        <dd class="govuk-summary-list__actions">
+      </dd>
+    </div>
+
+    <div class="govuk-summary-list__row">
+      <dt class="govuk-summary-list__key govuk-!-width-one-half">
+        17. If you have submitted any other qualification(s) for approval that would sit in the same qualification suite as this one, please provide the title(s) of the corresponding qualification(s). If this is not the case, please state ‘Not applicable.’
+      </dt>
+      <dd class="govuk-summary-list__value">
+        [Answer goes here]
+      </dd>
+        <dd class="govuk-summary-list__actions">
+      </dd>
+    </div>
+
+    <div class="govuk-summary-list__row">
+      <dt class="govuk-summary-list__key govuk-!-width-one-half">
+        18. What is the total qualification time? TQT
+      </dt>
+      <dd class="govuk-summary-list__value">
+        [Answer goes here]
+      </dd>
+        <dd class="govuk-summary-list__actions">
+      </dd>
+    </div>
+
+  <div class="govuk-summary-list__row">
+    <dt class="govuk-summary-list__key govuk-!-width-one-half">
+      19. Please set out the purpose statement with an explicit explanation of how the qualification supports progress directly into HE. This answer should be no longer than 500 words. If you write more than the word limit, we may not consider the text over the limit when we review your submission. Enter purpose statement.
+      </dt>
+    <dd class="govuk-summary-list__value">
+      [Answer goes here]
+    </dd>
+      <dd class="govuk-summary-list__actions">
+    </dd>
+  </div>
+
+  <div class="govuk-summary-list__row">
+    <dt class="govuk-summary-list__key govuk-!-width-one-half">
+      20. Do you have 6 letters of support for your qualification from HE providers that all meet the requirements confirmed in the Qualification-type funding approval criteria: alternative academic qualifications, Criteria 3: Qualification supports progression to HE?
+     </dt>
+    <dd class="govuk-summary-list__value">
+      [Answer goes here]
+    </dd>
+      <dd class="govuk-summary-list__actions">
+      <a class="govuk-link" href="#">[Attachment 1.pdf]<span class="govuk-visually-hidden"> for question 1</span></a>
+    <br>
+    <a class="govuk-link" href="#">[Attachment 2.pdf]<span class="govuk-visually-hidden"> for question 1</span></a>
+  </dd>
+  </div>
+
+  <div class="govuk-summary-list__row">
+    <dt class="govuk-summary-list__key govuk-!-width-one-half">
+      21. Is this a qualification that replaces a previously funded qualification that was very similar in nature? If this is the case, please ensure you upload the supporting evidence outlined in the box below into Galaxkey.
+   
+          <dd class="govuk-summary-list__value">
+      [Answer goes here]
+    </dd>
+      <dd class="govuk-summary-list__actions">
+    </dd>
+  </div>
+
+  <div class="govuk-summary-list__row">
+    <dt class="govuk-summary-list__key govuk-!-width-one-half">
+      22. How does your qualification add value for students? This answer should be no longer than 500 words. If you write more than the word limit, we may not consider the text over the limit when we review your submission. Enter added value statement. Enter added value statement.
+    </dt>
+            <dd class="govuk-summary-list__value">
+            [Answer goes here]
+            <br>
+            <a class="govuk-link" href="#">Read more<span class="govuk-visually-hidden"> for question 1</span></a>
+
+            </dd>
+      <dd class="govuk-summary-list__actions">
+    </dd>
+  </div>
+
+  <div class="govuk-summary-list__row">
+    <dt class="govuk-summary-list__key govuk-!-width-one-half">
+      23. How does the learning and assessment approach enhance students’ opportunities for progression to HE courses in aligned subject areas? This answer should be no longer than 200 words. If you write more than the word limit, we may not consider the text over the limit when we review your submission. Enter HE progression statement.
+    </dt>
+          <dd class="govuk-summary-list__value">
+          [Answer goes here]
+          </dd>
+      <dd class="govuk-summary-list__actions">
+    </dd>
+  </div>
+
+  <div class="govuk-summary-list__row">
+    <dt class="govuk-summary-list__key govuk-!-width-one-half">
+      24. If the qualification is in a subject area where there is an A level, how is the qualification different to the A level in terms of the approach taken to learning and assessment? If the qualification is in a subject area where there is not an A level, please state ‘Not applicable.’ This answer should be no longer than 400 words. If you write more than the word limit, we may not consider the text over the limit when we review your submission. Enter A Level difference statement.
+    </dt>
+    <dd class="govuk-summary-list__value">
+      [Answer goes here]
+      </dd>
+      <dd class="govuk-summary-list__actions">
+    </dd>
+  </div>
+
+  <div class="govuk-summary-list__row">
+    <dt class="govuk-summary-list__key govuk-!-width-one-half">
+      25. Please confirm that the qualification meets the assessment requirements stipulated for Conditions ATQ 4.1 and 4.2.    </dt>
+    <dd class="govuk-summary-list__value">
+      [Answer goes here]
+      </dd>
+      <dd class="govuk-summary-list__actions">
+    </dd>
+  </div>
+
+  <div class="govuk-summary-list__row">
+    <dt class="govuk-summary-list__key govuk-!-width-one-half">
+      26. Please provide a short statement explaining how the qualification meets the mandatory content requirement. This answer should be no longer than 200 words. If you write more than the word limit, we may not consider the text over the limit when we review your submission. Enter mandatory content statement.
+      </dt>
+          <dd class="govuk-summary-list__value">
+          [Answer goes here]
+          </dd>
+      <dd class="govuk-summary-list__actions">
+    </dd>
+  </div>
+
+  <div class="govuk-summary-list__row">
+    <dt class="govuk-summary-list__key govuk-!-width-one-half">
+      27. Is there any other contextual or background information you wish to share about your submission? This answer should be no longer than 200 words. If you write more than the word limit, we may not consider the text over the limit when we review your submission. Enter any other information.
+      </dt>
+      <dd class="govuk-summary-list__value">
+      [Answer goes here]
+      </dd>
+      <dd class="govuk-summary-list__actions">
+    </dd>
+  </div>
+
+  
+
+ 
+</div>
+{% endblock %}
