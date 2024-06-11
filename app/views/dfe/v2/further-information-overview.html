@@ -1,0 +1,83 @@
+{% extends "layouts/main-dfe.html" %}
+
+{% block pageTitle %}
+  Content page template – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block beforeContent %}
+{% from "govuk/components/phase-banner/macro.njk" import govukPhaseBanner %}
+
+{{ govukPhaseBanner({
+  tag: {
+    text: "Prototype"
+  },
+  html: 'This is a prototype. Content is likely to change rapidly.'
+}) }}
+
+{{ govukBackLink({
+  text: "Back",
+  href: "javascript:window.history.back()"
+}) }}
+{% endblock %}
+
+{% block content %}
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+
+  <h1 class="govuk-heading-xl">
+   Request further information from awarding organisation
+  </h1>
+  <p>
+    Request further information on questions that have been flagged in the review process. Or send general feedback.
+  </p>
+
+  <dl class="govuk-summary-list govuk-!-margin-bottom-9">
+    <div class="govuk-summary-list__row">
+      <dt class="govuk-summary-list__key govuk-!-width-two-thirds">
+        Item where further information is needed
+      </dt>
+      <dd class="govuk-summary-list__value">
+       <strong> Status</strong>
+      </dd>
+
+    </div>
+    
+    <div class="govuk-summary-list__row">
+      <dt class="govuk-summary-list__key govuk-!-width-one-half">
+        <a class="govuk-link" href="">Common funding awarding criteria 3: The qualification must be suitable for the student age groups</a>
+      </dd>
+      <dd class="govuk-summary-list__value">
+        <strong class="govuk-tag govuk-tag--grey">
+          Feedback added
+        </strong>     
+      </dd>   
+      
+    </div>
+    
+   
+    <div class="govuk-summary-list__row">
+      <dt class="govuk-summary-list__key">
+        <a class="govuk-link" href="further-information1.html">Common funding awarding criteria 5: The qualification must be in an appropriate sector subject area (SSA)</a>
+      </dt>
+      <dd class="govuk-summary-list__value">
+     
+      </dd>
+    </div>
+    <div class="govuk-summary-list__row">
+      <dt class="govuk-summary-list__key">
+        <a class="govuk-link" href="#">Other feedback</a>
+      </dt>
+      <dd class="govuk-summary-list__value">
+
+      </dd>
+    </div>
+</dl>
+
+    <a href="application-overview.html"><button type="submit" class="govuk-button" data-module="govuk-button">
+      Return to application overview
+    </button>
+  </a>
+  </div>
+</div>
+
+{% endblock %}
