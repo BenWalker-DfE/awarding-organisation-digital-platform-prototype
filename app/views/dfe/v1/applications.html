@@ -14,11 +14,15 @@
   html: 'This is a prototype. Content is likely to change rapidly.'
 }) }}
 
-{% from "govuk/components/back-link/macro.njk" import govukBackLink %}
+{% from "govuk/components/breadcrumbs/macro.njk" import govukBreadcrumbs %}
 
-{{ govukBackLink({
-  text: "Back",
-  href: "javascript:window.history.back()"
+{{ govukBreadcrumbs({
+  items: [
+    {
+      text: "Home",
+      href: "dashboard"
+    }
+  ]
 }) }}
 
 {% endblock %}
