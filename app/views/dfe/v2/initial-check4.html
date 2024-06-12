@@ -23,48 +23,36 @@
 {% block content %}
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-two-thirds">
+    <span class="govuk-caption-l">Initial check</span>
 
   <h1 class="govuk-heading-xl">
-   Request further information from awarding organisation
+   Request further information: Provider demand letters
   </h1>
-  <p>
-    Request further information on documents reviewed as part of the initial check. Or send general feedback.
-  </p>
-
-  <dl class="govuk-summary-list govuk-!-margin-bottom-9">
-    <div class="govuk-summary-list__row">
-      <dt class="govuk-summary-list__key govuk-!-width-two-thirds">
-        Item where further information is needed
-      </dt>
-      <dd class="govuk-summary-list__value">
-       <strong> Status</strong>
-      </dd>
-
-    </div>
-    
-    <div class="govuk-summary-list__row">
-      <dt class="govuk-summary-list__key govuk-!-width-one-half">
-        <a class="govuk-link" href="">Provider demand letters</a>
-      </dd>
-      <dd class="govuk-summary-list__value">  
+  
+  
+      <h2 class="govuk-heading-m">
+        Status
+      </h2>
+      <p>
         <strong class="govuk-tag govuk-tag--yellow">
-          Pending input
-        </strong> 
-      </dd>   
-      
-    </div>
-    <div class="govuk-summary-list__row">
-      <dt class="govuk-summary-list__key">
-        <a class="govuk-link" href="#">Other</a>
-      </dt>
-      <dd class="govuk-summary-list__value">
+        Request information        
+        </strong>
+      </p>
+  
+    <div class="govuk-form-group">
+      <h3 class="govuk-label-wrapper">
+        <label class="govuk-label govuk-label--m" for="more-detail">
+          Request for more information
+        </label>
+      </h3>
+      <div id="more-detail-hint" class="govuk-hint">
+          Enter text for the awarding organisation. You can review this before it is sent.
+        </div>
+        <textarea class="govuk-textarea" id="more-detail" name="moreDetail" rows="5" aria-describedby="more-detail-hint"></textarea>
+      </div>
 
-      </dd>
-    </div>
-</dl>
-
-    <a href="application-overview.html"><button type="submit" class="govuk-button" data-module="govuk-button">
-      Return to application overview
+    <a href="initial-check5.html"><button type="submit" class="govuk-button" data-module="govuk-button">
+      Continue
     </button>
   </a>
   </div>
