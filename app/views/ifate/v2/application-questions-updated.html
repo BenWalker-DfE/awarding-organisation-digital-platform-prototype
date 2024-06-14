@@ -20,10 +20,24 @@
 }) }}
 {% endblock %}
 
+
+
 {% block content %}
+
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-two-thirds">
-
+    <div class="govuk-notification-banner govuk-notification-banner--success" role="alert" aria-labelledby="govuk-notification-banner-title" data-module="govuk-notification-banner">
+      <div class="govuk-notification-banner__header">
+        <h2 class="govuk-notification-banner__title" id="govuk-notification-banner-title">
+          Success
+        </h2>
+      </div>
+      <div class="govuk-notification-banner__content">
+        <h3 class="govuk-notification-banner__heading">
+          Outcome and rationale saved
+        </h3>
+      </div>
+    </div>
   <h1 class="govuk-heading-xl">
    Review
   </h1>
@@ -44,10 +58,9 @@
         <a class="govuk-link" href="question1-add-outcome.html">1: The qualification must be within your scope of recognition</a>
       </dd>
       <dd class="govuk-summary-list__value">
-       <!-- <strong class="govuk-tag govuk-tag--green">
-          Pass
-        </strong>
-        -->      
+       <strong class="govuk-tag govuk-tag--yellow">
+          Need clarification
+        </strong>     
       </dd>   
       
     </div>
@@ -236,13 +249,36 @@
   </div>
 </dl>
 
-<h2 class="govuk-heading-s">
-  Request further information
- </h2>
-<p>No criteria have been flagged for clarification.</p>
-<hr class="govuk-section-break govuk-section-break--visible">
+<dl class="govuk-summary-list govuk-!-margin-bottom-9">
+  <div class="govuk-summary-list__row">
+    <dt class="govuk-summary-list__key govuk-!-width-two-thirds">
+      Request further information
+    </dt>
+    <dd class="govuk-summary-list__value">
+     <strong>
+      Status
+     </strong>
+    </dd>
 
-    <a href="application-overview-updated2.html"><button type="submit" class="govuk-button govuk-!-margin-top-9" data-module="govuk-button">
+  </div>
+  
+  <div class="govuk-summary-list__row">
+    <dt class="govuk-summary-list__key govuk-!-width-one-half">
+      <a class="govuk-link" href="further-information1">1: The qualification must be within your scope of recognition</a>
+    </dd>
+    <dd class="govuk-summary-list__value">
+ 
+    </dd>   
+    
+  </div>
+  
+   
+   
+    
+</dl>
+
+
+    <a href="application-overview-updated3.html"><button type="submit" class="govuk-button" data-module="govuk-button">
       Return to application overview
     </button>
   </a>
