@@ -1,0 +1,210 @@
+{% extends "layouts/main-dfe.html" %}
+
+{% block pageTitle %}
+Task list template – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+
+{% block beforeContent %}
+{% from "govuk/components/phase-banner/macro.njk" import govukPhaseBanner %}
+
+{{ govukPhaseBanner({
+  tag: {
+    text: "Prototype"
+  },
+  html: 'This is a prototype. Content is likely to change rapidly.'
+}) }}
+
+{{ govukBackLink({
+  text: "Back",
+  href: "javascript:window.history.back()"
+}) }}
+{% endblock %}
+
+
+{% block content %}
+
+<!-- This is an array that contains all the answers to the eligibility questions -->
+{% set eligibilityArray = [
+  data['eligibility1'],
+  data['eligibility2'],
+  data['eligibility3'],
+  data['eligibility4']
+  ] %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+
+    <h1 class="govuk-heading-xl">[Page heading]</h1>
+<!--
+    eligibilityArray | filter result: {{ eligibilityArray | filter }}
+-->
+    <dl class="govuk-summary-list">
+      {% if eligibilityArray | filter >= 1 %}
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          Reference number
+        </dt>
+        <dd class="govuk-summary-list__value" name="reference">
+          [XXXXXX]
+        </dd>
+       </div>
+       {% endif %}
+    </dl>
+    
+
+
+    <ul class="govuk-task-list">
+      <li class="govuk-task-list__item govuk-task-list__item--with-link">
+        <div class="govuk-task-list__name-and-hint">
+          <a class="govuk-link govuk-task-list__link" href="eligibility" aria-describedby="first-section-1-status">
+            Eligibility
+          </a>
+        </div>
+        <div class="govuk-task-list__status" id="first-section-1-status">
+          <!-- Using our 'filter' filter- we check how many values there are in the eligibility array -->
+          {% if eligibilityArray | filter == 0 %}
+          <strong class="govuk-tag govuk-tag--grey">
+            Not started
+          </strong>
+          {% elif eligibilityArray | filter >= 1 and eligibilityArray | filter < eligibilityArray | length %}
+          <strong class="govuk-tag govuk-tag--blue">
+            In progress
+          </strong>
+          {% elif eligibilityArray | filter >= eligibilityArray | length %}
+          <strong class="govuk-tag govuk-tag--green">
+            Complete
+          </strong>
+          {% endif %}
+        </div>
+      </li>
+
+      <li class="govuk-task-list__item govuk-task-list__item--with-link">
+        <div class="govuk-task-list__name-and-hint">
+          <a class="govuk-link govuk-task-list__link" href="#" aria-describedby="first-section-2-status">
+            Contact details
+          </a>
+        </div>
+        <div class="govuk-task-list__status" id="first-section-2-status">
+
+          <strong class="govuk-tag govuk-tag--grey">
+            Not started
+          </strong>
+
+        </div>
+      </li>
+
+      <li class="govuk-task-list__item govuk-task-list__item--with-link">
+        <div class="govuk-task-list__name-and-hint">
+
+          <a class="govuk-link govuk-task-list__link" href="#" aria-describedby="first-section-3-status">
+            Qualification details
+          </a>
+
+
+        </div>
+        <div class="govuk-task-list__status" id="first-section-3-status">
+
+          <strong class="govuk-tag govuk-tag--grey">
+            Not started
+          </strong>
+
+        </div>
+      </li>
+
+      <li class="govuk-task-list__item govuk-task-list__item--with-link">
+        <div class="govuk-task-list__name-and-hint">
+
+          <a class="govuk-link govuk-task-list__link" href="#" aria-describedby="first-section-4-status">
+            Provider demand
+          </a>
+
+
+        </div>
+        <div class="govuk-task-list__status" id="first-section-4-status">
+
+          <strong class="govuk-tag govuk-tag--grey">
+            Not started
+          </strong>
+
+        </div>
+      </li>
+
+      <li class="govuk-task-list__item govuk-task-list__item--with-link">
+        <div class="govuk-task-list__name-and-hint">
+
+          <a class="govuk-link govuk-task-list__link" href="#" aria-describedby="first-section-5-status">
+            Qualification type criteria: AAQ
+          </a>
+
+
+        </div>
+        <div class="govuk-task-list__status" id="first-section-5-status">
+
+          <strong class="govuk-tag govuk-tag--grey">
+            Not started
+          </strong>
+
+        </div>
+      </li>
+
+      <li class="govuk-task-list__item govuk-task-list__item--with-link">
+        <div class="govuk-task-list__name-and-hint">
+
+          <a class="govuk-link govuk-task-list__link" href="#" aria-describedby="first-section-6-status">
+            Provider demand
+          </a>
+
+
+        </div>
+        <div class="govuk-task-list__status" id="first-section-6-status">
+
+          <strong class="govuk-tag govuk-tag--grey">
+            Not started
+          </strong>
+
+        </div>
+      </li>
+
+      <li class="govuk-task-list__item govuk-task-list__item--with-link">
+        <div class="govuk-task-list__name-and-hint">
+
+          <a class="govuk-link govuk-task-list__link" href="upload-evidence" aria-describedby="first-section-7-status">
+            Evidence
+          </a>
+        </div>
+        <div class="govuk-task-list__status" id="first-section-7-status">
+          <strong class="govuk-tag govuk-tag--grey">
+            Not started
+          </strong>
+        </div>
+      </li>
+      
+      
+      <li class="govuk-task-list__item govuk-task-list__item--with-link">
+          <div class="govuk-task-list__name-and-hint">
+            {% if eligibilityArray | filter < eligibilityArray | length %}
+            Apply
+            {% elif eligibilityArray | filter >= eligibilityArray | length %}
+            <a class="govuk-link govuk-task-list__link" href="application-form-check-answers.html" aria-describedby="seventh-section-7-status">
+              Apply
+            </a>
+            {% endif %}
+          </div>
+        <div class="govuk-task-list__status" id="first-section-1-status">
+          <!-- Using our 'filter' filter- we check how many values there are in the eligibility array -->
+          {% if eligibilityArray | filter < eligibilityArray | length %}
+          <strong class="govuk-tag govuk-tag--grey">
+            Cannot start
+          </strong>
+          {% elif eligibilityArray | filter >= eligibilityArray | length %}
+          <strong class="govuk-tag govuk-tag--green">
+            Ready to apply
+          </strong>
+          {% endif %}
+        </div>
+      </li>
+    </ul>
+  </div>
+</div>
+{% endblock %}

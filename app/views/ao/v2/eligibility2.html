@@ -1,0 +1,59 @@
+{% extends "layouts/main-dfe.html" %}
+
+{% block pageTitle %}
+  Question page template – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block beforeContent %}
+{% from "govuk/components/phase-banner/macro.njk" import govukPhaseBanner %}
+
+{{ govukPhaseBanner({
+  tag: {
+    text: "Prototype"
+  },
+  html: 'This is a prototype. Content is likely to change rapidly.'
+}) }}
+
+{{ govukBackLink({
+  text: "Back",
+  href: "javascript:window.history.back()"
+}) }}
+
+{% endblock %}
+
+{% block content %}
+
+  
+    <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <form class="form" action="/eligibility-2" method="post">
+
+      <div class="govuk-form-group">
+        <h1 class="govuk-label-wrapper">
+          <label class="govuk-label govuk-label--l" for="eligibility2">
+            What is ...? (Eligibility question 2)
+          </label>
+        </h1>
+        <div id="eligibility2-hint" class="govuk-hint">
+          This is hint text
+        </div>
+        <input class="govuk-input govuk-!-margin-bottom-5" id="eligibility2" name="eligibility2" value="{{data['eligibility2']}}" type="text" aria-describedby="eligibility2-hint">
+      </div>
+
+      <div class="govuk-button-group">
+        <button name="button" value="primary" type="submit" class="govuk-button" data-module="govuk-button">
+          Save and continue
+        </button>
+        <button name="button" value="secondary" type="submit" class="govuk-button govuk-button--secondary"
+          data-module="govuk-button">
+          Save and review
+        </button>
+      </div>
+
+      </form>
+
+    </div>
+  </div>
+
+{% endblock %}

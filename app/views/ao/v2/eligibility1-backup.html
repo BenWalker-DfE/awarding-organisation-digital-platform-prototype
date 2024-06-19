@@ -1,0 +1,64 @@
+{% extends "layouts/main-dfe.html" %}
+
+{% block pageTitle %}
+  Question page template – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block beforeContent %}
+{% from "govuk/components/phase-banner/macro.njk" import govukPhaseBanner %}
+
+{{ govukPhaseBanner({
+  tag: {
+    text: "Prototype"
+  },
+  html: 'This is a prototype. Content is likely to change rapidly.'
+}) }}
+
+{{ govukBackLink({
+  text: "Back",
+  href: "javascript:window.history.back()"
+}) }}
+
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <h1 class="govuk-heading-l">
+        Heading or question goes here [Q1]
+      </h1>
+
+      <form class="form" action="/eligibility-route" method="post">
+
+          {% from "govuk/components/radios/macro.njk" import govukRadios %}
+ 
+        <div class="govuk-radios" data-module="govuk-radios">
+          <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="eligibility1a" name="eligibility1" type="radio"
+                  value="Yes">
+              <label class="govuk-label govuk-radios__label" for="eligibility1a">
+                  Yes
+              </label>
+          </div>
+          <div class="govuk-radios__item govuk-!-margin-bottom-5">
+              <input class="govuk-radios__input" id="eligibility1b" name="eligibility1" type="radio"
+                  value="No" >
+              <label class="govuk-label govuk-radios__label" for="eligibility1b">
+                  No
+              </label>
+          </div>
+        </div>
+        <button type="submit" class="govuk-button" data-module="govuk-button">
+          Save and continue
+        </button>
+      
+      
+      </form>
+      
+         
+    </div>
+  </div>
+      
+{% endblock %}

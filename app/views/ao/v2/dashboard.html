@@ -1,0 +1,77 @@
+{% extends "layouts/main-dfe.html" %}
+
+{% block pageTitle %}
+  Content page template – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block beforeContent %}
+{% from "govuk/components/phase-banner/macro.njk" import govukPhaseBanner %}
+
+{{ govukPhaseBanner({
+  tag: {
+    text: "Prototype"
+  },
+  html: 'This is a prototype. Content is likely to change rapidly.'
+}) }}
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+     
+
+      <h1 class="govuk-heading-l">
+        Applications
+      </h1>
+
+      <a href="application-form.html"><button type="submit" class="govuk-button" data-module="govuk-button">
+        Start new application
+      </button></a>
+      
+      <table class="govuk-table">
+        <caption class="govuk-table__caption govuk-table__caption--m">Applications in progress</caption>
+        <thead class="govuk-table__head">
+          <tr class="govuk-table__row">
+            <th scope="col" class="govuk-table__header">Application title</th>
+            <th scope="col" class="govuk-table__header">Reference number</th>
+            <th scope="col" class="govuk-table__header">Last saved</th>
+          </tr>
+        </thead>
+        <tbody class="govuk-table__body">
+          <tr class="govuk-table__row">
+            <td class="govuk-table__cell"><a href="application-form">[Application title]</a></td>
+            <td class="govuk-table__cell">[XXXXXX]</td>
+            <td class="govuk-table__cell">[XX month XXXX],[Name]</td>
+          </tr>
+          <tr class="govuk-table__row">
+            <td class="govuk-table__cell"><a href="">[Application title]</a></th>
+            <td class="govuk-table__cell">[XXXXXX]</td>
+            <td class="govuk-table__cell">[XX month XXXX],[Name]</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <table class="govuk-table">
+        <caption class="govuk-table__caption govuk-table__caption--m">Previous applications</caption>
+        <thead class="govuk-table__head">
+          <tr class="govuk-table__row">
+            <th scope="col" class="govuk-table__header">Application title</th>
+            <th scope="col" class="govuk-table__header">Reference number</th>
+            <th scope="col" class="govuk-table__header">Submission date</th>
+          </tr>
+        </thead>
+        <tbody class="govuk-table__body">
+          <tr class="govuk-table__row">
+            <td class="govuk-table__cell"><a href="">[Application title]</a></td>
+            <td class="govuk-table__cell">[XXXXXX]</td>
+            <td class="govuk-table__cell">[XX month XXXX],[Name]</td>
+          </tr>
+        </tbody>
+      </table>
+
+    </div>
+  </div>
+
+{% endblock %}
