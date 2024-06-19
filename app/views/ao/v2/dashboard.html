@@ -18,7 +18,7 @@
 {% block content %}
 
   <div class="govuk-grid-row">
-    <div class="govuk-grid-column-two-thirds">
+    <div class="govuk-grid-column-full-width">
 
      
 
@@ -29,48 +29,146 @@
       <a href="application-form.html"><button type="submit" class="govuk-button" data-module="govuk-button">
         Start new application
       </button></a>
-      
-      <table class="govuk-table">
-        <caption class="govuk-table__caption govuk-table__caption--m">Applications in progress</caption>
-        <thead class="govuk-table__head">
-          <tr class="govuk-table__row">
-            <th scope="col" class="govuk-table__header">Application title</th>
-            <th scope="col" class="govuk-table__header">Reference number</th>
-            <th scope="col" class="govuk-table__header">Last saved</th>
-          </tr>
-        </thead>
-        <tbody class="govuk-table__body">
-          <tr class="govuk-table__row">
-            <td class="govuk-table__cell"><a href="application-form">[Application title]</a></td>
-            <td class="govuk-table__cell">[XXXXXX]</td>
-            <td class="govuk-table__cell">[XX month XXXX],[Name]</td>
-          </tr>
-          <tr class="govuk-table__row">
-            <td class="govuk-table__cell"><a href="">[Application title]</a></th>
-            <td class="govuk-table__cell">[XXXXXX]</td>
-            <td class="govuk-table__cell">[XX month XXXX],[Name]</td>
-          </tr>
-        </tbody>
-      </table>
 
-      <table class="govuk-table">
-        <caption class="govuk-table__caption govuk-table__caption--m">Previous applications</caption>
-        <thead class="govuk-table__head">
-          <tr class="govuk-table__row">
-            <th scope="col" class="govuk-table__header">Application title</th>
-            <th scope="col" class="govuk-table__header">Reference number</th>
-            <th scope="col" class="govuk-table__header">Submission date</th>
-          </tr>
-        </thead>
-        <tbody class="govuk-table__body">
-          <tr class="govuk-table__row">
-            <td class="govuk-table__cell"><a href="">[Application title]</a></td>
-            <td class="govuk-table__cell">[XXXXXX]</td>
-            <td class="govuk-table__cell">[XX month XXXX],[Name]</td>
-          </tr>
-        </tbody>
-      </table>
 
+              <table class="govuk-table">
+                <thead class="govuk-table__head">
+                  <tr class="govuk-table__row">
+                      <th scope="col" class="govuk-table__header">Reference</th>
+                      <th scope="col" class="govuk-table__header">Qualification title</th>
+                      <th scope="col" class="govuk-table__header">Owner</th>
+                      <th scope="col" class="govuk-table__header">Status</th>
+                    </tr>
+                  </thead>
+                  <tbody class="govuk-table__body">
+                    <tr class="govuk-table__row">
+                    <td class="govuk-table__cell"><a href="">[XXXXXX]</a></td>
+                    <td class="govuk-table__cell"></td>
+                    <td class="govuk-table__cell">[Name]</td>
+                    <td class="govuk-table__cell">
+                      <strong class="govuk-tag govuk-tag--grey">
+                        Draft
+                      </strong>
+                    </td>                  
+                  </tr>
+                  <tr class="govuk-table__row">
+                    <td class="govuk-table__cell"><a href="">[XXXXXX]</a></td>
+                    <td class="govuk-table__cell">Design, Surveying and Planning for Construction</td>
+                    <td class="govuk-table__cell">[Name]</td>
+                    <td class="govuk-table__cell">
+                      <strong class="govuk-tag govuk-tag--light-blue">
+                        In review
+                      </strong>
+                    </td>                  
+                  </tr>
+                  <tr class="govuk-table__row">
+                    <td class="govuk-table__cell"><a href="">[XXXXXX]</a></td>
+                    <td class="govuk-table__cell">[Qualification title]</td>
+                    <td class="govuk-table__cell">[Name]</td>
+                    <td class="govuk-table__cell"><strong class="govuk-tag govuk-tag--light-blue">
+                      In review
+                    </strong></td>
+                  </tr>
+                  <tr class="govuk-table__row">
+                    <td class="govuk-table__cell"><a href="">[XXXXXX]</a></td>
+                    <td class="govuk-table__cell">[Qualification title]</td>
+                    <td class="govuk-table__cell">[Name]</td>
+                    <td class="govuk-table__cell"><strong class="govuk-tag govuk-tag--yellow">
+                      Information requested
+                    </strong></td>
+                  </tr>
+                  <tr class="govuk-table__row">
+                    <td class="govuk-table__cell"><a href="">[XXXXXX]</a></td>
+                    <td class="govuk-table__cell">[Qualification title]</td>
+                    <td class="govuk-table__cell">[Name]</td>
+                    <td class="govuk-table__cell"><strong class="govuk-tag govuk-tag--light-blue">
+                      In review
+                    </strong></td>
+                  </tr>
+                  <tr class="govuk-table__row">
+                    <td class="govuk-table__cell"><a href="">[XXXXXX]</a></td>
+                    <td class="govuk-table__cell">[Qualification title]</td>
+                    <td class="govuk-table__cell">[Name]</td>
+                    <td class="govuk-table__cell"><strong class="govuk-tag govuk-tag--light-blue">
+                      Pending moderation
+                    </strong></td>
+                  </tr>
+                  <tr class="govuk-table__row">
+                    <td class="govuk-table__cell"><a href="">[XXXXXX]</a></td>
+                    <td class="govuk-table__cell">[Qualification title]</td>
+                    <td class="govuk-table__cell">[Name]</td>
+                    <td class="govuk-table__cell"><strong class="govuk-tag govuk-tag--grey">
+                      Withdrawn
+                    </strong></td>
+                  </tr>
+                  <tr class="govuk-table__row">
+                    <td class="govuk-table__cell"><a href="">[XXXXXX]</a></td>
+                    <td class="govuk-table__cell">[Qualification title]</td>
+                    <td class="govuk-table__cell">[Name]</td>
+                    <td class="govuk-table__cell"><strong class="govuk-tag govuk-tag--green">
+                      Approved
+                    </strong></td>
+                  </tr>
+                  <tr class="govuk-table__row">
+                    <td class="govuk-table__cell"><a href="">[XXXXXX]</a></td>
+                    <td class="govuk-table__cell">[Qualification title]</td>
+                    <td class="govuk-table__cell">[Name]</td>
+                    <td class="govuk-table__cell"><strong class="govuk-tag govuk-tag--red">
+                      Rejected
+                    </strong></td>
+                  </tr>
+                  <tr class="govuk-table__row">
+                    <td class="govuk-table__cell"><a href="">[XXXXXX]</a></td>
+                    <td class="govuk-table__cell">[Qualification title]</td>
+                    <td class="govuk-table__cell">[Name]</td>
+                    <td class="govuk-table__cell"><strong class="govuk-tag govuk-tag--green">
+                      Approved
+                    </strong></td>
+                  </tr>
+                </tbody>
+              </table>
+           
+              <nav class="govuk-pagination" aria-label="Pagination">
+                <ul class="govuk-pagination__list">
+                  <li class="govuk-pagination__item govuk-pagination__item--current">
+                    <a class="govuk-link govuk-pagination__link" href="#" aria-label="Page 1" aria-current="page">
+                      1
+                    </a>
+                  </li>
+                  <li class="govuk-pagination__item">
+                    <a class="govuk-link govuk-pagination__link" href="#" aria-label="Page 2">
+                      2
+                    </a>
+                  </li>
+                  <li class="govuk-pagination__item">
+                    <a class="govuk-link govuk-pagination__link" href="#" aria-label="Page 3">
+                      3
+                    </a>
+                  </li>
+                </ul>
+                <div class="govuk-pagination__next" style="padding-right:620px">
+                  <a class="govuk-link govuk-pagination__link" href="#" rel="next">
+                    <span class="govuk-pagination__link-title">
+                      Next<span class="govuk-visually-hidden"> page</span>
+                    </span>
+                    <svg class="govuk-pagination__icon govuk-pagination__icon--next" xmlns="http://www.w3.org/2000/svg" height="13" width="15" aria-hidden="true" focusable="false" viewBox="0 0 15 13">
+                      <path d="m8.107-0.0078125-1.4136 1.414 4.2926 4.293h-12.986v2h12.896l-4.1855 3.9766 1.377 1.4492 6.7441-6.4062-6.7246-6.7266z"></path>
+                    </svg>
+                  </a>
+                </div>
+                <div class="govuk-form-group">
+                  <select class="govuk-select applications-per-page" id="sort" name="sort">
+                    <option value="published" selected>10</option>
+                    <option value="updated">25</option>
+                    <option value="views">50</option>
+                  </select>              
+                  <label class="govuk-label govuk-!-display-inline" for="sort">
+                    Applications per page </label>
+                </div>
+              </nav>
+
+          
+        </div>
     </div>
   </div>
 
