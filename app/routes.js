@@ -76,12 +76,12 @@ router.post('/teachdate', function (req, res) {
    
 router.post('/qualtype', function (req, res) {
         var qualtype = req.session.data['qualtype']
-        if (qualtype == 'yes'){
+        if (qualtype == 'aaq'){
          // Send user to next page
-         res.redirect('/ao/v2/qualtype')
+         res.redirect('/ao/v2/application-overview-aaq')
             } else {
           // Send user to ineligible page
-         res.redirect('/ao/v2/ineligible1')
+         res.redirect('/ao/v2/application-overview-tq')
              }
             
  })
