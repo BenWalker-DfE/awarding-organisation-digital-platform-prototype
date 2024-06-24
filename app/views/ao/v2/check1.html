@@ -25,36 +25,30 @@ Question page template – {{ serviceName }} – GOV.UK Prototype Kit
 
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-two-thirds">
-      <form action="/scope" method="post">
-          <fieldset class="govuk-fieldset" aria-describedby="scope-hint">
+      <form action="/england" method="post">
+          <fieldset class="govuk-fieldset" aria-describedby="england-hint">
             <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
               <span class="govuk-caption-xl">Eligibility</span>
               <h1 class="govuk-fieldset__heading">
-                    Is your qualification in scope for funding? 
-              </h1>
+                Is the qualification offered in England?              </h1>
             </legend>
-            <div id="scope-hint" class="govuk-hint">
-              <p>Check your qualification is in scope of this funding approval process.
-               </p>
-               <p>
-                <a href="https://www.gov.uk/guidance/qualifications-funding-approval-manual-2025-to-2026/qualifications-which-we-will-approve" rel="noreferrer noopener" target="_blank">The Qualifications Funding Approval Manual</a> (opens in new tab) lists the qualification types that will automatically be approved for funding.
-               </p>
-              </div>
-            <div class="govuk-radios govuk-radios--inline" data-module="govuk-radios">
+            
+            <div class="govuk-radios govuk-radios" data-module="govuk-radios">
                   <div class="govuk-radios__item">
-                    <input class="govuk-radios__input" id="scope" name="scope" type="radio" value="yes">
+                    <input class="govuk-radios__input" id="england" name="england" type="radio" value="yes">
                     <label class="govuk-label govuk-radios__label" for="yes">
-                      Yes
+                     Yes                    
                     </label>
                   </div>
                   <div class="govuk-radios__item">
-                    <input class="govuk-radios__input" id="scope" name="scope" type="radio" value="no">
+                    <input class="govuk-radios__input" id="england" name="england" type="radio" value="no">
                     <label class="govuk-label govuk-radios__label" for="no">
                       No
                     </label>
                   </div>
                 </div>
               </fieldset>
+
 
           
 
@@ -65,7 +59,6 @@ Question page template – {{ serviceName }} – GOV.UK Prototype Kit
         </button>
       </div>
     </div>
-
     </form>
   </div>
 </div>
