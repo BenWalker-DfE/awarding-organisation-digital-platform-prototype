@@ -14,10 +14,7 @@ Question page template – {{ serviceName }} – GOV.UK Prototype Kit
   html: 'This is a prototype. Content is likely to change rapidly.'
 }) }}
 
-{{ govukBackLink({
-  text: "Back",
-  href: "javascript:window.history.back()"
-}) }}
+
 
 {% endblock %}
 
@@ -25,19 +22,16 @@ Question page template – {{ serviceName }} – GOV.UK Prototype Kit
 
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-two-thirds">
-      <form action="/" method="post">
-
-
-
         <div class="govuk-form-group">
           <fieldset class="govuk-fieldset" aria-describedby="waste-hint">
             <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+              <span class="govuk-caption-xl">Qualification details</span>
               <h1 class="govuk-fieldset__heading">
-                What is the age range for the qualification?
+                For which age range is this qualification suitable?
               </h1>
             </legend>
         <p>
-          If you are seeking funding approval for 16 to 19, please select 16-18 and 18+. If the qualification is only suitable for 18-year-olds, please select 18+ only. If you are seeking funding approval for adults as well as 16 to 19, please select 19+ as well.
+          If you are seeking funding approval for 16 to 19, please select 16-18 <strong>and</strong> 18+. If the qualification is only suitable for 18-year-olds, please select 18+ only. If you are seeking funding approval for adults as well as 16 to 19, please select 19+ as well.
         </p>
             <div id="waste-hint" class="govuk-hint">
               Select all that apply.
@@ -67,13 +61,16 @@ Question page template – {{ serviceName }} – GOV.UK Prototype Kit
 
       
       <div class="govuk-button-group">
-       <a href="question3.html"> <button name="button" value="primary" type="submit" class="govuk-button govuk-!-margin-top-7" data-module="govuk-button">
-          Continue
+       <a href="question3-tq.html"> <button name="button" value="primary" type="submit" class="govuk-button" data-module="govuk-button">
+          Save and continue
         </button></a>
+
       </div>
+      <p class="govuk-body">
+        <a href="section-qual-details-tq.html" class="govuk-link">Return to summary</a>
+      </p>
     </div>
 
-    </form>
   </div>
 </div>
 

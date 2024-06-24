@@ -14,10 +14,7 @@ Question page template – {{ serviceName }} – GOV.UK Prototype Kit
   html: 'This is a prototype. Content is likely to change rapidly.'
 }) }}
 
-{{ govukBackLink({
-  text: "Back",
-  href: "javascript:window.history.back()"
-}) }}
+
 
 {% endblock %}
 
@@ -26,23 +23,28 @@ Question page template – {{ serviceName }} – GOV.UK Prototype Kit
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-two-thirds">
         <div class="govuk-form-group">
+          <span class="govuk-caption-xl">Qualification details</span>
           <h1 class="govuk-label-wrapper">
             <label class="govuk-label govuk-label--l" for="event-name">
-              What is the qualification title?
+              What is the proposed title of the qualification?
             </label>
           </h1>
           <div id="event-name-hint" class="govuk-hint">
-            [The qualification title must have...]
+            Please ensure qualification titles meet IfATE's titling requirements and appear as they will on the Ofqual register. Include the type of qualification. e.g. award, certificate, diploma. Guidance and examples can be found on <a href="" rel="noreferrer noopener" target="_blank">IfATE’s website</a> (opens in new tab). 
           </div>
           <input class="govuk-input" id="event-name" name="eventName" type="text" aria-describedby="event-name-hint">
         </div>         
 
       
       <div class="govuk-button-group">
-       <a href="question2.html"> <button name="button" value="primary" type="submit" class="govuk-button govuk-!-margin-top-7" data-module="govuk-button">
-          Continue
+       <a href="question2-tq.html"> <button name="button" value="primary" type="submit" class="govuk-button" data-module="govuk-button">
+          Save and continue
         </button></a>
+
       </div>
+      <p class="govuk-body">
+        <a href="section-qual-details-aaq.html" class="govuk-link">Return to summary</a>
+      </p>
     </div>
 
   </div>

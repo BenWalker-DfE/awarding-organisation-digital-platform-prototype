@@ -1,0 +1,58 @@
+{% extends "layouts/main-dfe.html" %}
+
+{% block pageTitle %}
+Question page template – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block beforeContent %}
+{% from "govuk/components/phase-banner/macro.njk" import govukPhaseBanner %}
+
+{{ govukPhaseBanner({
+  tag: {
+    text: "Prototype"
+  },
+  html: 'This is a prototype. Content is likely to change rapidly.'
+}) }}
+
+
+
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    
+
+        <div class="govuk-form-group">
+          <fieldset class="govuk-fieldset" role="group" aria-describedby="passport-issued-hint">
+            <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+              <span class="govuk-caption-xl">Qualification details</span>
+              <h1 class="govuk-fieldset__heading">
+                Is the qualification’s level and SSA within your scope of recognition?
+              </h1>
+            </legend>
+           
+ 
+          </fieldset>
+        </div>
+
+
+              
+    
+
+      
+      <div class="govuk-button-group">
+       <a href="section-qual-details-aaq-updated.html"> <button name="button" value="primary" type="submit" class="govuk-button" data-module="govuk-button">
+          Save and continue
+        </button></a>
+
+      </div>
+      <p class="govuk-body">
+        <a href="section-qual-details-aaq.html" class="govuk-link">Return to summary</a>
+      </p>
+    </div>
+  </div>
+</div>
+
+{% endblock %}
