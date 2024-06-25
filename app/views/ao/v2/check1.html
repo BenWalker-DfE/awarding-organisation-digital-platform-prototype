@@ -25,25 +25,26 @@ Question page template – {{ serviceName }} – GOV.UK Prototype Kit
 
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-two-thirds">
-      <form action="/england" method="post">
-          <fieldset class="govuk-fieldset" aria-describedby="england-hint">
+      <form action="/qualtype" method="post">
+          <fieldset class="govuk-fieldset" aria-describedby="scope-hint">
             <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
               <span class="govuk-caption-xl">Eligibility</span>
               <h1 class="govuk-fieldset__heading">
-                Is the qualification offered in England?              </h1>
+                    What is the qualification type? 
+              </h1>
             </legend>
             
             <div class="govuk-radios govuk-radios" data-module="govuk-radios">
                   <div class="govuk-radios__item">
-                    <input class="govuk-radios__input" id="england" name="england" type="radio" value="yes">
-                    <label class="govuk-label govuk-radios__label" for="yes">
-                     Yes                    
+                    <input class="govuk-radios__input" id="qualtype" name="qualtype" type="radio" value="aaq">
+                    <label class="govuk-label govuk-radios__label" for="aaq">
+                      Alternative academic qualification
                     </label>
                   </div>
                   <div class="govuk-radios__item">
-                    <input class="govuk-radios__input" id="england" name="england" type="radio" value="no">
-                    <label class="govuk-label govuk-radios__label" for="no">
-                      No
+                    <input class="govuk-radios__input" id="qualtype" name="qualtype" type="radio" value="tq">
+                    <label class="govuk-label govuk-radios__label" for="tq">
+                      Technical qualification
                     </label>
                   </div>
                 </div>
