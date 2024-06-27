@@ -10,8 +10,10 @@
     <div class="govuk-grid-column-two-thirds">
 
       {{ govukPanel({
-        titleText: "Application complete",
-        html: "Your reference number<br><strong>[HDJ2123F]</strong>"
+        titleText: "Application has been submitted",
+        html: "Qualification funding applied for [Title] 
+           
+        Submission ID [ID]"
       }) }}
 
       <p>
@@ -23,18 +25,19 @@
       </h2>
 
       <p>
-        We've sent your application to [...].
+        Once we've reviewed your application, we'll email the outcome to you. If any of your answers need clarification, we'll send you a notification by email.
       </p>
 
-      <p>
-        They will contact you either to [confirm your registration, or to ask for more information].
-      </p>
       <p>
         <a href="#">
-          What did you think of this service?
-        </a> (takes 30 seconds)
+          What did you think of this service?</a> (takes 60 seconds)
       </p>
 
+      <div class="govuk-button-group">
+        <button name="button" value="primary" type="submit" class="govuk-button" data-module="govuk-button" href="dashboard-updated.html">
+          Return to Applications
+        </button>
+      </div>
 
     </div>
   </div>
