@@ -78,10 +78,10 @@ router.post('/teachdate', function (req, res) {
      var teachdate = req.session.data['teachdate']
      if (teachdate == 'yes'){
          // Send user to next page
-         res.redirect('/ao/v2/ineligible-teachdate')
+         res.redirect('/ao/v2/check4-aaq')
       } else {
          // Send user to ineligible page
-        res.redirect('/ao/v2/check4-aaq')
+        res.redirect('/ao/v2/ineligible-teachdate')
       }
         
    })

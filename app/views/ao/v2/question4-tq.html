@@ -22,34 +22,51 @@ Question page template – {{ serviceName }} – GOV.UK Prototype Kit
 
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-two-thirds">
-    
-
         <div class="govuk-form-group">
-          <fieldset class="govuk-fieldset" role="group" aria-describedby="passport-issued-hint">
+          <fieldset class="govuk-fieldset">
             <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
               <span class="govuk-caption-xl">Qualification details</span>
               <h1 class="govuk-fieldset__heading">
-                Is the qualification’s level and SSA within your scope of recognition?
+                Are the qualifications level and SSA within your awarding body's scope of recognition?  
               </h1>
             </legend>
-           
- 
-          </fieldset>
-        </div>
-
-
-              
-    
-
+            <div id="changedName-hint" class="govuk-hint">
+              <p>Further information can be found by following the link to <a href="">Ofqual's Scope of Recognition</a>. </p>
+            </p>Please check your scope of recognition before submitting qualifications for funding approval and, if necessary, apply to Ofqual to extend your scope of recognition before submitting a qualification for funding approval.</p>
+            </div>
+            <div class="govuk-radios" data-module="govuk-radios">
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="whereDoYouLive" name="whereDoYouLive" type="radio" value="england">
+                <label class="govuk-label govuk-radios__label" for="whereDoYouLive">
+                  Yes
+                </label>
+              </div>
+              <div class="govuk-radios" data-module="govuk-radios">
+                <div class="govuk-radios__item">
+                  <input class="govuk-radios__input" id="whereDoYouLive" name="whereDoYouLive" type="radio" value="england">
+                  <label class="govuk-label govuk-radios__label" for="whereDoYouLive">
+                    No
+                  </label>
+                </div>
+                <div class="govuk-radios" data-module="govuk-radios">
+                  <div class="govuk-radios__item">
+                    <input class="govuk-radios__input" id="whereDoYouLive" name="whereDoYouLive" type="radio" value="england">
+                    <label class="govuk-label govuk-radios__label" for="whereDoYouLive">
+                      Pending approval
+                    </label>
+                  </div>
+                </div>
+              </fieldset>
+            </div>
       
-      <div class="govuk-button-group">
+      <div class="govuk-button-group govuk-!-margin-top-5">
        <a href="section-qual-details-tq-updated.html"> <button name="button" value="primary" type="submit" class="govuk-button" data-module="govuk-button">
           Save and continue
         </button></a>
 
       </div>
       <p class="govuk-body">
-        <a href="section-qual-details-tq.html" class="govuk-link">Return to summary</a>
+        <a href="section-qual-details-aaq.html" class="govuk-link">Return to summary</a>
       </p>
     </div>
   </div>
