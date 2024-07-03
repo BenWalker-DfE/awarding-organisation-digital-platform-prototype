@@ -1,0 +1,45 @@
+{% extends "layouts/main-dfe.html" %}
+
+{% block pageTitle %}
+  Content page template – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block beforeContent %}
+{% from "govuk/components/phase-banner/macro.njk" import govukPhaseBanner %}
+
+{{ govukPhaseBanner({
+  tag: {
+    text: "Prototype"
+  },
+  html: 'This is a prototype. Content is likely to change rapidly.'
+}) }}
+
+{{ govukBackLink({
+  text: "Back",
+  href: "javascript:window.history.back()"
+}) }}
+{% endblock %}
+
+{% block content %}
+<div class="govuk-width-container">
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      <div class="govuk-panel govuk-panel--confirmation">
+        <h1 class="govuk-panel__title">
+          Request sent
+        </h1>
+        
+      </div>
+      <p class="govuk-body">An email has been sent to the awarding organisation.</p>
+      <h2 class="govuk-heading-m">What do you want to do next?</h2>
+      <p class="govuk-body">
+        <a href="application-overview-updated2.html" class="govuk-link">Return to application overview</a>
+      </p>
+    </div>
+  </div>
+</div>
+        
+
+
+
+{% endblock %}

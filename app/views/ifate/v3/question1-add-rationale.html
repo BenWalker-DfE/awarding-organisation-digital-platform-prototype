@@ -1,0 +1,82 @@
+{% extends "layouts/main-dfe.html" %}
+
+{% block pageTitle %}
+  Content page template – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block beforeContent %}
+{% from "govuk/components/phase-banner/macro.njk" import govukPhaseBanner %}
+
+{{ govukPhaseBanner({
+  tag: {
+    text: "Prototype"
+  },
+  html: 'This is a prototype. Content is likely to change rapidly.'
+}) }}
+
+{{ govukBackLink({
+  text: "Back",
+  href: "javascript:window.history.back()"
+}) }}
+{% endblock %}
+
+{% block content %}
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    <span class="govuk-caption-l">Content coverage</span>
+<h1 class="govuk-heading-xl">
+  Add rationale for the outcome given to 1: Submission details match the qualification structure spreadsheet
+</h1>
+
+  <hr class="govuk-section-break govuk-section-break--xl govuk-section-break--visible">
+  <h2 class="govuk-heading-l">
+    Add rationale
+  </h2>
+
+  <details class="govuk-details govuk-!-padding-bottom-3">
+    <summary class="govuk-details__summary">
+      <span class="govuk-details__summary-text">
+        View assessment criteria
+      </span>
+    </summary>
+    <div class="govuk-details__text">
+      [Assessment guidance]
+    </details>
+
+    <h2 class="govuk-heading-m">
+      Outcome
+    </h2>
+    <p>
+      <strong class="govuk-tag govuk-tag--yellow">
+        Request feedback
+      </strong>
+    </p>
+
+    <div class="govuk-form-group">
+      <h3 class="govuk-label-wrapper">
+        <label class="govuk-label govuk-label--m" for="more-detail">
+          Rationale for outcome
+        </label>
+      </h3>
+
+      <div id="more-detail-hint" class="govuk-hint">
+        This is an internal note.
+      </div>
+      <textarea class="govuk-textarea" id="more-detail" name="moreDetail" rows="5" aria-describedby="more-detail-hint"></textarea>
+    </div>
+
+  <div class="govuk-button-group">
+    <a href="application-questions-updated.html"><button type="submit" class="govuk-button" data-module="govuk-button">
+      Save and review
+    </button></a>
+  </div>
+
+</div>
+  <div class="govuk-grid-column-one-third">
+    <h2 class="govuk-heading-m">Related links</h1> 
+      <p><a href="application-form.html" target="_blank">Application form</a> (opens in new tab)
+      </p>
+
+    </div>
+</div>
+{% endblock %}
