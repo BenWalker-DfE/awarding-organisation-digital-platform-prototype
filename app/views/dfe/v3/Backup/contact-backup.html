@@ -28,7 +28,6 @@
   Create message
 </h1>
   
-<p class="govuk-body">This message will be sent to the primary contact at the awarding organisation.</p>
 <dl class="govuk-summary-list">
       
       <div class="govuk-summary-list__row">
@@ -48,19 +47,23 @@
           [Title]
         </dd>
       </div>
-
-      <div class="govuk-summary-list__row">
-        <dt class="govuk-summary-list__key">
-          Send message to
-        </dt>
-        <dd class="govuk-summary-list__value">
-          [Name of primary contact]
-        </dd>
-      </div>
 </dl>
   
 
 <div class="govuk-form-group">
+
+  <h2 class="govuk-label-wrapper">
+  <label class="govuk-label govuk-label--m" for="sort">
+    Send message to
+  </label>
+  </h2>
+  <select class="govuk-select govuk-!-margin-bottom-4" id="sort" name="sort">
+    <option value="published">[First name Last name]</option>
+    <option value="updated" selected>[First name Last name]</option>
+    <option value="views">[First name Last name]</option>
+    <option value="comments">[First name Last name]</option>
+  </select>
+
   <h2 class="govuk-label-wrapper">
     <label class="govuk-label govuk-label--m" for="account-number">
       Enter subject line
@@ -92,25 +95,44 @@ This will appear in the email subject line  </div>
 </div>
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-one-third">
-    <h2 class="govuk-heading-m">Related checks</h2> 
-    <p class="govuk-body">Checks open in a new tab.</p>
+    <h2 class="govuk-heading-m">Notes</h2> 
 
-
-    <p class="govuk-body"><a href=""><strong>Check:</strong> Awarding organisation information</a></p> 
+    <div class="govuk-checkboxes__item govuk-checkboxes--small govuk-!-margin-bottom-4">
+      <input class="govuk-checkboxes__input" id="waste-3" name="waste" type="checkbox" value="farm">
+      <label class="govuk-label govuk-checkboxes__label" for="waste-3">
+        Hide checks that 'Passed'
+      </label>
+    </div>
+    <p class="govuk-body"><strong>Check:</strong>  Awarding organisation information</p> 
     <p class="govuk-body"><strong>Outcome:</strong>
-     <strong class="govuk-tag govuk-tag--yellow govuk-!-margin-bottom-3">
+     <strong class="govuk-tag govuk-tag--yellow">
       Need clarification
     </strong>
-    </p>
-   
-    <p class="govuk-body"><a href=""><strong>Check:</strong> HEP letter</a></p> 
-    <p class="govuk-body"><strong>Outcome:</strong>
-      <strong class="govuk-tag govuk-tag--green">
-        Pass
-    </strong>
-    </p>
+  </p>
   
-   
+  <p class="govuk-body"><strong>Note by:</strong> [Name], 3 July 2024</p> 
+      <p class="govuk-body">
+    AO has not sent role of primary contact.
+     </p>
+     <button type="submit" class="govuk-button govuk-button--secondary" data-module="govuk-button">
+      Copy note to message
+    </button>
+    <hr class="govuk-section-break govuk-section-break--visible govuk-section-break--s">
+
+    <p class="govuk-body govuk-!-margin-top-4"><strong>Check:</strong> HEP letter</p> 
+    <p class="govuk-body"><strong>Outcome:</strong>
+     <strong class="govuk-tag govuk-tag--green">
+      Pass
+    </strong>
+  </p>
+  
+  <p class="govuk-body"><strong>Note by:</strong> [Name], 3 July 2024</p> 
+      <p class="govuk-body">
+    Info as expected.
+     </p>
+     <button type="submit" class="govuk-button govuk-button--secondary" data-module="govuk-button">
+      Copy note to message
+    </button>
     </div>
 </div>
 </div>
