@@ -1,4 +1,4 @@
-{% extends "layouts/main-dfe.html" %}
+{% extends "layouts/main-dfe-internal.html" %}
 
 {% block pageTitle %}
   Content page template – {{ serviceName }} – GOV.UK Prototype Kit
@@ -18,163 +18,297 @@
 {% endblock %}
 
 {% block content %}
-  
+<h1 class="govuk-heading-xl">
+  Applications
+ </h1>
+ <div class="govuk-grid-row"> 
+  <div class="govuk-grid-column-one-third filter-border">
+
+  <aside role="complementary">
+     <h3 class="govuk-heading-m">
+      Filters
+     </h3>
+
+     <div class="govuk-form-group">
+      <label class="govuk-label govuk-label--s search-ukprn" for="choose-provider">
+      Awarding organisation
+       </label>
+
+        
+       <select class="govuk-select search-provider-name" name="choose-provider" id="choose-provider">
+        <option value="empty" aria-label="Please enter a provider name"></option>
+        <option value="00000000">City and Guilds</option>
+        <option value="10000536">International Baccalaureate Organisation</option>
+        <option value="territory:bat">Institute of the Motor Industry</option>
+        <option value="territory:cap">NCFE</option>
+        <option value="country:du">NOCN</option>
+        ...
+        <option value="country:vi">OCR</option>
+        <option value="country:wi">Pearson</option>
+      </select>
+
+        <label class="govuk-label govuk-label--s search-ukprn" for="choose-provider" style="padding-top: 20px">
+          Assigned to
+           </label>
+                
+           <select class="govuk-select search-provider-name" name="choose-provider" id="choose-provider">
+            <option value="empty" aria-label="Please enter a provider name"></option>
+            <option value="hollie">Hollie Duncan</option>
+            <option value="asma">Asma Iqbal</option>
+            <option value="rianne:bat">Rianne Liem</option>
+            <option value="abdul:cap">Abdul Mansour</option>
+            <option value="keira:du">Keira Scott</option>
+            <option value="lewis:vi">Lewis Metcalfe</option>
+            <option value="zak:wi">Zak Sharp</option>
+            <option value="lee:zen">Lee Shen</option>
+            </select>
+
+<script src="/app/assets/javascripts/application.js"></script>
+      <label class="govuk-label govuk-label--s search-ukprn" for="choose-route" style="padding-top: 20px">
+        Route
+         </label>
+              
+         <select class="govuk-select" name="route" id="id-route">
+          <option value="empty" aria-label="Select a route"></option>
+          <option value="agriculture">Agriculture, environmental and animal care</option>
+          <option value="business">Business and administration</option>
+          <option value="">Care services</option>
+          <option value="">Catering and hospitality</option>
+          <option value="">Construction and the built environment</option>
+          <option value="">Creative and design</option>
+          <option value="">Digital</option>
+          <option value="">Education and early years</option>
+          <option value="">Engineering and manufacturing</option>
+          <option value="">Hair and beauty</option>
+          <option value="">Health and science</option>
+          <option value="">Legal, finance and accounting</option>
+          <option value="">Protective services</option>
+          <option value="">Sales, marketing and procurement</option>
+          <option value="">Transport and logistics</option>
+          </select>
 
 
-       <h1 class="govuk-heading-xl">
-        Applications
-       </h1>
+          <label class="govuk-label govuk-label--s" for="standard" style="padding-top: 20px">
+            Occupational standard
+             </label>
+                  
+             <select class="govuk-select" name="standard" id="id-standard">
+              <option value="empty" aria-label="Select a standard"></option>
+              <option value="1">ST0397: Animal care and welfare assistant - Animal Interaction and Handling</option>
+              <option value="2">ST0397: Animal care and welfare assistant - Breeding</option>
+              <option value="3">ST0239: HR support</option>
+              <option value="4">ST0562: Learning and development practitioner</option>
+              <option value="5">ST0867: Playworker</option>
+              <option value="6">ST1030: Safeguarding officer</option>
+              </select>
+
       
-       <button type="submit" class="govuk-button govuk-button--secondary" data-module="govuk-button">
-        Assign to reviewers
-      </button>
-
-              <table class="govuk-table">
-                <thead class="govuk-table__head">
-                  <tr class="govuk-table__row">
-                      <th scope="col" class="govuk-table__header">Reference</th>
-                      <th scope="col" class="govuk-table__header">Awarding organisation</th>
-                      <th scope="col" class="govuk-table__header">Reviewer 1</th>
-                      <th scope="col" class="govuk-table__header">Reviewer 2</th>
-                      <th scope="col" class="govuk-table__header">Status</th>
-                    </tr>
-                  </thead>
-                  <tbody class="govuk-table__body">
-                    <tr class="govuk-table__row">
-                    <td class="govuk-table__cell"><a href="">[XXXXXX]</a></td>
-                    <td class="govuk-table__cell">Pearson Edexcel</td>
-                    <td class="govuk-table__cell"></td>
-                    <td class="govuk-table__cell"></td>
-                    <td class="govuk-table__cell">
-                      
-                    </td>                  
-                  </tr>
-                  <tr class="govuk-table__row">
-                    <td class="govuk-table__cell"><a href="">[XXXXXX]</a></td>
-                    <td class="govuk-table__cell">Pearson Edexcel</td>
-                    <td class="govuk-table__cell"></td>
-                    <td class="govuk-table__cell">[Reviewer name]</td>
-                    <td class="govuk-table__cell">
-                      <strong class="govuk-tag govuk-tag--light-blue">
-                        In review
-                      </strong>
-                    </td>                  
-                  </tr>
-                  <tr class="govuk-table__row">
-                    <td class="govuk-table__cell"><a href="">[XXXXXX]</a></td>
-                    <td class="govuk-table__cell">City & Guilds</td>
-                    <td class="govuk-table__cell">[Reviewer name]</td>
-                    <td class="govuk-table__cell">[Reviewer name]</td>
-                    <td class="govuk-table__cell"><strong class="govuk-tag govuk-tag--light-blue">
-                      In review
-                    </strong></td>
-                  </tr>
-                  <tr class="govuk-table__row">
-                    <td class="govuk-table__cell"><a href="">[XXXXXX]</a></td>
-                    <td class="govuk-table__cell">City & Guilds</td>
-                    <td class="govuk-table__cell">[Reviewer name]</td>
-                    <td class="govuk-table__cell">[Reviewer name]</td>
-                    <td class="govuk-table__cell"><strong class="govuk-tag govuk-tag--yellow">
-                      Pending input
-                    </strong></td>
-                  </tr>
-                  <tr class="govuk-table__row">
-                    <td class="govuk-table__cell"><a href="">[XXXXXX]</a></td>
-                    <td class="govuk-table__cell">City & Guilds</td>
-                    <td class="govuk-table__cell">[Reviewer name]</td>
-                    <td class="govuk-table__cell">[Reviewer name]</td>
-                    <td class="govuk-table__cell"><strong class="govuk-tag govuk-tag--green">
-                      Feedback received
-                    </strong></td>
-                  </tr>
-                  <tr class="govuk-table__row">
-                    <td class="govuk-table__cell"><a href="">[XXXXXX]</a></td>
-                    <td class="govuk-table__cell">City & Guilds</td>
-                    <td class="govuk-table__cell">[Reviewer name]</td>
-                    <td class="govuk-table__cell">[Reviewer name]</td>
-                    <td class="govuk-table__cell"><strong class="govuk-tag govuk-tag--light-blue">
-                      In moderation
-                    </strong></td>
-                  </tr>
-                  <tr class="govuk-table__row">
-                    <td class="govuk-table__cell"><a href="">[XXXXXX]</a></td>
-                    <td class="govuk-table__cell">City & Guilds</td>
-                    <td class="govuk-table__cell">[Reviewer name]</td>
-                    <td class="govuk-table__cell">[Reviewer name]</td>
-                    <td class="govuk-table__cell"><strong class="govuk-tag govuk-tag--grey">
-                      Withdrawn
-                    </strong></td>
-                  </tr>
-                  <tr class="govuk-table__row">
-                    <td class="govuk-table__cell"><a href="">[XXXXXX]</a></td>
-                    <td class="govuk-table__cell">City & Guilds</td>
-                    <td class="govuk-table__cell">[Reviewer name]</td>
-                    <td class="govuk-table__cell">[Reviewer name]</td>
-                    <td class="govuk-table__cell"><strong class="govuk-tag govuk-tag--green">
+              <fieldset class="govuk-fieldset">
+                <legend class="govuk-fieldset__legend govuk-fieldset__legend--s govuk-!-margin-bottom-0">
+                  <h4 class="govuk-fieldset__heading govuk-heading-s govuk-!-margin-top-5">
+                    Status
+                  </h4>
+                </legend>
+                <div class="govuk-checkboxes govuk-checkboxes--small" data-module="govuk-checkboxes">
+                  <div class="govuk-checkboxes__item">
+                    <input class="govuk-checkboxes__input" id="organisation" name="organisation" type="checkbox" value="candg">
+                    <label class="govuk-label govuk-checkboxes__label" for="organisation">
+                      Unassigned
+                    </label>
+                  </div>
+                  <div class="govuk-checkboxes__item">
+                    <input class="govuk-checkboxes__input" id="organisation-2" name="organisation" type="checkbox" value="ncfe">
+                    <label class="govuk-label govuk-checkboxes__label" for="organisation-2">
+                      Submission check
+                    </label>
+                  </div>
+                  <div class="govuk-checkboxes__item">
+                    <input class="govuk-checkboxes__input" id="organisation-2" name="organisation" type="checkbox" value="ncfe">
+                    <label class="govuk-label govuk-checkboxes__label" for="organisation-2">
+                      Review
+                    </label>
+                  </div>
+                  <div class="govuk-checkboxes__item">
+                    <input class="govuk-checkboxes__input" id="organisation-2" name="organisation" type="checkbox" value="ncfe">
+                    <label class="govuk-label govuk-checkboxes__label" for="organisation-2">
+                      Moderation
+                    </label>
+                  </div>
+                  <div class="govuk-checkboxes__item">
+                    <input class="govuk-checkboxes__input" id="organisation-3" name="organisation" type="checkbox" value="pearson">
+                    <label class="govuk-label govuk-checkboxes__label" for="organisation-3">
                       Approved
-                    </strong></td>
-                  </tr>
-                  <tr class="govuk-table__row">
-                    <td class="govuk-table__cell"><a href="">[XXXXXX]</a></td>
-                    <td class="govuk-table__cell">City & Guilds</td>
-                    <td class="govuk-table__cell">[Reviewer name]</td>
-                    <td class="govuk-table__cell">[Reviewer name]</td>
-                    <td class="govuk-table__cell"><strong class="govuk-tag govuk-tag--red">
+                    </label>
+                  </div>
+                  <div class="govuk-checkboxes__item">
+                    <input class="govuk-checkboxes__input" id="organisation-3" name="organisation" type="checkbox" value="pearson">
+                    <label class="govuk-label govuk-checkboxes__label" for="organisation-3">
                       Rejected
-                    </strong></td>
-                  </tr>
-                  <tr class="govuk-table__row">
-                    <td class="govuk-table__cell"><a href="">[XXXXXX]</a></td>
-                    <td class="govuk-table__cell">Pearson Edexcel</td>
-                    <td class="govuk-table__cell">[Reviewer name]</td>
-                    <td class="govuk-table__cell">[Reviewer name]</td>
-                    <td class="govuk-table__cell"><strong class="govuk-tag govuk-tag--green">
-                      Approved
-                    </strong></td>
-                  </tr>
-                </tbody>
-              </table>
-           
-              <nav class="govuk-pagination" aria-label="Pagination">
-                <ul class="govuk-pagination__list">
-                  <li class="govuk-pagination__item govuk-pagination__item--current">
-                    <a class="govuk-link govuk-pagination__link" href="#" aria-label="Page 1" aria-current="page">
-                      1
-                    </a>
-                  </li>
-                  <li class="govuk-pagination__item">
-                    <a class="govuk-link govuk-pagination__link" href="#" aria-label="Page 2">
-                      2
-                    </a>
-                  </li>
-                  <li class="govuk-pagination__item">
-                    <a class="govuk-link govuk-pagination__link" href="#" aria-label="Page 3">
-                      3
-                    </a>
-                  </li>
-                </ul>
-                <div class="govuk-pagination__next" style="padding-right:620px">
-                  <a class="govuk-link govuk-pagination__link" href="#" rel="next">
-                    <span class="govuk-pagination__link-title">
-                      Next<span class="govuk-visually-hidden"> page</span>
-                    </span>
-                    <svg class="govuk-pagination__icon govuk-pagination__icon--next" xmlns="http://www.w3.org/2000/svg" height="13" width="15" aria-hidden="true" focusable="false" viewBox="0 0 15 13">
-                      <path d="m8.107-0.0078125-1.4136 1.414 4.2926 4.293h-12.986v2h12.896l-4.1855 3.9766 1.377 1.4492 6.7441-6.4062-6.7246-6.7266z"></path>
-                    </svg>
-                  </a>
+                    </label>
+                  </div>
+                  <div class="govuk-checkboxes__item">
+                    <input class="govuk-checkboxes__input" id="organisation-3" name="organisation" type="checkbox" value="pearson">
+                    <label class="govuk-label govuk-checkboxes__label" for="organisation-3">
+                      Withdrawn
+                    </label>
+                  </div>
                 </div>
-                <div class="govuk-form-group">
-                  <select class="govuk-select applications-per-page" id="sort" name="sort">
-                    <option value="published" selected>10</option>
-                    <option value="updated">25?</option>
-                    <option value="views">50?</option>
-                  </select>              
-                  <label class="govuk-label govuk-!-display-inline" for="sort">
-                    Applications per page </label>
-                </div>
-              </nav>
+              </fieldset>
 
-          
+
+    <div class="govuk-button-group" style="padding-top: 30px">
+      <button class="govuk-button ukprn-search-button" data-module="govuk-button">
+      Apply filters
+      </button>
+      <button class="govuk-button govuk-button--secondary ukprn-search-clear-button" data-module="govuk-button">
+      Clear filters
+      </button>
+    </div>
+  </div>
+  </aside>
+
+
+  </div>
+
+  <div class="govuk-grid-column-two-thirds">
+
+    <aside role="complementary"> 
+      <div class="record-count-v4">
+        <h2 class="govuk-heading-m">
+            Viewing 1 - 10 of 134 applications
+          </h2>
         </div>
+       <table class="govuk-table">
+        <thead class="govuk-table__head">
+          <tr class="govuk-table__row">
+              <th scope="col" class="govuk-table__header govuk-!-width-one-half">Qualification title</th>
+              <th scope="col" class="govuk-table__header govuk-!-width-one-quarter">Awarding organisation</th>
+              <th scope="col" class="govuk-table__header govuk-!-width-one-quarter" >Status</th>
+            </tr>
+          </thead>
+          <tbody class="govuk-table__body">
+          <tr class="govuk-table__row">
+            <td class="govuk-table__cell"><a href="application-overview.html">City & Guilds Level 3 Technical Occupational Entry for Teaching Assistants (Certificate)</a></td>
+            <td class="govuk-table__cell">City & Guilds</td>
+            <td class="govuk-table__cell">
+              <strong class="govuk-tag govuk-tag--grey govuk-!-margin-bottom-2">
+                Unassigned
+              </strong>
+              <br>
+              <a href="">Assign</a>
+            </td>
+          </tr>
 
+          <tr class="govuk-table__row">
+            <td class="govuk-table__cell"><a href="">IMI Level 3 Technical Specialist in Diagnosing, Rectifying and Recalibrating Advanced Driver Assistance System (ADAS) Components (Award)</a></td>
+            <td class="govuk-table__cell">Institute of Motor Industry</td>
+            <td class="govuk-table__cell"><strong class="govuk-tag govuk-tag--light-blue">
+              Submission check
+            </strong></td>
+          </tr>
+          <tr class="govuk-table__row">
+            <td class="govuk-table__cell"><a href="">NCFE Level 3 Technical Occupational Entry for the Data Technician (Diploma)</a></td>
+            <td class="govuk-table__cell">NCFE</td>
+            <td class="govuk-table__cell"><strong class="govuk-tag govuk-tag--grey">
+              Withdrawn
+            </strong></td>
+          </tr>
+          <tr class="govuk-table__row">
+            <td class="govuk-table__cell"><a href="">NOCN Level 3 Technical Occupational Entry for Civil Engineering Technicians (Diploma)</a></td>
+            <td class="govuk-table__cell">NOCN</td>
+            <td class="govuk-table__cell"><strong class="govuk-tag govuk-tag--green">
+              Approved
+            </strong></td>
+          </tr>
+          <tr class="govuk-table__row">
+            <td class="govuk-table__cell"><a href="">Pearson BTEC Level 3 Technical Occupational Entry for Cyber Security Technician (Diploma)</a></td>
+            <td class="govuk-table__cell">Pearson Edexcel</td>
+            <td class="govuk-table__cell"><strong class="govuk-tag govuk-tag--red govuk-!-margin-bottom-3">
+              Rejected
+            </strong>
+           </td>
+          </tr>
+          <tr class="govuk-table__row">
+            <td class="govuk-table__cell"><a href="">[Qualification title]</a></td>
+            <td class="govuk-table__cell">Pearson Edexcel</td>
+            <td class="govuk-table__cell"><strong class="govuk-tag govuk-tag--green">
+              Approved
+            </strong></td>
+          </tr>
+          <tr class="govuk-table__row">
+            <td class="govuk-table__cell"><a href="">[Qualification title]</a></td>
+            <td class="govuk-table__cell">Pearson Edexcel</td>
+            <td class="govuk-table__cell"><strong class="govuk-tag govuk-tag--green">
+              Approved
+            </strong></td>
+          </tr>
+          <tr class="govuk-table__row">
+            <td class="govuk-table__cell"><a href="">[Qualification title]</a></td>
+            <td class="govuk-table__cell">Pearson Edexcel</td>
+            <td class="govuk-table__cell"><strong class="govuk-tag govuk-tag--green">
+              Approved
+            </strong></td>
+          </tr>
+          <tr class="govuk-table__row">
+            <td class="govuk-table__cell"><a href="">[Qualification title]</a></td>
+            <td class="govuk-table__cell">Pearson Edexcel</td>
+            <td class="govuk-table__cell"><strong class="govuk-tag govuk-tag--green">
+              Approved
+            </strong></td>
+          </tr>
+          <tr class="govuk-table__row">
+            <td class="govuk-table__cell"><a href="">[Qualification title]</a></td>
+            <td class="govuk-table__cell">Pearson Edexcel</td>
+            <td class="govuk-table__cell"><strong class="govuk-tag govuk-tag--green">
+              Approved
+            </strong></td>
+          </tr>
+        </tbody>
+      </table>   
+      <nav class="govuk-pagination" aria-label="Pagination">
+        <ul class="govuk-pagination__list">
+          <li class="govuk-pagination__item govuk-pagination__item--current">
+            <a class="govuk-link govuk-pagination__link" href="#" aria-label="Page 1" aria-current="page">
+              1
+            </a>
+          </li>
+          <li class="govuk-pagination__item">
+            <a class="govuk-link govuk-pagination__link" href="#" aria-label="Page 2">
+              2
+            </a>
+          </li>
+          <li class="govuk-pagination__item">
+            <a class="govuk-link govuk-pagination__link" href="#" aria-label="Page 3">
+              3
+            </a>
+          </li>
+        </ul>
+        <div class="govuk-pagination__next" style="padding-right:300px">
+          <a class="govuk-link govuk-pagination__link" href="#" rel="next">
+            <span class="govuk-pagination__link-title">
+              Next<span class="govuk-visually-hidden"> page</span>
+            </span>
+            <svg class="govuk-pagination__icon govuk-pagination__icon--next" xmlns="http://www.w3.org/2000/svg" height="13" width="15" aria-hidden="true" focusable="false" viewBox="0 0 15 13">
+              <path d="m8.107-0.0078125-1.4136 1.414 4.2926 4.293h-12.986v2h12.896l-4.1855 3.9766 1.377 1.4492 6.7441-6.4062-6.7246-6.7266z"></path>
+            </svg>
+          </a>
+        </div>
+        <div class="govuk-form-group">
+          <select class="govuk-select applications-per-page" id="sort" name="sort">
+            <option value="published" selected>10</option>
+            <option value="updated">25</option>
+            <option value="views">50</option>
+          </select>              
+          <label class="govuk-label govuk-!-display-inline" for="sort">
+            Applications per page </label>
+        </div>
+      </nav>
+  
+    </aside>
+  
+  
+    </div>
+
+</div>
+        
 {% endblock %}
