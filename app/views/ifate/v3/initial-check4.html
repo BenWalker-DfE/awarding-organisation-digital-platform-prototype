@@ -1,4 +1,4 @@
-{% extends "layouts/main-dfe.html" %}
+{% extends "layouts/main-dfe-internal.html" %}
 
 {% block pageTitle %}
   Content page template – {{ serviceName }} – GOV.UK Prototype Kit
@@ -24,38 +24,71 @@
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-two-thirds">
     <span class="govuk-caption-l">Submission check</span>
+<h1 class="govuk-heading-xl">
+  Qualification specification
+</h1>
 
-  <h1 class="govuk-heading-xl">
-   Request further information: Ofqual Scope of Recognition (SoR)
-  </h1>
-  
-  
-      <h2 class="govuk-heading-m">
-        Status
-      </h2>
-      <p>
-        <strong class="govuk-tag govuk-tag--yellow">
-        Need clarification        
-        </strong>
-      </p>
-  
-    <div class="govuk-form-group">
-      <h3 class="govuk-label-wrapper">
-        <label class="govuk-label govuk-label--m" for="more-detail">
-          Request for more information
-        </label>
-      </h3>
-      <div id="more-detail-hint" class="govuk-hint">
-          Enter text for the awarding organisation. You can review this before it is sent.
-        </div>
-        <textarea class="govuk-textarea" id="more-detail" name="moreDetail" rows="5" aria-describedby="more-detail-hint"></textarea>
-      </div>
 
-    <a href="initial-check5.html"><button type="submit" class="govuk-button" data-module="govuk-button">
-      Continue
-    </button>
-  </a>
+
+
+<dl class="govuk-summary-list">
+  <div class="govuk-summary-list__row">
+    <dt class="govuk-summary-list__key">
+      Has a qualification specification been submitted?
+    </dt>
+    <dd class="govuk-summary-list__value">
+      <strong class="govuk-tag govuk-tag--red">
+        Fail
+      </strong>
+    </dd>
+    <dd class="govuk-summary-list__actions">
+      <a class="govuk-link" href="initial-check2.html">Change<span class="govuk-visually-hidden"> name</span></a>
+    </dd>
   </div>
+</dl>
+
+<a href="initial-check3.html"><button type="submit" class="govuk-button govuk-button--secondary" data-module="govuk-button">
+  Add new comment
+</button></a>
+
+<h2 class="govuk-heading-m">
+  Comments
+</h2>
+
+
+<h2 class="govuk-heading-s">
+  [Name, 4 July 2024, 3.05pm]
+</h2>
+<p class="govuk-body">
+  [This is the comment]
+</p>
+  <a href="initial-check4.html">
+    Edit
+  </a> | <a href="initial-check4.html">
+    Delete
+  </a>
+
+  <hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">
+
+
+  <div class="govuk-button-group govuk-!-margin-top-9">
+    <a href="initial-check-updated.html"><button type="submit" class="govuk-button" data-module="govuk-button">
+      Return to submission check
+    </button></a>
+   
+  </div>
+
 </div>
 
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-one-third">
+    <h2 class="govuk-heading-m">Related links</h1> 
+      <p><a href="application-form.html" target="_blank">Application form</a> (opens in new tab)
+      </p>
+      <p><a href="" target="_blank">[Latest specification]</a> (opens in new tab)
+      </p>
+    </div>
+</div>
+</div>
 {% endblock %}
