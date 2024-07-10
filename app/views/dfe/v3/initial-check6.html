@@ -21,25 +21,56 @@
 {% endblock %}
 
 {% block content %}
-<div class="govuk-width-container">
-  <div class="govuk-grid-row">
-    <div class="govuk-grid-column-two-thirds">
-      <div class="govuk-panel govuk-panel--confirmation">
-        <h1 class="govuk-panel__title">
-          Request sent
-        </h1>
-        
-      </div>
-      <p class="govuk-body">An email has been sent to the awarding organisation.</p>
-      <h2 class="govuk-heading-m">What do you want to do next?</h2>
-      <p class="govuk-body">
-        <a href="application-overview-updated2.html" class="govuk-link">Return to application overview</a>
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    <span class="govuk-caption-l">Submission check</span>
+<h1 class="govuk-heading-xl">
+  Less than 100 enrolments evidence
+</h1>
+
+
+
+
+<dl class="govuk-summary-list">
+  <div class="govuk-summary-list__row">
+    <dt class="govuk-summary-list__key">
+      Is there evidence to show why demand is expected to be less than 100 publicly funded enrolments in a funding year?    </legend>
+    </dt>
+    <dd class="govuk-summary-list__value">
+      <strong class="govuk-tag govuk-tag--green">
+        Pass
+      </strong>
+    </dd>
+    <dd class="govuk-summary-list__actions">
+      <a class="govuk-link" href="initial-check1.html">Change<span class="govuk-visually-hidden"> name</span></a>
+    </dd>
+  </div>
+</dl>
+
+<a href=""><button type="submit" class="govuk-button govuk-button--secondary" data-module="govuk-button">
+  Add new comment
+</button></a>
+
+
+
+  <div class="govuk-button-group govuk-!-margin-top-9">
+    <a href="initial-check-updated2.html"><button type="submit" class="govuk-button" data-module="govuk-button">
+      Return to submission check
+    </button></a>
+   
+  </div>
+
+</div>
+
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-one-third">
+    <h2 class="govuk-heading-m">Related links</h1> 
+      <p><a href="application-form.html" target="_blank">Application form</a> (opens in new tab)
+      </p>
+      <p><a href="" target="_blank">[Latest specification]</a> (opens in new tab)
       </p>
     </div>
-  </div>
 </div>
-        
-
-
-
+</div>
 {% endblock %}
