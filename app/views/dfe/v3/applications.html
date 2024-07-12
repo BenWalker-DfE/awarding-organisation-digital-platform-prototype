@@ -74,13 +74,13 @@
                 <p class="govuk-body"><a href="">Clear</a></p>
                 <div class="govuk-radios qualification-type-container govuk-radios--small" data-module="govuk-radios">
                   <div class="govuk-radios__item">
-                    <input class="govuk-radios__input" id="changedName" name="nontech" type="radio" value="month">
+                    <input class="govuk-radios__input" id="changedName" name="changedName" type="radio" value="nontech">
                     <label class="govuk-label govuk-radios__label" for="changedName">
                       Non-technical
                     </label>
                   </div>
                   <div class="govuk-radios__item">
-                    <input class="govuk-radios__input" id="changedName-2" name="tech" type="radio" value="year">
+                    <input class="govuk-radios__input" id="changedName-2" name="changedName" type="radio" value="tech">
                     <label class="govuk-label govuk-radios__label" for="changedName-2">
                       Technical
                     </label>
@@ -91,8 +91,8 @@
 
             
 
-     <div class="subject-visible">
-      <label class="govuk-label govuk-label--s" for="choose-provider" style="padding-top: 20px">
+     <div class="subject-container hide">
+      <label class="govuk-label govuk-label--s" for="choose-provider">
         Subject
          </label>
        
@@ -116,7 +116,7 @@
           </select>
         </div>
 
-        <div class="sector-subject-visible">
+        <div class="sector-subject-container hide">
           <label class="govuk-label govuk-label--s search-ukprn" for="choose-provider" style="padding-top: 20px">
             Sector subject area
              </label>
@@ -130,8 +130,8 @@
               </select>
         </div>
 
-        <div class="route-visible">
-      <label class="govuk-label govuk-label--s search-ukprn" for="choose-provider" style="padding-top: 20px">
+        <div class="route-container hide">
+      <label class="govuk-label govuk-label--s search-ukprn" for="choose-provider">
         Route
          </label>
               
@@ -156,7 +156,7 @@
           </select>
         </div>
 
-        <div class="standard-visible">
+        <div class="standard-container hide">
           <label class="govuk-label govuk-label--s search-ukprn" for="choose-provider" style="padding-top: 20px">
             Occupational standard
              </label>
@@ -395,9 +395,33 @@
 <script>
   $(document).ready(function(){
           
-    $("input[name='nontech']").on( "click", function() {
-      $(this).parent().parent().parent().parent().find('.route-hidden').remove('.route-hidden');
-    } );
+    $("input[value='nontech']").on( "click", function() {
+    $('.route-container').addClass('hide');
+    $('.standard-container').addClass('hide');
+    $('.sector-subject-container').addClass('hide');
+
+
+    $('.subject-container').removeClass('hide');
+  } );
+
+  $("input[value='tech']").on( "click", function() {
+    $('.subject-container').addClass('hide');
+    $('.sector-subject-container').addClass('hide');
+    $('.standard-container').addClass('hide');
+
+    $('.route-container').removeClass('hide');
+
+  } );
+
+  $(".subject-container").on( "change", function() {
+    $('.sector-subject-container').removeClass('hide');
+
+} );
+
+$(".route-container").on( "change", function() {
+    $('.standard-container').removeClass('hide');
+
+} );
   })
 </script>
 {% endblock %}

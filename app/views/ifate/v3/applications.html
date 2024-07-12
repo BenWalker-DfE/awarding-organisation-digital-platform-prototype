@@ -63,6 +63,7 @@
             <option value="lee:zen">Lee Shen</option>
             </select>
 
+            <div class="route-container">
       <label class="govuk-label govuk-label--s search-ukprn" for="choose-route" style="padding-top: 20px">
         Route
          </label>
@@ -85,8 +86,9 @@
           <option value="">Sales, marketing and procurement</option>
           <option value="">Transport and logistics</option>
           </select>
+            </div>
 
-
+          <div class="standard-container hide">
           <label class="govuk-label govuk-label--s" for="standard" style="padding-top: 20px">
             Occupational standard
              </label>
@@ -100,7 +102,7 @@
               <option value="5">ST0867: Playworker</option>
               <option value="6">ST1030: Safeguarding officer</option>
               </select>
-
+          </div>
       
               <fieldset class="govuk-fieldset">
                 <legend class="govuk-fieldset__legend govuk-fieldset__legend--s govuk-!-margin-bottom-0">
@@ -312,53 +314,12 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
 <script>
   $(document).ready(function(){
-   
-    $(function() {
-$('#id-route').on('change', function(e) {
+          
 
-  console.log("test")
-  if ($(this).val() == agriculture) {
+$(".route-container").on( "change", function() {
+    $('.standard-container').removeClass('hide');
 
-        var arr = ['1', '2'];
-        $('#id-standard option').each(function(i) {
-            if ($.inArray($(this).attr('value'), arr) == -1) {
-                $(this).css('display', 'none');
-            } else {
-                $(this).css('display', 'inline-block');
-            }
-        });
-    } else if ($(this).val() == business) {
-
-        var arr = ['3', '4'];
-        $('#id-standard option').each(function(i) {
-            if ($.inArray($(this).attr('value'), arr) == -1) {
-                $(this).css('display', 'none');
-            } else {
-                $(this).css('display', 'inline-block');
-            }
-        });
-    } else if ($(this).val() == care) {
-
-        var arr = ['5', '6'];
-        $('#id-standard option').each(function(i) {
-            if ($.inArray($(this).attr('value'), arr) == -1) {
-                $(this).css('display', 'none');
-            } else {
-                $(this).css('display', 'inline-block');
-            }
-        });
-    } else {
-
-        $('#id-standard option').each(function(i) {
-            $(this).css('display', 'inline-block');
-        });
-
-    }
-
-})
-
-
-});
+} );
   })
 </script>
 {% endblock %}
