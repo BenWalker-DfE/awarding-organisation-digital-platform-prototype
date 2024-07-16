@@ -1,0 +1,71 @@
+{% extends "layouts/main-dfe.html" %}
+
+{% block pageTitle %}
+Question page template – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block beforeContent %}
+{% from "govuk/components/phase-banner/macro.njk" import govukPhaseBanner %}
+
+{{ govukPhaseBanner({
+  tag: {
+    text: "Prototype"
+  },
+  html: 'This is a prototype. Content is likely to change rapidly.'
+}) }}
+
+{{ govukBackLink({
+  text: "Back",
+  href: "javascript:window.history.back()"
+}) }}
+
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+      <form action="/teachdate" method="post">
+          <fieldset class="govuk-fieldset" aria-describedby="scope-hint">
+            <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+              <span class="govuk-caption-xl">Eligibility</span>
+              <h1 class="govuk-fieldset__heading">
+                    Does this qualification have a first teach from 1 August 2026? 
+              </h1>
+            </legend>
+            <div id="teachdate-hint" class="govuk-hint">
+              <p>This submission process is only for qualifications with a first teach from 1 August 2026.
+              </p>
+              </div>
+            <div class="govuk-radios govuk-radios--inline" data-module="govuk-radios">
+                  <div class="govuk-radios__item">
+                    <input class="govuk-radios__input" id="teachdate" name="teachdate" type="radio" value="yes">
+                    <label class="govuk-label govuk-radios__label" for="yes">
+                      Yes
+                    </label>
+                  </div>
+                  <div class="govuk-radios__item">
+                    <input class="govuk-radios__input" id="teachdate" name="teachdate" type="radio" value="no">
+                    <label class="govuk-label govuk-radios__label" for="no">
+                      No
+                    </label>
+                  </div>
+                </div>
+              </fieldset>
+
+          
+
+      
+      <div class="govuk-button-group">
+        <button name="button" value="primary" type="submit" class="govuk-button govuk-!-margin-top-7" data-module="govuk-button">
+          Continue
+        </button>
+
+      </div>
+    </div>
+
+    </form>
+  </div>
+</div>
+
+{% endblock %}

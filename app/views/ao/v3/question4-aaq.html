@@ -1,0 +1,70 @@
+{% extends "layouts/main-dfe.html" %}
+
+{% block pageTitle %}
+Question page template – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block beforeContent %}
+{% from "govuk/components/phase-banner/macro.njk" import govukPhaseBanner %}
+
+{{ govukPhaseBanner({
+  tag: {
+    text: "Prototype"
+  },
+  html: 'This is a prototype. Content is likely to change rapidly.'
+}) }}
+
+
+
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+        <div class="govuk-form-group">
+          <fieldset class="govuk-fieldset">
+            <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+              <span class="govuk-caption-xl">Qualification details</span>
+              <h1 class="govuk-fieldset__heading">
+                Is the qualification's level and SSA within your scope of recognition?
+              </h1>
+            </legend>
+            <div id="changedName-hint" class="govuk-hint">
+              Please note that awarding organisations are able to check their scope of recognition within the AO portal or by contacting Ofqual: <a href="">strategic.relationships@ofqual.gov.uk</a></p>
+              <p>Ofqual will confirm whether the AO has the right scope of recognition. 
+              Qualifications must be within your scope of recognition in order to be submitted.  
+            </div>
+            <div class="govuk-radios" data-module="govuk-radios">
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="whereDoYouLive" name="whereDoYouLive" type="radio" value="england">
+                <label class="govuk-label govuk-radios__label" for="whereDoYouLive">
+                  Yes
+                </label>
+              </div>
+              <div class="govuk-radios" data-module="govuk-radios">
+                <div class="govuk-radios__item">
+                  <input class="govuk-radios__input" id="whereDoYouLive" name="whereDoYouLive" type="radio" value="england">
+                  <label class="govuk-label govuk-radios__label" for="whereDoYouLive">
+                    No
+                  </label>
+                </div>
+              </div>
+            </fieldset>
+          </div>
+
+      
+      <div class="govuk-button-group govuk-!-margin-top-5">
+       <a href="section-qual-details-aaq-updated.html"> <button name="button" value="primary" type="submit" class="govuk-button" data-module="govuk-button">
+          Save and continue
+        </button></a>
+
+      </div>
+      <p class="govuk-body">
+        <a href="section-qual-details-aaq.html" class="govuk-link">Return to summary</a>
+      </p>
+    </div>
+  </div>
+</div>
+
+{% endblock %}

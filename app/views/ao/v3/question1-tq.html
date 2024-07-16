@@ -1,0 +1,53 @@
+{% extends "layouts/main-dfe.html" %}
+
+{% block pageTitle %}
+Question page template – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block beforeContent %}
+{% from "govuk/components/phase-banner/macro.njk" import govukPhaseBanner %}
+
+{{ govukPhaseBanner({
+  tag: {
+    text: "Prototype"
+  },
+  html: 'This is a prototype. Content is likely to change rapidly.'
+}) }}
+
+
+
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+        <div class="govuk-form-group">
+          <span class="govuk-caption-xl">Qualification details</span>
+          <h1 class="govuk-label-wrapper">
+            <label class="govuk-label govuk-label--l" for="event-name">
+              What is the qualification title?
+            </label>
+          </h1>
+          <div id="event-name-hint" class="govuk-hint">
+            Please ensure qualification titles meet IfATE's titling requirements and appear as they will on the Ofqual register. Include the type of qualification. e.g. award, certificate, diploma. Guidance and examples can be found on <a href="https://www.instituteforapprenticeships.org/privacy/#:~:text=This%20signposting%20within%20the%20qualification%20title%2C%20gives%20users,of%20competence%20signalled%20by%20achievement%20of%20the%20qualifications." target="_blank" rel="noreferrer noopener">IfATE's website</a> (opens in new tab).
+          </div>
+          <input class="govuk-input" id="event-name" name="eventName" type="text" aria-describedby="event-name-hint">
+        </div>         
+
+      
+      <div class="govuk-button-group">
+       <a href="question2-tq.html"> <button name="button" value="primary" type="submit" class="govuk-button" data-module="govuk-button">
+          Save and continue
+        </button></a>
+
+      </div>
+      <p class="govuk-body">
+        <a href="section-qual-details-tq.html" class="govuk-link">Return to summary</a>
+      </p>
+    </div>
+
+  </div>
+</div>
+
+{% endblock %}

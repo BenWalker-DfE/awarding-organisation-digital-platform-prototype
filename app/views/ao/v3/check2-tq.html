@@ -1,0 +1,73 @@
+{% extends "layouts/main-dfe.html" %}
+
+{% block pageTitle %}
+Question page template – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block beforeContent %}
+{% from "govuk/components/phase-banner/macro.njk" import govukPhaseBanner %}
+
+{{ govukPhaseBanner({
+  tag: {
+    text: "Prototype"
+  },
+  html: 'This is a prototype. Content is likely to change rapidly.'
+}) }}
+
+{{ govukBackLink({
+  text: "Back",
+  href: "javascript:window.history.back()"
+}) }}
+
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+      <form action="/scopetq" method="post">
+          <fieldset class="govuk-fieldset" aria-describedby="scopetq-hint">
+            <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+              <span class="govuk-caption-xl">Eligibility</span>
+              <h1 class="govuk-fieldset__heading">
+                Are your qualifications in scope of this funding approval process?
+              </h1>
+            </legend>
+            <div id="scopetq-hint" class="govuk-hint">
+               <p>
+               In the <a href="https://www.gov.uk/guidance/qualifications-funding-approval-manual-2025-to-2026/qualification-type-funding-approval-criteria-technical-qualifications" rel="noreferrer noopener" target="_blank">2025 qualifications funding approval manual</a> (opens in new tab) DfE have listed qualification types that will automatically be approved for funding for 2025 to 2026. You do not need to use this form for DfE to consider these qualifications for funding approval.        
+              </p>
+            
+              </div>
+            <div class="govuk-radios govuk-radios--inline" data-module="govuk-radios">
+                  <div class="govuk-radios__item">
+                    <input class="govuk-radios__input" id="scopetq" name="scopetq" type="radio" value="yes">
+                    <label class="govuk-label govuk-radios__label" for="yes">
+                      Yes
+                    </label>
+                  </div>
+                  <div class="govuk-radios__item">
+                    <input class="govuk-radios__input" id="scopetq" name="scopetq" type="radio" value="no">
+                    <label class="govuk-label govuk-radios__label" for="no">
+                      No
+                    </label>
+                  </div>
+                </div>
+              </fieldset>
+
+          
+
+      
+      <div class="govuk-button-group">
+        <button name="button" value="primary" type="submit" class="govuk-button govuk-!-margin-top-7" data-module="govuk-button">
+          Continue
+        </button>
+
+      </div>
+    </div>
+
+    </form>
+  </div>
+</div>
+
+{% endblock %}
