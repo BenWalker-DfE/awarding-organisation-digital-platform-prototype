@@ -1,0 +1,58 @@
+{% extends "layouts/main-dfe.html" %}
+
+{% block pageTitle %}
+Question page template – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block beforeContent %}
+{% from "govuk/components/phase-banner/macro.njk" import govukPhaseBanner %}
+
+{{ govukPhaseBanner({
+  tag: {
+    text: "Prototype"
+  },
+  html: 'This is a prototype. Content is likely to change rapidly.'
+}) }}
+
+
+
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    <div class="govuk-form-group">
+      <fieldset class="govuk-fieldset">
+        <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+          <span class="govuk-caption-xl">Provider demand</span>
+          <h1 class="govuk-fieldset__heading">
+            How many post-16 publicly funded enrolments do you estimate for your qualification in [2026]?
+          </h1>
+        </legend>
+        <p class="govuk-body">
+          Publicly funded enrolments must be funded through:
+        </p>
+        <ul class="govuk-list--bullet">
+          <li>to 19 study programmes</li>
+          <li>adult education budget, and/or</li>
+          <li>advanced learner loans</li>
+        </ul>
+        <div class="govuk-form-group">
+          <label class="govuk-label" for="event-name">
+            Enter estimated number of enrolments
+          </label>
+          <input class="govuk-input govuk-input--width-4" id="event-name" name="eventName" type="text" aria-describedby="event-name-hint">
+        </div>
+      </fieldset>
+    </div>
+  <div class="govuk-button-group">
+    <a href="enrolments3-aaq.html" class="govuk-button" role="button" data-module="govuk-button">
+      Continue
+    </a>
+</div>
+</div>
+</div>      
+
+
+{% endblock %}

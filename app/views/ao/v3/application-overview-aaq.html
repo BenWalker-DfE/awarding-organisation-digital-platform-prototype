@@ -33,6 +33,23 @@
 {% block content %}
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-two-thirds">
+
+
+    <div class="govuk-notification-banner" role="region" aria-labelledby="govuk-notification-banner-title" data-module="govuk-notification-banner">
+      <div class="govuk-notification-banner__header">
+        <h2 class="govuk-notification-banner__title" id="govuk-notification-banner-title">
+          Important
+        </h2>
+      </div>
+      <div class="govuk-notification-banner__content">
+        <p class="govuk-notification-banner__heading">
+          You have a new message about this application.
+          <a class="govuk-notification-banner__link" target="blank" href="messages">View messages</a> (opens in new tab).
+        </p>
+      </div>
+    </div>
+
+
        <h1 class="govuk-heading-xl">
         Application overview
        </h1>
@@ -47,11 +64,7 @@
               Draft
             </strong>
           </dd>
-          <!--
-            <dd class="govuk-summary-list__actions">
-            <a class="govuk-link" href="#">Change<span class="govuk-visually-hidden"> address</span></a>
-          </dd>
-        -->
+         
         </div>
         <div class="govuk-summary-list__row">
           <dt class="govuk-summary-list__key">
@@ -60,11 +73,7 @@
           <dd class="govuk-summary-list__value">
             [XXXXXX]
           </dd>
-          <!--
-            <dd class="govuk-summary-list__actions">
-            <a class="govuk-link" href="#">Change<span class="govuk-visually-hidden"> address</span></a>
-          </dd>
-        -->
+          
         </div>
         <div class="govuk-summary-list__row">
           <dt class="govuk-summary-list__key">
@@ -73,67 +82,20 @@
           <dd class="govuk-summary-list__value">
             Alternative academic qualification
           </dd>
-          <!--
-            <dd class="govuk-summary-list__actions">
-            <a class="govuk-link" href="#">Change<span class="govuk-visually-hidden"> address</span></a>
-          </dd>
-        -->
+       
         </div>
         
         <div class="govuk-summary-list__row">
           <dt class="govuk-summary-list__key">
-            Proposed title
+            Submission date
           </dt>
           <dd class="govuk-summary-list__value">
+            Not yet submitted
+          </dd>
+          
             
-          </dd>
-          <!--
-            <dd class="govuk-summary-list__actions">
-            <a class="govuk-link" href="#">Change<span class="govuk-visually-hidden"> address</span></a>
-          </dd>
-        -->
-        </div>
-        <div class="govuk-summary-list__row">
-          <dt class="govuk-summary-list__key">
-            Size
-          </dt>
-          <dd class="govuk-summary-list__value">
-            
-          </dd>
-          <!--
-            <dd class="govuk-summary-list__actions">
-            <a class="govuk-link" href="#">Change<span class="govuk-visually-hidden"> address</span></a>
-          </dd>
-        -->
-        </div>
-
-        <div class="govuk-summary-list__row">
-          <dt class="govuk-summary-list__key">
-            Subject
-          </dt>
-          <dd class="govuk-summary-list__value">
-            
-          </dd>
-         <!--
-          <dd class="govuk-summary-list__actions">
-            <a class="govuk-link" href="#">Change<span class="govuk-visually-hidden"> name</span></a>
-          </dd>
-          -->
-        </div>
-        <div class="govuk-summary-list__row">
-          <dt class="govuk-summary-list__key">
-            Sector subject area
-          </dt>
-          <dd class="govuk-summary-list__value">
-            
-          </dd>
-         <!--
-          <dd class="govuk-summary-list__actions">
-            <a class="govuk-link" href="#">Change<span class="govuk-visually-hidden"> name</span></a>
-          </dd>
-          -->
-        </div>
-        
+       
+        </div> 
       </dl>
 
 
@@ -159,7 +121,7 @@
             <h3 class="govuk-heading-s">
               Provider demand           
             </h3>
-            <span class="govuk-caption-m">0 out of 5 questions completed</span>
+            <span class="govuk-caption-m">0 out of 2 questions completed</span>
             <p class="govuk-body govuk-!-margin-top-2">
               <a href="#" class="govuk-link">Go to provider demand</a>
             </p>
@@ -194,8 +156,10 @@
 
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-one-third">
-    <h2 class="govuk-heading-m">Related links</h1> 
-      <p><a href="" target="_blank">[Anything useful here?]</a> (opens in new tab)
+    <h2 class="govuk-heading-m">Related links</h1>   <strong class="govuk-tag govuk-tag--yellow govuk-!-margin-bottom-2">
+      New message
+    </strong>
+      <p><a href="messages" target="blank">View messages</a> (opens in new tab)
       </p>
 
     </div>

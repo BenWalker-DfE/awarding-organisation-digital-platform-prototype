@@ -1,0 +1,64 @@
+{% extends "layouts/main-dfe-internal.html" %}
+
+{% block pageTitle %}
+  Content page template – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block beforeContent %}
+{% from "govuk/components/phase-banner/macro.njk" import govukPhaseBanner %}
+
+{{ govukPhaseBanner({
+  tag: {
+    text: "Prototype"
+  },
+  html: 'This is a prototype. Content is likely to change rapidly.'
+}) }}
+
+{{ govukBackLink({
+  text: "Back",
+  href: "javascript:window.history.back()"
+}) }}
+{% endblock %}
+
+{% block content %}
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+<h1 class="govuk-heading-xl">
+  Review and send message
+</h1>
+  
+<p class="govuk-body">
+      Dear Sarah,
+      <br>Please find attached a sixth provider demand letter from Exeter University.
+      <br>With many thanks
+</p>
+
+      
+<div class="govuk-button-group">
+  <a href=""><button type="submit" class="govuk-button" data-module="govuk-button">
+    Save and review
+  </button></a>
+  <a href=""><button type="submit" class="govuk-button govuk-button--secondary" data-module="govuk-button">
+    Upload file
+  </button></a>
+  <a href=""><button type="submit" class="govuk-button govuk-button--secondary" data-module="govuk-button">
+    Save and exit
+  </button></a>
+</div>
+</div>
+{% endblock %}
+
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+<h1 class="govuk-heading-xl">
+  Review and send message
+</h1>
+  
+<p class="govuk-body">
+      Dear Sarah,
+      <br>Please find attached a sixth provider demand letter from Exeter University.
+      <br>With many thanks
+</p>
+
+    

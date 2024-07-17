@@ -1,0 +1,53 @@
+{% extends "layouts/main-dfe.html" %}
+
+{% block pageTitle %}
+Question page template – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block beforeContent %}
+{% from "govuk/components/phase-banner/macro.njk" import govukPhaseBanner %}
+
+{{ govukPhaseBanner({
+  tag: {
+    text: "Prototype"
+  },
+  html: 'This is a prototype. Content is likely to change rapidly.'
+}) }}
+
+
+
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+                 
+          <div class="govuk-form-group">
+            <fieldset class="govuk-fieldset">
+              <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+                <span class="govuk-caption-xl">Provider demand</span>
+                <h1 class="govuk-fieldset__heading">
+                  Why will there will be less than 100 publicly funded post 16 enrolments each funding year?                </h1>
+              </legend>
+              <p class="govuk-body">
+                Supporting evidence needs to explain why once the qualification is established it will not have 100 publicly funded enrolments or more. It can include letters from professional bodies or employers that explain why the qualification is specialist.
+                Evidence must include the qualification title (as it is in the submission form) and explain why demand is less than 100.             
+              </p>
+<textarea class="govuk-textarea" id="more-detail" name="moreDetail" rows="5" aria-describedby="more-detail-hint"></textarea>
+</div>  
+
+      
+      <div class="govuk-button-group">
+       <a href="enrolments5-aaq.html"> <button name="button" value="primary" type="submit" class="govuk-button" data-module="govuk-button">
+          Continue
+        </button></a>
+
+      </div>
+    
+    </div>
+
+  </div>
+</div>
+
+{% endblock %}
