@@ -25,21 +25,23 @@ Question page template – {{ serviceName }} – GOV.UK Prototype Kit
 
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-two-thirds">
-      <form action="/scopetq" method="post">
+      <form action="/scopetqv3" method="post">
           <fieldset class="govuk-fieldset" aria-describedby="scopetq-hint">
             <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
               <span class="govuk-caption-xl">Eligibility</span>
               <h1 class="govuk-fieldset__heading">
-                Are your qualifications in scope of this funding approval process?
+                Is your qualification in scope of this funding approval process? 
               </h1>
             </legend>
-            <div id="scopetq-hint" class="govuk-hint">
-               <p>
-               In the <a href="https://www.gov.uk/guidance/qualifications-funding-approval-manual-2025-to-2026/qualification-type-funding-approval-criteria-technical-qualifications" rel="noreferrer noopener" target="_blank">2025 qualifications funding approval manual</a> (opens in new tab) DfE have listed qualification types that will automatically be approved for funding for 2025 to 2026. You do not need to use this form for DfE to consider these qualifications for funding approval.        
-              </p>
-            
-              </div>
-            <div class="govuk-radios govuk-radios--inline" data-module="govuk-radios">
+            <p class="govuk-body">
+              These are the qualification types in scope of this funding approval process:
+            </p>
+            <ul class="govuk-list--bullet">
+              <li>alternative academic qualifications (AAQs) at level 3</li>
+              <li>technical qualifications at level 2 and level 3</li>
+              <li>technical and academic progression qualifications, and T Level foundation qualifications, at level 2</li>  
+          </ul>
+            <div class="govuk-radios govuk-radios" data-module="govuk-radios">
                   <div class="govuk-radios__item">
                     <input class="govuk-radios__input" id="scopetq" name="scopetq" type="radio" value="yes">
                     <label class="govuk-label govuk-radios__label" for="yes">

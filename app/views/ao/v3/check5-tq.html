@@ -25,15 +25,16 @@ Question page template – {{ serviceName }} – GOV.UK Prototype Kit
 
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-two-thirds">
-      <form action="/national-tq" method="post">
+      <form action="/national-tqv3" method="post">
           <fieldset class="govuk-fieldset" aria-describedby="national-hint">
             <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
               <span class="govuk-caption-xl">Eligibility</span>
               <h1 class="govuk-fieldset__heading">
-                Is the qualification offered nationally, so is not restricted to one provider of education or training or one employer?              </h1>
-            </legend>
-            
-            <div class="govuk-radios govuk-radios--inline" data-module="govuk-radios">
+                Can the qualification be delivered nationally?            </h1></legend>
+            <p class="govuk-body">
+              To deliver a qualification nationally, it must not be restricted to one provider of education or training or one employer.
+            </p>
+            <div class="govuk-radios govuk-radios" data-module="govuk-radios">
                   <div class="govuk-radios__item">
                     <input class="govuk-radios__input" id="national" name="national" type="radio" value="yes">
                     <label class="govuk-label govuk-radios__label" for="yes">

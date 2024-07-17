@@ -25,25 +25,27 @@ Question page template – {{ serviceName }} – GOV.UK Prototype Kit
 
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-two-thirds">
-      <form action="/nationalv3" method="post">
+      <form action="/sortqv3" method="post">
           <fieldset class="govuk-fieldset" aria-describedby="national-hint">
             <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
               <span class="govuk-caption-xl">Eligibility</span>
               <h1 class="govuk-fieldset__heading">
-                Can the qualification be delivered nationally?            </h1></legend>
-                <p class="govuk-body">
-                  To deliver a qualification nationally, it must not be restricted to one provider of education or training or one employer.
-                </p>
-            
+                Is the qualification's level and sector subject area within your scope of recognition? </h1>
+            </legend>
+           <p class="govuk-body">You can only submit qualifications that are within your scope of recognition. 
+
+           </p>
+           <p>You can check your scope of recognition by contacting Ofqual: <a href="">strategic.relationships@ofqual.gov.uk</a></p>
+             
             <div class="govuk-radios govuk-radios" data-module="govuk-radios">
                   <div class="govuk-radios__item">
-                    <input class="govuk-radios__input" id="national" name="national" type="radio" value="yes">
+                    <input class="govuk-radios__input" id="sortqv3" name="sortqv3" type="radio" value="yes">
                     <label class="govuk-label govuk-radios__label" for="yes">
                       Yes
                     </label>
                   </div>
                   <div class="govuk-radios__item">
-                    <input class="govuk-radios__input" id="national" name="national" type="radio" value="no">
+                    <input class="govuk-radios__input" id="sortqv3" name="sortqv3" type="radio" value="no">
                     <label class="govuk-label govuk-radios__label" for="no">
                       No
                     </label>

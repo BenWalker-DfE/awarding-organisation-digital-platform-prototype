@@ -145,3 +145,123 @@ router.post('/national-tq', function (req, res) {
          }
         
 })
+
+router.post('/scopev3', function (req, res) {
+    var scope = req.session.data['scope']
+    if (scope == 'yes'){
+        // Send user to next page
+        res.redirect('/ao/v3/check3')
+      } else {
+        // Send user to ineligible page
+        res.redirect('/ao/v3/ineligible-scope')
+      }
+    
+    })
+
+router.post('/scopetqv3', function (req, res) {
+    var scopetq = req.session.data['scopetq']
+    if (scopetq == 'yes'){
+         // Send user to next page
+        res.redirect('/ao/v3/check4-tq')
+        } else {
+        // Send user to ineligible page
+        res.redirect('/ao/v3/ineligible-scope')
+        }
+        
+    })
+
+router.post('/teachdatev3', function (req, res) {
+     var teachdate = req.session.data['teachdate']
+     if (teachdate == 'yes'){
+         // Send user to next page
+         res.redirect('/ao/v3/check4-aaq')
+      } else {
+         // Send user to ineligible page
+        res.redirect('/ao/v3/ineligible-teachdate')
+      }
+        
+   })
+   
+router.post('/qualtypev3', function (req, res) {
+        var qualtype = req.session.data['qualtype']
+        if (qualtype == 'aaq'){
+         // Send user to next page
+         res.redirect('/ao/v3/check2-aaq')
+            } else {
+          // Send user to ineligible page
+         res.redirect('/ao/v3/check2-tq')
+             }
+            
+ })
+
+router.post('/englandv3', function (req, res) {
+    var england = req.session.data['england']
+    if (england == 'yes'){
+     // Send user to next page
+     res.redirect('/ao/v3/check5-aaq')
+        } else {
+      // Send user to ineligible page
+     res.redirect('/ao/v3/ineligible-england')
+         }
+        
+})
+
+router.post('/england-tqv3', function (req, res) {
+    var england = req.session.data['england']
+    if (england == 'yes'){
+     // Send user to next page
+     res.redirect('/ao/v3/check5-tq')
+        } else {
+      // Send user to ineligible page
+     res.redirect('/ao/v3/ineligible-england')
+         }
+        
+})
+
+router.post('/nationalv3', function (req, res) {
+    var national = req.session.data['national']
+    if (national == 'yes'){
+     // Send user to next page
+     res.redirect('/ao/v3/check6-aaq')
+        } else {
+      // Send user to ineligible page
+     res.redirect('/ao/v3/ineligible-national')
+         }
+        
+})
+
+router.post('/national-tqv3', function (req, res) {
+    var national = req.session.data['national']
+    if (national == 'yes'){
+     // Send user to next page
+     res.redirect('/ao/v3/check6-tq')
+        } else {
+      // Send user to ineligible page
+     res.redirect('/ao/v3/ineligible-national')
+         }
+        
+})
+
+router.post('/sorv3', function (req, res) {
+    var sorv3 = req.session.data['sorv3']
+    if (sorv3 == 'yes'){
+     // Send user to next page
+     res.redirect('/ao/v3/application-overview-aaq')
+        } else {
+      // Send user to ineligible page
+     res.redirect('/ao/v3/ineligible-sor')
+         }
+        
+})
+
+router.post('/sortqv3', function (req, res) {
+    var sortqv3 = req.session.data['sortqv3']
+    if (sortqv3 == 'yes'){
+     // Send user to next page
+     res.redirect('/ao/v3/application-overview-tq')
+        } else {
+      // Send user to ineligible page
+     res.redirect('/ao/v3/ineligible-sor')
+         }
+        
+})
