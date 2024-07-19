@@ -1,0 +1,77 @@
+{% extends "layouts/main-dfe-internal.html" %}
+
+{% block pageTitle %}
+  Content page template – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block beforeContent %}
+{% from "govuk/components/phase-banner/macro.njk" import govukPhaseBanner %}
+
+{{ govukPhaseBanner({
+  tag: {
+    text: "Prototype"
+  },
+  html: 'This is a prototype. Content is likely to change rapidly.'
+}) }}
+
+{{ govukBackLink({
+  text: "Back",
+  href: "javascript:window.history.back()"
+}) }}
+{% endblock %}
+
+{% block content %}
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    <span class="govuk-caption-l">Content coverage</span>
+    <h1 class="govuk-heading-xl">Select outcome for knowledge, skills and behaviours</h1>
+
+  <div class="govuk-form-group">
+    <fieldset class="govuk-fieldset">
+      <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+        <h2 class="govuk-fieldset__heading">
+          Suitable coverage of the selected knowledge, skills, and behaviours statements within the qualification materials        </h2>
+      </legend>
+
+
+      <p class="govuk-body">
+        This means full coverage of knowledge and skills atatements and partial coverage of behaviour statements.
+      </p>
+        <div class="govuk-radios" data-module="govuk-radios">
+        <div class="govuk-radios__item">
+          <input class="govuk-radios__input" id="whereDoYouLive" name="whereDoYouLive" type="radio" value="england">
+          <label class="govuk-label govuk-radios__label" for="whereDoYouLive">
+            Pass
+          </label>
+        </div>
+        <div class="govuk-radios__item">
+          <input class="govuk-radios__input" id="whereDoYouLive-2" name="whereDoYouLive" type="radio" value="scotland">
+          <label class="govuk-label govuk-radios__label" for="whereDoYouLive-2">
+            Fail
+          </label>
+        </div>
+      </div>
+    </fieldset>
+  </div>
+
+  <div class="govuk-button-group">
+    <a href="questions4"><button type="submit" class="govuk-button" data-module="govuk-button">
+      Save and continue
+    </button></a>
+    <a href="application-questions.html"><button type="submit" class="govuk-button govuk-button--secondary" data-module="govuk-button">
+      Save and review
+    </button></a>
+  </div>
+
+</div>
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-one-third">
+    <h2 class="govuk-heading-m">Related links</h1> 
+      <p><a href="" target="_blank">Application form</a> (opens in new tab)
+      </p>
+      <p><a href="" target="_blank">[Latest specification]</a> (opens in new tab)
+      </p>
+    </div>
+</div>
+</div>
+{% endblock %}

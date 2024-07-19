@@ -1,0 +1,87 @@
+{% extends "layouts/main-dfe-internal.html" %}
+
+{% block pageTitle %}
+  Content page template – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block beforeContent %}
+{% from "govuk/components/phase-banner/macro.njk" import govukPhaseBanner %}
+
+{{ govukPhaseBanner({
+  tag: {
+    text: "Prototype"
+  },
+  html: 'This is a prototype. Content is likely to change rapidly.'
+}) }}
+
+{{ govukBackLink({
+  text: "Back",
+  href: "javascript:window.history.back()"
+}) }}
+{% endblock %}
+
+{% block content %}
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    <span class="govuk-caption-l">Submission check</span>
+<h1 class="govuk-heading-xl">
+  Qualification specification
+</h1>
+
+
+
+<table class="govuk-table">
+  <caption class="govuk-table__caption govuk-table__caption--m"></caption>
+  <thead class="govuk-table__head">
+    <tr class="govuk-table__row">
+      <th scope="col" class="govuk-table__header govuk-!-width-three-fifths">      Check 
+      </th>
+      <th scope="col" class="govuk-table__header govuk-!-width-one-fifth">Outcome</th>
+      <th scope="col" class="govuk-table__header govuk-!-width-one-fifth" style="text-align:right">Action</th>
+    </tr>
+  </thead>
+  <tbody class="govuk-table__body">
+    <tr class="govuk-table__row">
+      <td class="govuk-table__cell">Has a qualification specification been submitted?</td>
+      <td class="govuk-table__cell">      <strong class="govuk-tag govuk-tag--red">
+        Fail
+      </strong></td>
+      <td class="govuk-table__cell" style="text-align:right"><a href="initial-check1.html">Change</a><span class="govuk-visually-hidden"> outcome</span></td>
+    </tr>
+  </tbody>
+</table>
+
+<div class="govuk-form-group">
+  <h2 class="govuk-label-wrapper">
+    <label class="govuk-label govuk-label--m" for="account-number">
+      Add comment
+    </label>
+  </h2>
+  <input class="govuk-input" id="event-name" name="eventName" type="text">
+</div>
+
+
+
+<div class="govuk-button-group">
+  <a href="initial-check4.html"><button type="submit" class="govuk-button" data-module="govuk-button">
+    Save
+  </button></a>
+  <a href="initial-check2.html"><button type="submit" class="govuk-button govuk-button--secondary" data-module="govuk-button">
+    Cancel
+  </button></a>
+</div>
+
+</div>
+
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-one-third">
+    <h2 class="govuk-heading-m">Related links</h1> 
+      <p><a href="" target="_blank">Application form</a> (opens in new tab)
+      </p>
+      <p><a href="" target="_blank">[Latest specification]</a> (opens in new tab)
+      </p>
+    </div>
+</div>
+</div>
+{% endblock %}

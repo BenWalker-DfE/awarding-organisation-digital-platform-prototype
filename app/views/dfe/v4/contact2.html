@@ -1,0 +1,76 @@
+{% extends "layouts/main-dfe-internal.html" %}
+
+{% block pageTitle %}
+  Content page template – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block beforeContent %}
+{% from "govuk/components/phase-banner/macro.njk" import govukPhaseBanner %}
+
+{{ govukPhaseBanner({
+  tag: {
+    text: "Prototype"
+  },
+  html: 'This is a prototype. Content is likely to change rapidly.'
+}) }}
+
+{{ govukBackLink({
+  text: "Back",
+  href: "javascript:window.history.back()"
+}) }}
+{% endblock %}
+
+{% block content %}
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+<h1 class="govuk-heading-xl">
+Review and send message</h1>
+
+  
+<dl class="govuk-summary-list">
+      
+  <div class="govuk-summary-list__row">
+    <dt class="govuk-summary-list__key">
+      Submission ID
+    </dt>
+    <dd class="govuk-summary-list__value">
+      [XXXXXX]
+    </dd>
+  </div>
+
+  <div class="govuk-summary-list__row">
+    <dt class="govuk-summary-list__key">
+      Qualification title
+    </dt>
+    <dd class="govuk-summary-list__value">
+      [Title]
+    </dd>
+  </div>
+</dl>
+
+
+ <h2 class="govuk-heading-m">Send message to
+</h2>
+<p class="govuk-body">[First name Last name]</p>
+
+<h2 class="govuk-heading-m">Message subject
+</h2>
+<p class="govuk-body">[Subject line]</p>
+       
+<h2 class="govuk-heading-m">Message
+</h2>
+<p class="govuk-body">[Message goes here]</p>
+
+
+  <div class="govuk-button-group">
+    <a href="contact-confirmation.html"><button type="submit" class="govuk-button" data-module="govuk-button">
+      Send message
+    </button></a>
+
+    <a href="application-overview.html"><button type="submit" class="govuk-button govuk-button--secondary" data-module="govuk-button">
+      Save and exit
+    </button></a>
+  </div>
+</div>
+</div>
+{% endblock %}

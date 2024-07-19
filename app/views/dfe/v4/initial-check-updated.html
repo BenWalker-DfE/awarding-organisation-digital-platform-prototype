@@ -1,0 +1,193 @@
+{% extends "layouts/main-dfe-internal.html" %}
+
+{% block pageTitle %}
+  Content page template – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block beforeContent %}
+{% from "govuk/components/phase-banner/macro.njk" import govukPhaseBanner %}
+
+{{ govukPhaseBanner({
+  tag: {
+    text: "Prototype"
+  },
+  html: 'This is a prototype. Content is likely to change rapidly.'
+}) }}
+
+{{ govukBreadcrumbs({
+  items: [
+    {
+      text: "Home",
+      href: "#"
+    },
+    {
+      text: "Application overview",
+      href: "application-overview"
+    },
+    {
+      text: "Initial check"
+    }
+  ]
+}) }}
+{% endblock %}
+
+{% block content %}
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+<h1 class="govuk-heading-xl">
+  Submission check
+</h1>
+
+<h2 class="govuk-heading-m">
+  Provider demand
+</h2>
+<ul class="govuk-task-list">
+  <li class="govuk-task-list__item govuk-task-list__item--with-link">
+    <div class="govuk-task-list__name-and-hint">
+      <a class="govuk-link govuk-task-list__link" href="initial-check4.html" aria-describedby="company-details-1-status">
+        Post-16 enrolments evidence
+      </a>
+    </div>
+    <div class="govuk-task-list__status" id="company-details-1-status">
+      <strong class="govuk-tag govuk-tag--red">
+        Fail
+      </strong>
+    </div>
+    
+  </li>
+  <li class="govuk-task-list__item govuk-task-list__item--with-link">
+    <div class="govuk-task-list__name-and-hint">
+      <a class="govuk-link govuk-task-list__link" href="initial-check5.html" aria-describedby="company-details-1-status">
+        Less than 100 enrolments evidence
+      </a>
+    </div>
+    <div class="govuk-task-list__status" id="company-details-1-status">
+     <!-- <strong class="govuk-tag govuk-tag--yellow">
+        Request information
+      </strong>
+    -->
+    </div>
+  </li>
+</ul>
+
+<h2 class="govuk-heading-m">
+  Qualification supports progression to higher education
+</h2>
+<ul class="govuk-task-list">
+  <li class="govuk-task-list__item govuk-task-list__item--with-link">
+    <div class="govuk-task-list__name-and-hint">
+      <a class="govuk-link govuk-task-list__link" href="" aria-describedby="company-details-1-status">
+        HE support letters x 6
+            </a>
+    </div>
+    <div class="govuk-task-list__status" id="company-details-1-status">
+      <!--
+      <strong class="govuk-tag govuk-tag--green">
+        Received
+      </strong>
+    -->
+    </div>
+    
+  </li>
+  <li class="govuk-task-list__item govuk-task-list__item--with-link">
+    <div class="govuk-task-list__name-and-hint">
+      <a class="govuk-link govuk-task-list__link" href="" aria-describedby="company-details-1-status">
+        HE progression evidence
+      </a>
+    </div>
+    <div class="govuk-task-list__status" id="company-details-1-status">
+     <!-- <strong class="govuk-tag govuk-tag--yellow">
+        Request information
+      </strong>
+    -->
+    </div>
+  </li>
+</ul>
+
+
+<h2 class="govuk-heading-m">
+  Ofqual regulatory requirements</h2>
+<ul class="govuk-task-list">
+  <li class="govuk-task-list__item govuk-task-list__item--with-link">
+    <div class="govuk-task-list__name-and-hint">
+      <a class="govuk-link govuk-task-list__link" href="" aria-describedby="company-details-1-status">
+        Assessment strategy evidence
+                  </a>
+    </div>
+    <div class="govuk-task-list__status" id="company-details-1-status">
+      <!--
+      <strong class="govuk-tag govuk-tag--green">
+        Received
+      </strong>
+    -->
+    </div>
+    
+  </li>
+  <li class="govuk-task-list__item govuk-task-list__item--with-link">
+    <div class="govuk-task-list__name-and-hint">
+      <a class="govuk-link govuk-task-list__link" href="" aria-describedby="company-details-1-status">
+        Qualification specification
+            </a>
+    </div>
+    <div class="govuk-task-list__status" id="company-details-1-status">
+     <!-- <strong class="govuk-tag govuk-tag--yellow">
+        Request information
+      </strong>
+    -->
+    </div>
+  </li>
+  <li class="govuk-task-list__item govuk-task-list__item--with-link">
+    <div class="govuk-task-list__name-and-hint">
+      <a class="govuk-link govuk-task-list__link" href="" aria-describedby="company-details-1-status">
+        Sample assessment materials
+      </a>
+    </div>
+  </li>
+  <li class="govuk-task-list__item govuk-task-list__item--with-link">
+    <div class="govuk-task-list__name-and-hint">
+      <a class="govuk-link govuk-task-list__link" href="" aria-describedby="company-details-1-status">
+        Ofqual QLC exemption requests
+      </a>
+    </div>
+    </li>
+</ul>
+
+<h2 class="govuk-heading-m">
+  Qualification proposed by exception
+</h2>
+<ul class="govuk-task-list">
+  <li class="govuk-task-list__item govuk-task-list__item--with-link">
+    <div class="govuk-task-list__name-and-hint">
+      <a class="govuk-link govuk-task-list__link" href="" aria-describedby="company-details-1-status">
+        Exception evidence materials
+      </a>
+    </div>
+    <div class="govuk-task-list__status" id="company-details-1-status">
+    </div>
+    
+  </li>
+</ul>
+
+
+
+<div class="govuk-button-group">
+  <a href="application-overview-updated.html"><button type="submit" class="govuk-button" data-module="govuk-button">
+    Return to application overview
+  </button></a>
+  <a href="contact.html"><button type="submit" class="govuk-button govuk-button--secondary" data-module="govuk-button">
+    Create message
+  </button>
+  </a>
+</div>
+</div>
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-one-third">
+    <h2 class="govuk-heading-m">Related links</h1> 
+      <p><a href="" target="_blank">Application form</a> (opens in new tab)
+      </p>
+      <p><a href="" target="_blank">[Latest specification]</a> (opens in new tab)
+      </p>
+    </div>
+</div>
+</div>
+{% endblock %}

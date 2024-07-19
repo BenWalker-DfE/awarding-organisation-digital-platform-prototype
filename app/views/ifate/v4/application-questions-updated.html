@@ -1,0 +1,258 @@
+{% extends "layouts/main-dfe.html" %}
+
+{% block pageTitle %}
+  Content page template – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block beforeContent %}
+{% from "govuk/components/phase-banner/macro.njk" import govukPhaseBanner %}
+
+{{ govukPhaseBanner({
+  tag: {
+    text: "Prototype"
+  },
+  html: 'This is a prototype. Content is likely to change rapidly.'
+}) }}
+
+{{ govukBackLink({
+  text: "Back",
+  href: "javascript:window.history.back()"
+}) }}
+{% endblock %}
+
+
+
+{% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+   
+  <h1 class="govuk-heading-xl">
+   Review
+  </h1>
+
+  <dl class="govuk-summary-list govuk-!-margin-bottom-9">
+    <div class="govuk-summary-list__row">
+      <dt class="govuk-summary-list__key govuk-!-width-two-thirds">
+        Content coverage
+      </dt>
+      <dd class="govuk-summary-list__value">
+       <strong> Outcome</strong>
+      </dd>
+
+    </div>
+    
+    <div class="govuk-summary-list__row">
+      <dt class="govuk-summary-list__key govuk-!-width-one-half">
+        <a class="govuk-link" href="questions2.html">Submission details match the qualification structure spreadsheet</a>
+      </dd>
+      <dd class="govuk-summary-list__value">
+       <strong class="govuk-tag govuk-tag--red">
+          Fail
+        </strong> 
+      </dd>   
+      
+    </div>
+    
+    <div class="govuk-summary-list__row">
+      <dt class="govuk-summary-list__key">
+        <a class="govuk-link" href="questions3.html">Suitable coverage of the selected knowledge, skills, behaviours</a>
+      </dd>
+      <dd class="govuk-summary-list__value">
+              <!-- <strong class="govuk-tag govuk-tag--green">
+          Pass
+        </strong>
+        -->          
+      </dd>
+    </div>
+
+    <div class="govuk-summary-list__row">
+      <dt class="govuk-summary-list__key">
+        <a class="govuk-link" href="#">Rules of combination (RoC) are met</a>
+      </dt>
+      <dd class="govuk-summary-list__value">
+       <!-- <strong class="govuk-tag govuk-tag--green">
+          Pass
+        </strong>
+        -->          
+      </dd>
+    </div>
+
+    <div class="govuk-summary-list__row">
+      <dt class="govuk-summary-list__key">
+        <a class="govuk-link" href="#">Rationale for occupational relevance for content that does not meet ocupational standard</a>
+      </dt>
+      <dd class="govuk-summary-list__value">
+       <!-- <strong class="govuk-tag govuk-tag--green">
+          Pass
+        </strong>
+        -->          
+      </dd>
+    </div>
+
+    <div class="govuk-summary-list__row">
+      <dt class="govuk-summary-list__key">
+        <a class="govuk-link" href="#">Extended content supports occupational route and transferable study skills</a>
+      </dt>
+      <dd class="govuk-summary-list__value">
+       <!-- <strong class="govuk-tag govuk-tag--green">
+          Pass
+        </strong>
+        -->          
+      </dd>
+    </div>
+</dl>
+
+<dl class="govuk-summary-list govuk-!-margin-bottom-9">
+  <div class="govuk-summary-list__row">
+    <dt class="govuk-summary-list__key govuk-!-width-two-thirds">
+      Employer engagement
+    </dt>
+    <dd class="govuk-summary-list__value">
+     <strong> Outcome</strong>
+    </dd>
+
+  </div>
+  
+  <div class="govuk-summary-list__row">
+    <dt class="govuk-summary-list__key govuk-!-width-one-half">
+      <a class="govuk-link" href="">Evidence that a range of employer representatives were consulted</a>
+    </dd>
+    <dd class="govuk-summary-list__value">
+  
+    </dd>   
+    
+  </div>
+  
+  <div class="govuk-summary-list__row">
+    <dt class="govuk-summary-list__key">
+      <a class="govuk-link" href="#">Evidence that engagement has impacted design decisions</a>
+    </dd>
+    <dd class="govuk-summary-list__value">
+        
+    </dd>
+  </div>
+
+  <div class="govuk-summary-list__row">
+    <dt class="govuk-summary-list__key">
+      <a class="govuk-link" href="#">Evidence of employer demand</a>
+    </dt>
+    <dd class="govuk-summary-list__value">
+          
+    </dd>
+  </div>
+
+  <div class="govuk-summary-list__row">
+    <dt class="govuk-summary-list__key">
+      <a class="govuk-link" href="#">Evidence that employers agree the qualification meets the occupational standard</a>
+    </dt>
+    <dd class="govuk-summary-list__value">
+       
+    </dd>
+  </div>
+  <div class="govuk-summary-list__row">
+    <dt class="govuk-summary-list__key">
+      <a class="govuk-link" href="#">Evidence that future skills have been considered</a>
+    </dt>
+    <dd class="govuk-summary-list__value">
+          
+    </dd>
+  </div>
+  <div class="govuk-summary-list__row">
+    <dt class="govuk-summary-list__key">
+      <a class="govuk-link" href="#">There is a plan for future employer reviews</a>
+    </dt>
+    <dd class="govuk-summary-list__value">
+
+    </dd>
+  </div>
+</dl>
+
+<dl class="govuk-summary-list govuk-!-margin-bottom-9">
+  <div class="govuk-summary-list__row">
+    <dt class="govuk-summary-list__key govuk-!-width-two-thirds">
+      Assessment
+    </dt>
+    <dd class="govuk-summary-list__value">
+     <strong> Outcome</strong>
+    </dd>
+
+  </div>
+  
+  <div class="govuk-summary-list__row">
+    <dt class="govuk-summary-list__key govuk-!-width-one-half">
+      <a class="govuk-link" href="">Assessment principles</a>
+    </dd>
+    <dd class="govuk-summary-list__value">
+  
+    </dd>   
+    
+  </div>
+  
+  <div class="govuk-summary-list__row">
+    <dt class="govuk-summary-list__key">
+      <a class="govuk-link" href="#">Breadth of assessment</a>
+    </dd>
+    <dd class="govuk-summary-list__value">
+        
+    </dd>
+  </div>
+
+  <div class="govuk-summary-list__row">
+    <dt class="govuk-summary-list__key">
+      <a class="govuk-link" href="#">Holistic assessment</a>
+    </dt>
+    <dd class="govuk-summary-list__value">
+          
+    </dd>
+  </div>
+
+  <div class="govuk-summary-list__row">
+    <dt class="govuk-summary-list__key">
+      <a class="govuk-link" href="#">Grading structure</a>
+    </dt>
+    <dd class="govuk-summary-list__value">
+       
+    </dd>
+  </div>
+  <div class="govuk-summary-list__row">
+    <dt class="govuk-summary-list__key">
+      <a class="govuk-link" href="#">Modular approach</a>
+    </dt>
+    <dd class="govuk-summary-list__value">
+          
+    </dd>
+  </div>
+  <div class="govuk-summary-list__row">
+    <dt class="govuk-summary-list__key">
+      <a class="govuk-link" href="#">Maintain standards</a>
+    </dt>
+    <dd class="govuk-summary-list__value">
+    </dd>
+  </div>
+  <div class="govuk-summary-list__row">
+    <dt class="govuk-summary-list__key">
+      <a class="govuk-link" href="#">Sample assessment materials (SAMs)</a>
+    </dt>
+    <dd class="govuk-summary-list__value">
+    </dd>
+  </div>
+  <div class="govuk-summary-list__row">
+    <dt class="govuk-summary-list__key">
+      <a class="govuk-link" href="#">Additional evidence requirements</a>
+    </dt>
+    <dd class="govuk-summary-list__value">
+    </dd>
+  </div>
+</dl>
+
+
+
+    <a href="application-overview-updated3.html"><button type="submit" class="govuk-button" data-module="govuk-button">
+      Return to application overview
+    </button>
+  </a>
+  </div>
+</div>
+
+{% endblock %}
