@@ -1,0 +1,93 @@
+{% extends "layouts/main-dfe.html" %}
+
+{% block pageTitle %}
+Question page template – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block beforeContent %}
+{% from "govuk/components/phase-banner/macro.njk" import govukPhaseBanner %}
+
+{{ govukPhaseBanner({
+  tag: {
+    text: "Prototype"
+  },
+  html: 'This is a prototype. Content is likely to change rapidly.'
+}) }}
+
+{{ govukBackLink({
+  text: "Back",
+  href: "javascript:window.history.back()"
+}) }}
+
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+      <form action="/qualtypev4" method="post">
+          <fieldset class="govuk-fieldset" aria-describedby="scope-hint">
+            <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+              <span class="govuk-caption-xl">Eligibility</span>
+              <h1 class="govuk-fieldset__heading">
+                    What is the qualification type? 
+              </h1>
+            </legend>
+            
+            <p class="govuk-body">
+            It is important to consider whether your qualification is primarily non-technical or technical, as described in the <a href="https://www.gov.uk/guidance/qualifications-funding-approval-manual-2025-to-2026">Qualifications Funding Approval Manual</a>.
+
+            </p>
+            
+            <p class="govuk-body">
+              <strong>Non-technical qualifications</strong> are qualifications which are not based on the occupational standards. These include:</p>
+              <ul class="govuk-list--bullet">
+
+             <li>alternative academic qualifications</li>
+             <li>technical progression qualifications which support progression to a level 3 technical qualification</li>
+             <li>academic progression qualifications which support progression to a level 3 academic qualification</li>
+              <li>T Level foundation qualifications</li>
+            </ul> 
+              <p>
+            <strong>Technical qualifications</strong> are those whose primary purpose is entry to skilled employment, and which deliver the knowledge, skills and behaviours students need to progress into or within skilled employment, or to higher technical study. If a qualification is aligned to an occupation on the Institute for Apprenticeships and Technical Education's <a href="https://www.instituteforapprenticeships.org/occupational-maps/">occupational maps</a>, it is generally more likely to be a technical qualification. 
+            </p>
+            
+            <p>
+              Making this distinction informs whether you should submit qualifications through the non-technical or technical process. Please be aware, submitting your qualification through the incorrect process risks your submission being invalid.
+
+
+            </p>
+
+            
+            <div class="govuk-radios govuk-radios" data-module="govuk-radios">
+                  <div class="govuk-radios__item">
+                    <input class="govuk-radios__input" id="qualtype" name="qualtype" type="radio" value="aaq">
+                    <label class="govuk-label govuk-radios__label" for="aaq">
+                      Non-technical qualification
+                    </label>
+                  </div>
+                  <div class="govuk-radios__item">
+                    <input class="govuk-radios__input" id="qualtype" name="qualtype" type="radio" value="tq">
+                    <label class="govuk-label govuk-radios__label" for="tq">
+                      Technical qualification
+                    </label>
+                  </div>
+                </div>
+              </fieldset>
+
+
+          
+
+      
+      <div class="govuk-button-group">
+        <button name="button" value="primary" type="submit" class="govuk-button govuk-!-margin-top-7" data-module="govuk-button">
+          Continue
+        </button>
+      
+      </div>
+    </div>
+    </form>
+  </div>
+</div>
+
+{% endblock %}

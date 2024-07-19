@@ -1,0 +1,178 @@
+
+{% extends "layouts/main-dfe.html" %}
+
+{% block pageTitle %}
+  Content page template – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block beforeContent %}
+{% from "govuk/components/phase-banner/macro.njk" import govukPhaseBanner %}
+
+{{ govukPhaseBanner({
+  tag: {
+    text: "Prototype"
+  },
+  html: 'This is a prototype. Content is likely to change rapidly.'
+}) }}
+
+{% from "govuk/components/breadcrumbs/macro.njk" import govukBreadcrumbs %}
+
+{{ govukBreadcrumbs({
+  items: [
+    {
+      text: "Home",
+      href: "dashboard.html"
+    },
+    {
+      text: "Application overview"
+    }
+  ]
+}) }}
+{% endblock %}
+
+{% block content %}
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    <h1 class="govuk-heading-xl">
+      Application overview
+     </h1>
+        
+     <dl class="govuk-summary-list">
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          Status
+        </dt>
+        <dd class="govuk-summary-list__value">      
+          <strong class="govuk-tag govuk-tag--grey">
+            Draft
+          </strong>
+        </dd>
+       
+      </div>
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          Submission ID
+        </dt>
+        <dd class="govuk-summary-list__value">
+          [XXXXXX]
+        </dd>
+        
+      </div>
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          Qualification type
+        </dt>
+        <dd class="govuk-summary-list__value">
+          Alternative academic qualification
+        </dd>
+     
+      </div>
+
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+         Owner
+        </dt>
+        <dd class="govuk-summary-list__value">
+          [Name]
+        </dd>
+
+      </div> 
+      
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          Qualification title
+        </dt>
+        <dd class="govuk-summary-list__value">
+          Title goes here
+        </dd>
+
+      </div> 
+
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          Submission date
+        </dt>
+        <dd class="govuk-summary-list__value">
+          
+        </dd>
+
+      </div> 
+
+ 
+    </dl>
+
+
+      <h2 class="govuk-heading-m">Application progress</h2>
+      <ul class="govuk-task-list">
+        <li class="govuk-task-list__item govuk-task-list__item--with-link">
+          <div class="govuk-task-list__name-and-hint">
+            <h3 class="govuk-heading-s">
+              Qualification details
+            </h3>
+            <span class="govuk-caption-m">4 out of 4 questions completed</span>
+            <strong class="govuk-tag govuk-!-margin-top-2">
+              Completed
+            </strong>
+            <p class="govuk-body govuk-!-margin-top-2">
+              <a href="section-qual-details-aaq-updated.html" class="govuk-link">Go to qualification details</a>
+            </p>
+          </div>
+          <div class="govuk-task-list__status" id="company-details-1-status">
+          </div>
+        </li>
+
+        <li class="govuk-task-list__item govuk-task-list__item--with-link">
+          <div class="govuk-task-list__name-and-hint">
+            <h3 class="govuk-heading-s">
+              Provider demand           
+            </h3>
+            <span class="govuk-caption-m">2 out of 2 questions completed</span>
+            <strong class="govuk-tag govuk-!-margin-top-2">
+              Completed
+            </strong>
+            <p class="govuk-body govuk-!-margin-top-2">
+              <a href="section-prov-demand-aaq-updated2.html" class="govuk-link">Go to provider demand</a>
+            </p>
+          </div>
+          <div class="govuk-task-list__status" id="company-details-1-status">
+          </div>
+        </li>
+        <li class="govuk-task-list__item govuk-task-list__item--with-link">
+          <div class="govuk-task-list__name-and-hint">
+            <h3 class="govuk-heading-s">
+              Qualification type criteria            
+            </h3>
+            <span class="govuk-caption-m">0 out of 6 questions completed</span>
+            <p class="govuk-body govuk-!-margin-top-2">
+              <a href="#" class="govuk-link">Go to qualification type criteria</a>
+            </p>
+          </div>
+          <div class="govuk-task-list__status" id="company-details-1-status">
+          </div>
+        </li>
+       
+        </ul>
+
+        <p class="govuk-body">Only submit once you've answered all of the questions.
+        </p>
+        <p>
+          By submitting your answers, you confirm that you have the authority to act on behalf of the organisation.
+        </p>
+
+      <a href="application-confirmation.html"><button type="submit" class="govuk-button" data-module="govuk-button">
+        Accept and submit
+      </button>
+    </a>
+</div>
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-one-third">
+    <h2 class="govuk-heading-m">Related links</h1> 
+      <p><a href="" target="blank">View messages</a> (opens in new tab)
+      </p>
+
+    </div>
+</div>
+</div>
+{% endblock %}
+

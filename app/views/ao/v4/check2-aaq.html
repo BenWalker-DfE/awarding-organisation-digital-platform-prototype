@@ -1,0 +1,77 @@
+{% extends "layouts/main-dfe.html" %}
+
+{% block pageTitle %}
+Question page template – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block beforeContent %}
+{% from "govuk/components/phase-banner/macro.njk" import govukPhaseBanner %}
+
+{{ govukPhaseBanner({
+  tag: {
+    text: "Prototype"
+  },
+  html: 'This is a prototype. Content is likely to change rapidly.'
+}) }}
+
+{{ govukBackLink({
+  text: "Back",
+  href: "javascript:window.history.back()"
+}) }}
+
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+      <form action="/scopev4" method="post">
+          <fieldset class="govuk-fieldset govuk-!-margin-bottom-5" aria-describedby="scope-hint">
+            <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+              <span class="govuk-caption-xl">Eligibility</span>
+              <h1 class="govuk-fieldset__heading">
+                Is your qualification in scope of this funding approval process? 
+              </h1>
+            </legend>
+              <p class="govuk-body">
+                These are the qualification types in scope of this funding approval process:
+              </p>
+              <ul class="govuk-list--bullet">
+                <li>alternative academic qualifications (AAQs) at level 3</li>
+                <li>technical qualifications at level 2 and level 3</li>
+                <li>technical and academic progression qualifications, and T Level foundation qualifications, at level 2</li>  
+            </ul>
+            <div class="govuk-radios govuk-radios" data-module="govuk-radios">
+                  <div class="govuk-radios__item">
+                    <input class="govuk-radios__input" id="scope" name="scope" type="radio" value="yes">
+                    <label class="govuk-label govuk-radios__label" for="yes">
+                      Yes
+                    </label>
+                  </div>
+                  <div class="govuk-radios__item">
+                    <input class="govuk-radios__input" id="scope" name="scope" type="radio" value="no">
+                    <label class="govuk-label govuk-radios__label" for="no">
+                      No
+                    </label>
+                  </div>
+                </div>
+              </fieldset>
+
+          <p class="govuk-body">
+            Some qualification types are automatically approved for funding as detailed in the <a href="https://www.gov.uk/guidance/qualifications-funding-approval-manual-2025-to-2026" target="_blank" rel="noreferrer">Funding Approval Manual</a> (opens in new tab). You do not need to use this service for us to consider these qualifications for funding approval.
+          </p>
+
+      
+      <div class="govuk-button-group">
+        <button name="button" value="primary" type="submit" class="govuk-button govuk-!-margin-top-7" data-module="govuk-button">
+          Continue
+        </button>
+
+      </div>
+    </div>
+
+    </form>
+  </div>
+</div>
+
+{% endblock %}

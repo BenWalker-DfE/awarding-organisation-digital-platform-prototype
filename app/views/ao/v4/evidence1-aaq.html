@@ -1,0 +1,55 @@
+{% extends "layouts/main-dfe.html" %}
+
+{% block pageTitle %}
+Question page template – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block beforeContent %}
+{% from "govuk/components/phase-banner/macro.njk" import govukPhaseBanner %}
+
+{{ govukPhaseBanner({
+  tag: {
+    text: "Prototype"
+  },
+  html: 'This is a prototype. Content is likely to change rapidly.'
+}) }}
+
+
+
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+                 
+          
+                <span class="govuk-caption-xl">Evidence of demand</span>
+                <h1 class="govuk-heading-xl">
+                  Funding a new qualification              </h1>
+                  <p class="govuk-body">
+                    You have told us that you are applying for funding for a new qualification.
+                  </p>
+              <p class="govuk-body">
+                You must submit letters from institutions that show the qualification will have at least 100 publicly funded enrolments and which funding year and funding stream those enrolments relate to.
+                </p>
+                <p>
+                The <a href="https://www.gov.uk/guidance/qualifications-funding-approval-manual-2025-to-2026/common-funding-approval-criteria">Qualifications Funding Approval Manual</a> sets out what needs to be included in the letters and explains how you can check whether the institution is in receipt of publicly funded enrolments. 
+                </p>
+                <p>
+                To support you, we have provided <a href="https://assets.publishing.service.gov.uk/media/6613e674c4c84d4b31346a66/Guidance_for_FE_providers_on_estimating_publicly_funded_enrolments.pdf">guidance for FE providers on estimating publicly funded enrolments</a>.              </p>
+              </p>
+      
+      <div class="govuk-button-group">
+       <a href="evidence2-aaq.html"> <button name="button" value="primary" type="submit" class="govuk-button" data-module="govuk-button">
+          Continue
+        </button></a>
+
+      </div>
+     
+    </div>
+
+  </div>
+</div>
+
+{% endblock %}

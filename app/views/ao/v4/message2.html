@@ -1,0 +1,103 @@
+{% extends "layouts/main-dfe-internal.html" %}
+
+{% block pageTitle %}
+  Content page template – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block beforeContent %}
+{% from "govuk/components/phase-banner/macro.njk" import govukPhaseBanner %}
+
+{{ govukPhaseBanner({
+  tag: {
+    text: "Prototype"
+  },
+  html: 'This is a prototype. Content is likely to change rapidly.'
+}) }}
+
+{{ govukBackLink({
+  text: "Back",
+  href: "javascript:window.history.back()"
+}) }}
+{% endblock %}
+
+{% block content %}
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+<h1 class="govuk-heading-xl">
+  Message
+</h1>
+  
+<dl class="govuk-summary-list">
+  <div class="govuk-summary-list__row">
+    <dt class="govuk-summary-list__key">
+      Message subject:
+    </dt>
+    <dd class="govuk-summary-list__value">
+      Query about the qualification title
+    </dd>
+  </div>
+  <div class="govuk-summary-list__row">
+    <dt class="govuk-summary-list__key">
+      Sent:
+    </dt>
+    <dd class="govuk-summary-list__value">
+      10.25
+    </dd>
+  </div>
+  <div class="govuk-summary-list__row">
+    <dt class="govuk-summary-list__key">
+      From:
+    </dt>
+    <dd class="govuk-summary-list__value">
+      Department for Education, [Name of sender]
+    </dd>
+  </div>
+  <div class="govuk-summary-list__row">
+    <dt class="govuk-summary-list__key">
+      Submission ID
+    </dt>
+    <dd class="govuk-summary-list__value">
+      [XXXXXX]
+    </dd>
+  </div>
+
+  <div class="govuk-summary-list__row">
+    <dt class="govuk-summary-list__key">
+      Qualification title
+    </dt>
+    <dd class="govuk-summary-list__value">
+      Design, Surveying and Planning for Construction
+    </dd>
+  </div>
+</dl>
+       
+<p class="govuk-body">Thank you for your application. Having completed a check of documents, we have noticed that the qualification title doesn't seem to match the qualification you've submitted. Please could you review this for us? With many thanks,</p>
+
+<div class="govuk-form-group">
+  <h2 class="govuk-label-wrapper">
+    <label class="govuk-label govuk-label--l" for="more-detail">
+      Enter message
+    </label>
+  </h2>
+  <div id="more-detail-hint" class="govuk-hint">
+    Write your message in this box
+  </div>
+  <textarea class="govuk-textarea" id="more-detail" name="moreDetail" rows="5" aria-describedby="more-detail-hint"></textarea>
+</div>
+ 
+</div>
+</div>
+
+
+      
+      
+<div class="govuk-button-group">
+  <a href="message3"><button type="submit" class="govuk-button" data-module="govuk-button">
+    Save and review
+  </button></a>
+   <a href=""><button type="submit" class="govuk-button govuk-button--secondary" data-module="govuk-button">
+    Save and exit
+  </button></a>
+</div>
+</div>
+{% endblock %}
