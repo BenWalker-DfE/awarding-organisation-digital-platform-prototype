@@ -8,38 +8,38 @@ https://prototype-kit.service.gov.uk/docs/how-to-use-layouts
 {% block header %}
 
 {{ header({
-    "showNav": "false",
-    "showSearch": "false",
-    "showHeaderActionLinks": "true",
-    "logoPath": "public/images",
-    "searchAction": "/search/",
-    "searchInputName": "q",
-    "logoAltText": "Department for Education",
-    "homeHref": "/index",
-    "selectedNav": view,
-    "service": {
-      "name": "Approve qualification funding",
-      "serviceUrl": "/index"
-    },
-    "headerActionLinks": [
-      {
-        "url"  : "start",
-        "label" : "Sign out"
-      }
-    ],
-    "primaryLinks": [
-        {
-        "url"  : "/index",
-        "label" : "Home"
-      }, {
-        "url"  : "application-form",
-        "label" : "Apply"
-      }
-    ]
-  })
+"showNav": "false",
+"showSearch": "false",
+"showHeaderActionLinks": "true",
+"logoPath": "public/images",
+"searchAction": "/search/",
+"searchInputName": "q",
+"logoAltText": "Department for Education",
+"homeHref": "/index",
+"selectedNav": view,
+"service": {
+"name": "Assess qualifications for funding",
+"serviceUrl": "/index"
+},
+"headerActionLinks": [
+{
+"url" : "start",
+"label" : "Sign out"
+}
+],
+"primaryLinks": [
+{
+"url" : "/index",
+"label" : "Home"
+}, {
+"url" : "application-form",
+"label" : "Apply"
+}
+]
+})
 }}
 {% endblock %}
 {% block scripts %}
-  {{ super() }}
-  <script src="/node_modules/dfe-frontend/dist/dfefrontend.min.js"></script>
+{{ super() }}
+<script src="/node_modules/dfe-frontend/dist/dfefrontend.min.js"></script>
 {% endblock %}
