@@ -430,6 +430,7 @@ html: 'This is a prototype. Content is likely to change rapidly.'
     $("input[value='nontech']").on("click", function () {
       $('.route-container').addClass('hide');
       $('.standard-container').addClass('hide');
+      $('.tech-level-container').addClass('hide');
       $('.sector-subject-container').removeClass('hide');
       $('.subject-container').removeClass('hide');
       $('.non-tech-level-container').removeClass('hide');
@@ -438,6 +439,7 @@ html: 'This is a prototype. Content is likely to change rapidly.'
     $("input[value='tech']").on("click", function () {
       $('.subject-container').addClass('hide');
       $('.sector-subject-container').addClass('hide');
+      $('.non-tech-level-container').addClass('hide');
       $('.standard-container').removeClass('hide');
       $('.route-container').removeClass('hide');
       $('.tech-level-container').removeClass('hide');
