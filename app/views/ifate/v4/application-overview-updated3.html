@@ -1,180 +1,172 @@
 {% extends "layouts/main-dfe.html" %}
 
 {% block pageTitle %}
-  Content page template – {{ serviceName }} – GOV.UK Prototype Kit
+Content page template – {{ serviceName }} – GOV.UK Prototype Kit
 {% endblock %}
 
 {% block beforeContent %}
 {% from "govuk/components/phase-banner/macro.njk" import govukPhaseBanner %}
 
 {{ govukPhaseBanner({
-  tag: {
-    text: "Prototype"
-  },
-  html: 'This is a prototype. Content is likely to change rapidly.'
+tag: {
+text: "Prototype"
+},
+html: 'This is a prototype. Content is likely to change rapidly.'
 }) }}
 
 {% from "govuk/components/breadcrumbs/macro.njk" import govukBreadcrumbs %}
 
 {{ govukBreadcrumbs({
-  items: [
-    {
-      text: "Home",
-      href: "applications"
-    },
-    {
-      text: "Application overview"
-    }
-  ]
+items: [
+{
+text: "Home",
+href: "applications"
+},
+{
+text: "Application overview"
+}
+]
 }) }}
 {% endblock %}
 
 {% block content %}
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-two-thirds">
-       <h1 class="govuk-heading-xl">
-        Application overview
-       </h1>
-          
-       <dl class="govuk-summary-list">
-        <div class="govuk-summary-list__row">
-          <dt class="govuk-summary-list__key">
-            Status
-          </dt>
-          <dd class="govuk-summary-list__value">      
-            <strong class="govuk-tag govuk-tag--light-blue">
-              Review
-            </strong>
-          </dd>
-          <dd class="govuk-summary-list__actions">
-            <a class="govuk-link" href="#">Change<span class="govuk-visually-hidden"> date of birth</span></a>
-          </dd>
-        </div>
-        <div class="govuk-summary-list__row">
-          <dt class="govuk-summary-list__key">
-            Submission ID
-          </dt>
-          <dd class="govuk-summary-list__value">
-            [XXXXXX]
-          </dd>
-        </div>
-        
-        <div class="govuk-summary-list__row">
-          <dt class="govuk-summary-list__key">
-            Awarding organisation
-          </dt>
-          <dd class="govuk-summary-list__value">
-            City & Guilds
-          </dd>
-        </div>
-        
-        <div class="govuk-summary-list__row">
-          <dt class="govuk-summary-list__key">
-            Qualification title
-          </dt>
-          <dd class="govuk-summary-list__value">
-            City & Guilds Level 3 Technical Occupational Entry for Teaching Assistants (Certificate)
-          </dd>
-        </div>
-        <div class="govuk-summary-list__row">
-          <dt class="govuk-summary-list__key">
-            Qualification type
-          </dt>
-          <dd class="govuk-summary-list__value">
-            Technical
-          </dd>
-        </div>
-        <div class="govuk-summary-list__row">
-          <dt class="govuk-summary-list__key">
-            Category
-          </dt>
-          <dd class="govuk-summary-list__value">
-            Occupational entry - adults only
-          </dd>
-        </div>
-      
+    <h1 class="govuk-heading-xl">
+      Application overview
+    </h1>
 
-        <div class="govuk-summary-list__row">
-          <dt class="govuk-summary-list__key">
-            Route
-          </dt>
-          <dd class="govuk-summary-list__value">
-            Education and early years
-          </dd>
-        </div>
+    <dl class="govuk-summary-list">
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          Status
+        </dt>
+        <dd class="govuk-summary-list__value">
+          <strong class="govuk-tag govuk-tag--light-blue">
+            Review
+          </strong>
+        </dd>
+        <dd class="govuk-summary-list__actions">
+          <a class="govuk-link" href="#">Change<span class="govuk-visually-hidden"> date of birth</span></a>
+        </dd>
+      </div>
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          Submission ID
+        </dt>
+        <dd class="govuk-summary-list__value">
+          [XXXXXX]
+        </dd>
+      </div>
 
-        <div class="govuk-summary-list__row">
-          <dt class="govuk-summary-list__key">
-            Occupational standard
-          </dt>
-          <dd class="govuk-summary-list__value">
-            Teaching assistant
-          </dd>
-        </div>
-        
-        <div class="govuk-summary-list__row">
-          <dt class="govuk-summary-list__key">
-           Assigned to
-          </dt>
-          <dd class="govuk-summary-list__value">
-            Hollie Duncan
-          </dd>
-          <dd class="govuk-summary-list__actions">
-            <a class="govuk-link" href="#">Change<span class="govuk-visually-hidden"> date of birth</span></a>
-          </dd>
-        </div>    
-        
-      </dl>
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          Awarding organisation
+        </dt>
+        <dd class="govuk-summary-list__value">
+          City & Guilds
+        </dd>
+      </div>
 
-      <h2 class="govuk-heading-l govuk-!-margin-top-9">
-        Review progress
-       </h2>
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          Qualification title
+        </dt>
+        <dd class="govuk-summary-list__value">
+          City & Guilds Level 3 Technical Occupational Entry for Teaching Assistants (Certificate)
+        </dd>
+      </div>
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          Qualification type
+        </dt>
+        <dd class="govuk-summary-list__value">
+          Technical
+        </dd>
+      </div>
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          Category
+        </dt>
+        <dd class="govuk-summary-list__value">
+          Occupational entry - adults only
+        </dd>
+      </div>
 
-      <ul class="govuk-task-list">
-        <li class="govuk-task-list__item govuk-task-list__item--with-link">
-          <div class="govuk-task-list__name-and-hint">
-            <a class="govuk-link govuk-task-list__link" href="initial-check-updated2.html" aria-describedby="company-details-1-status">
-              Submission check
-            </a>
-          </div>
-          <div class="govuk-task-list__status" id="company-details-1-status">
-            <strong class="govuk-tag govuk-tag--green">
-              Pass
-            </strong>
-          </div>
-        </li>
-        <li class="govuk-task-list__item govuk-task-list__item--with-link">
-          <div class="govuk-task-list__name-and-hint">
-            <a class="govuk-link govuk-task-list__link" href="application-questions-updated2.html" aria-describedby="company-details-1-status">
-              Review
-            </a>
-          </div>
-          <div class="govuk-task-list__status" id="company-details-1-status">
-            <strong class="govuk-tag govuk-tag--green">
-              Pass
-            </strong>
-          </div>
-        </li>
-      </ul>
 
-      <h2 class="govuk-heading-l govuk-!-margin-top-9">
-        Funding decision
-       </h2>
-       <ul class="govuk-task-list">
-       <li class="govuk-task-list__item govuk-task-list__item--with-link">
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          Route
+        </dt>
+        <dd class="govuk-summary-list__value">
+          Education and early years
+        </dd>
+      </div>
+
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          Occupational standard
+        </dt>
+        <dd class="govuk-summary-list__value">
+          Teaching assistant
+        </dd>
+      </div>
+
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          Assigned to
+        </dt>
+        <dd class="govuk-summary-list__value">
+          Hollie Duncan
+        </dd>
+        <dd class="govuk-summary-list__actions">
+          <a class="govuk-link" href="#">Change<span class="govuk-visually-hidden"> date of birth</span></a>
+        </dd>
+      </div>
+
+    </dl>
+
+    <h2 class="govuk-heading-l govuk-!-margin-top-9">
+      Review progress
+    </h2>
+
+    <ul class="govuk-task-list">
+      <li class="govuk-task-list__item govuk-task-list__item--with-link">
         <div class="govuk-task-list__name-and-hint">
-     
-            DfE decision
+          <a class="govuk-link govuk-task-list__link" href="initial-check-updated2.html"
+            aria-describedby="company-details-1-status">
+            Submission check
+          </a>
         </div>
         <div class="govuk-task-list__status" id="company-details-1-status">
           <strong class="govuk-tag govuk-tag--green">
-            Approved
+            Pass
           </strong>
         </div>
       </li>
       <li class="govuk-task-list__item govuk-task-list__item--with-link">
         <div class="govuk-task-list__name-and-hint">
-     
+          <a class="govuk-link govuk-task-list__link" href="application-questions-updated2.html"
+            aria-describedby="company-details-1-status">
+            Review
+          </a>
+        </div>
+        <div class="govuk-task-list__status" id="company-details-1-status">
+          <strong class="govuk-tag govuk-tag--green">
+            Pass
+          </strong>
+        </div>
+      </li>
+    </ul>
+
+
+    <ul class="govuk-task-list">
+      <h2 class="govuk-heading-l govuk-!-margin-top-9">
+        IfATE review decision </h2>
+
+      <li class="govuk-task-list__item govuk-task-list__item--with-link">
+        <div class="govuk-task-list__name-and-hint">
+
           <a href="decision2.html">IfATE decision</a>
         </div>
         <div class="govuk-task-list__status" id="company-details-1-status">
@@ -185,50 +177,98 @@
       </li>
       <li class="govuk-task-list__item govuk-task-list__item--with-link">
         <div class="govuk-task-list__name-and-hint">
-     
-          Offer: 16-19
+          <a href=""> Communicate decision to awarding organisation
+          </a>
         </div>
-      </li> 
-      <li class="govuk-task-list__item govuk-task-list__item--with-link">
-        <div class="govuk-task-list__name-and-hint">
-     
-          Offer: Level 3 legal entitlement
-        </div>
-      </li>
-      <li class="govuk-task-list__item govuk-task-list__item--with-link">
-        <div class="govuk-task-list__name-and-hint">
-     
-          Offer: Advanced learner loans
-        </div>
-      </li>
-      <li class="govuk-task-list__item govuk-task-list__item--with-link">
-        <div class="govuk-task-list__name-and-hint">
-     
-          Offer: Free courses for jobs
+        <div class="govuk-task-list__status" id="company-details-2-status">
+
         </div>
       </li>
     </ul>
-       
+
+
+    <ul class="govuk-task-list">
+      <h2 class="govuk-heading-l govuk-!-margin-top-9">
+        DfE funding decision </h2>
+      <li class="govuk-task-list__item govuk-task-list__item--with-link">
+        <div class="govuk-task-list__name-and-hint">
+
+          DfE decision
+        </div>
+        <div class="govuk-task-list__status" id="company-details-1-status">
+          <strong class="govuk-tag govuk-tag--green">
+            Approved
+          </strong>
+        </div>
+      </li>
+
+      <li class="govuk-task-list__item govuk-task-list__item--with-link">
+        <div class="govuk-task-list__name-and-hint">
+
+          Offer: 16-19
+        </div>
+        <div class="govuk-task-list__status" id="company-details-2-status">
+
+        </div>
+      </li>
+      <li class="govuk-task-list__item govuk-task-list__item--with-link">
+        <div class="govuk-task-list__name-and-hint">
+
+          Offer: Level 3 legal entitlement
+        </div>
+        <div class="govuk-task-list__status" id="company-details-2-status">
+
+        </div>
+      </li>
+      <li class="govuk-task-list__item govuk-task-list__item--with-link">
+        <div class="govuk-task-list__name-and-hint">
+
+          Offer: Advanced learner loans
+        </div>
+        <div class="govuk-task-list__status" id="company-details-2-status">
+
+        </div>
+      </li>
+      <li class="govuk-task-list__item govuk-task-list__item--with-link">
+        <div class="govuk-task-list__name-and-hint">
+
+          Offer: Free courses for jobs
+        </div>
+        <div class="govuk-task-list__status" id="company-details-2-status">
+
+        </div>
+      </li>
+      <li class="govuk-task-list__item govuk-task-list__item--with-link">
+        <div class="govuk-task-list__name-and-hint">
+          Communicate decision to awarding organisation
+
+        </div>
+        <div class="govuk-task-list__status" id="company-details-2-status">
+
+        </div>
+      </li>
+    </ul>
 
     <div class="govuk-button-group">
       <a href="applications.html"><button type="submit" class="govuk-button" data-module="govuk-button">
-        Return to applications
-      </button></a>
-      <a href="contact.html"><button type="submit" class="govuk-button govuk-button--secondary" data-module="govuk-button">
-        Create message
-      </button>
+          Return to applications
+        </button></a>
+      <a href="contact.html"><button type="submit" class="govuk-button govuk-button--secondary"
+          data-module="govuk-button">
+          Create message
+        </button>
       </a>
     </div>
-</div>
+  </div>
 
-<div class="govuk-grid-row">
-  <div class="govuk-grid-column-one-third">
-    <h2 class="govuk-heading-m">Related links</h1> 
-      <p><a href="" target="_blank">Application form</a> (opens in new tab)
-      </p>
-      <p><a href="" target="_blank">[Latest specification]</a> (opens in new tab)
-      </p>
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-one-third">
+      <h2 class="govuk-heading-m">Related links</h1>
+        <p><a href="" target="_blank">Application form</a> (opens in new tab)
+        </p>
+        <p><a href="" target="_blank">[Latest specification]</a> (opens in new tab)
+        </p>
     </div>
-</div>
+  </div>
 </div>
 {% endblock %}
