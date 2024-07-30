@@ -1,33 +1,33 @@
 {% extends "layouts/main-dfe.html" %}
 
 {% block pageTitle %}
-  Content page template – {{ serviceName }} – GOV.UK Prototype Kit
+Content page template – {{ serviceName }} – GOV.UK Prototype Kit
 {% endblock %}
 
 {% block beforeContent %}
 {% from "govuk/components/phase-banner/macro.njk" import govukPhaseBanner %}
 
 {{ govukPhaseBanner({
-  tag: {
-    text: "Prototype"
-  },
-  html: 'This is a prototype. Content is likely to change rapidly.'
+tag: {
+text: "Prototype"
+},
+html: 'This is a prototype. Content is likely to change rapidly.'
 }) }}
 
 {{ govukBreadcrumbs({
-  items: [
-    {
-      text: "Home",
-      href: "applications"
-    },
-    {
-      text: "Application overview",
-      href: "application-overview"
-    },
-    {
-      text: "Initial check"
-    }
-  ]
+items: [
+{
+text: "Home",
+href: "applications"
+},
+{
+text: "Application overview",
+href: "application-overview"
+},
+{
+text: "Document checklist"
+}
+]
 }) }}
 {% endblock %}
 
@@ -35,148 +35,164 @@
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-two-thirds">
     <h1 class="govuk-heading-xl">
-      Submission check
+      Document checklist
     </h1>
-    
-    
+
+
     <h2 class="govuk-heading-m">
-    Attachments check
+      Attachments check
     </h2>
     <ul class="govuk-task-list">
       <li class="govuk-task-list__item govuk-task-list__item--with-link">
         <div class="govuk-task-list__name-and-hint">
-          <a class="govuk-link govuk-task-list__link" href="initial-check1.html" aria-describedby="company-details-1-status">
-    Qualification specification
-    </a>
+          <a class="govuk-link govuk-task-list__link" href="initial-check1.html"
+            aria-describedby="company-details-1-status">
+            Qualification specification
+          </a>
         </div>
         <div class="govuk-task-list__status" id="company-details-1-status">
           <strong class="govuk-tag govuk-tag--red">
-             Fail
-           </strong>
-         </div>
-      </li>
-      <li class="govuk-task-list__item govuk-task-list__item--with-link">
-        <div class="govuk-task-list__name-and-hint">
-          <a class="govuk-link govuk-task-list__link" href="initial-check5.html" aria-describedby="company-details-1-status">
-    Qualification structure spreadsheet
-    </a>
+            Fail
+          </strong>
         </div>
       </li>
       <li class="govuk-task-list__item govuk-task-list__item--with-link">
         <div class="govuk-task-list__name-and-hint">
-          <a class="govuk-link govuk-task-list__link" href="initial-check5.html" aria-describedby="company-details-1-status">
+          <a class="govuk-link govuk-task-list__link" href="initial-check5.html"
+            aria-describedby="company-details-1-status">
+            Qualification structure spreadsheet
+          </a>
+        </div>
+      </li>
+      <li class="govuk-task-list__item govuk-task-list__item--with-link">
+        <div class="govuk-task-list__name-and-hint">
+          <a class="govuk-link govuk-task-list__link" href="initial-check5.html"
+            aria-describedby="company-details-1-status">
             PSRB documentation
           </a>
         </div>
       </li>
       <li class="govuk-task-list__item govuk-task-list__item--with-link">
         <div class="govuk-task-list__name-and-hint">
-          <a class="govuk-link govuk-task-list__link" href="initial-check5.html" aria-describedby="company-details-1-status">
+          <a class="govuk-link govuk-task-list__link" href="initial-check5.html"
+            aria-describedby="company-details-1-status">
             KSB mapping spreadsheet
-    </a>
+          </a>
         </div>
       </li>
       <li class="govuk-task-list__item govuk-task-list__item--with-link">
         <div class="govuk-task-list__name-and-hint">
-          <a class="govuk-link govuk-task-list__link" href="initial-check5.html" aria-describedby="company-details-1-status">
+          <a class="govuk-link govuk-task-list__link" href="initial-check5.html"
+            aria-describedby="company-details-1-status">
             Employer engagement evidence
-    </a>
+          </a>
         </div>
       </li>
       <li class="govuk-task-list__item govuk-task-list__item--with-link">
         <div class="govuk-task-list__name-and-hint">
-          <a class="govuk-link govuk-task-list__link" href="initial-check5.html" aria-describedby="company-details-1-status">
+          <a class="govuk-link govuk-task-list__link" href="initial-check5.html"
+            aria-describedby="company-details-1-status">
             Assessment strategy
-    </a>
+          </a>
         </div>
       </li>
       <li class="govuk-task-list__item govuk-task-list__item--with-link">
         <div class="govuk-task-list__name-and-hint">
-          <a class="govuk-link govuk-task-list__link" href="initial-check5.html" aria-describedby="company-details-1-status">
+          <a class="govuk-link govuk-task-list__link" href="initial-check5.html"
+            aria-describedby="company-details-1-status">
             Sample assessment materials
-    </a>
+          </a>
         </div>
       </li>
       <li class="govuk-task-list__item govuk-task-list__item--with-link">
         <div class="govuk-task-list__name-and-hint">
-          <a class="govuk-link govuk-task-list__link" href="initial-check5.html" aria-describedby="company-details-1-status">
+          <a class="govuk-link govuk-task-list__link" href="initial-check5.html"
+            aria-describedby="company-details-1-status">
             Regulatory body documents
-    </a>
+          </a>
         </div>
       </li>
       <li class="govuk-task-list__item govuk-task-list__item--with-link">
         <div class="govuk-task-list__name-and-hint">
-          <a class="govuk-link govuk-task-list__link" href="initial-check5.html" aria-describedby="company-details-1-status">
+          <a class="govuk-link govuk-task-list__link" href="initial-check5.html"
+            aria-describedby="company-details-1-status">
             List of delivery partners
-    </a>
+          </a>
         </div>
       </li>
       <li class="govuk-task-list__item govuk-task-list__item--with-link">
         <div class="govuk-task-list__name-and-hint">
-          <a class="govuk-link govuk-task-list__link" href="initial-check5.html" aria-describedby="company-details-1-status">
+          <a class="govuk-link govuk-task-list__link" href="initial-check5.html"
+            aria-describedby="company-details-1-status">
             Provider demand
-    </a>
+          </a>
         </div>
       </li>
       <li class="govuk-task-list__item govuk-task-list__item--with-link">
         <div class="govuk-task-list__name-and-hint">
-          <a class="govuk-link govuk-task-list__link" href="initial-check5.html" aria-describedby="company-details-1-status">
+          <a class="govuk-link govuk-task-list__link" href="initial-check5.html"
+            aria-describedby="company-details-1-status">
             EDI, digital, sustainability information
-    </a>
+          </a>
         </div>
       </li>
     </ul>
-    
-    
+
+
     <h2 class="govuk-heading-m">
       Assessment check
-      </h2>
-      <ul class="govuk-task-list">
-        <li class="govuk-task-list__item govuk-task-list__item--with-link">
-          <div class="govuk-task-list__name-and-hint">
-            <a class="govuk-link govuk-task-list__link" href="initial-check1.html" aria-describedby="company-details-1-status">
-              Qualification specification submitted
-      </a>
-          </div>
-          
-        </li>
-        <li class="govuk-task-list__item govuk-task-list__item--with-link">
-          <div class="govuk-task-list__name-and-hint">
-            <a class="govuk-link govuk-task-list__link" href="initial-check5.html" aria-describedby="company-details-1-status">
-              Unit specification
-      </a>
-          </div>
-        </li>
-        <li class="govuk-task-list__item govuk-task-list__item--with-link">
-          <div class="govuk-task-list__name-and-hint">
-            <a class="govuk-link govuk-task-list__link" href="initial-check5.html" aria-describedby="company-details-1-status">
-              Indication where holistic assessment is used
-      </a>
-          </div>
-        </li>
-        <li class="govuk-task-list__item govuk-task-list__item--with-link">
-          <div class="govuk-task-list__name-and-hint">
-            <a class="govuk-link govuk-task-list__link" href="initial-check5.html" aria-describedby="company-details-1-status">
-              KSB mapping sheet
-      </a>
-          </div>
-        </li>
-      </ul>
-    
+    </h2>
+    <ul class="govuk-task-list">
+      <li class="govuk-task-list__item govuk-task-list__item--with-link">
+        <div class="govuk-task-list__name-and-hint">
+          <a class="govuk-link govuk-task-list__link" href="initial-check1.html"
+            aria-describedby="company-details-1-status">
+            Qualification specification submitted
+          </a>
+        </div>
 
-<a href="application-overview-updated.html"><button type="submit" class="govuk-button govuk-!-margin-top-5" data-module="govuk-button">
-  Return to application overview
-</button>
-</a>
-</div>
-<div class="govuk-grid-row">
-  <div class="govuk-grid-column-one-third">
-    <h2 class="govuk-heading-m">Related links</h1> 
-      <p><a href="" target="_blank">Application form</a> (opens in new tab)
-      </p>
-      <p><a href="" target="_blank">[Latest specification]</a> (opens in new tab)
-      </p>
+      </li>
+      <li class="govuk-task-list__item govuk-task-list__item--with-link">
+        <div class="govuk-task-list__name-and-hint">
+          <a class="govuk-link govuk-task-list__link" href="initial-check5.html"
+            aria-describedby="company-details-1-status">
+            Unit specification
+          </a>
+        </div>
+      </li>
+      <li class="govuk-task-list__item govuk-task-list__item--with-link">
+        <div class="govuk-task-list__name-and-hint">
+          <a class="govuk-link govuk-task-list__link" href="initial-check5.html"
+            aria-describedby="company-details-1-status">
+            Indication where holistic assessment is used
+          </a>
+        </div>
+      </li>
+      <li class="govuk-task-list__item govuk-task-list__item--with-link">
+        <div class="govuk-task-list__name-and-hint">
+          <a class="govuk-link govuk-task-list__link" href="initial-check5.html"
+            aria-describedby="company-details-1-status">
+            KSB mapping sheet
+          </a>
+        </div>
+      </li>
+    </ul>
+
+
+    <a href="application-overview-updated.html"><button type="submit" class="govuk-button govuk-!-margin-top-5"
+        data-module="govuk-button">
+        Return to application overview
+      </button>
+    </a>
+  </div>
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-one-third">
+      <h2 class="govuk-heading-m">Related links</h1>
+        <p><a href="" target="_blank">Application form</a> (opens in new tab)
+        </p>
+        <p><a href="" target="_blank">[Latest specification]</a> (opens in new tab)
+        </p>
     </div>
-</div>
+  </div>
 </div>
 {% endblock %}
