@@ -1,0 +1,75 @@
+{% extends "layouts/main-dfe-internal.html" %}
+
+{% block pageTitle %}
+Content page template – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block beforeContent %}
+{% from "govuk/components/phase-banner/macro.njk" import govukPhaseBanner %}
+
+{{ govukPhaseBanner({
+tag: {
+text: "Prototype"
+},
+html: 'This is a prototype. Content is likely to change rapidly.'
+}) }}
+
+{{ govukBackLink({
+text: "Back",
+href: "javascript:window.history.back()"
+}) }}
+{% endblock %}
+
+{% block content %}
+
+<h1 class="govuk-heading-xl">
+  Messages
+</h1>
+<div class="govuk-button-group">
+
+  <a href="contact.html"><button type="submit" class="govuk-button govuk-button--secondary" data-module="govuk-button">
+      Create message
+    </button>
+  </a>
+</div>
+
+
+<table class="govuk-table">
+  <thead class="govuk-table__head">
+    <tr class="govuk-table__row">
+      <th scope="col" class="govuk-table__header">Message title</th>
+      <th scope="col" class="govuk-table__header">From</th>
+      <th scope="col" class="govuk-table__header">Sent</th>
+    </tr>
+  </thead>
+  <tbody class="govuk-table__body">
+
+    <tr class="govuk-table__row">
+      <td class="govuk-table__cell"><a href="contact2.html">Missing information about level
+        </a></td>
+      <td class="govuk-table__cell"></td>
+      <td class="govuk-table__cell"><strong class="govuk-tag govuk-tag--grey">
+          Draft
+        </strong> </td>
+    </tr>
+    <tr class="govuk-table__row">
+      <td class="govuk-table__cell"><a href="message"><strong> Query about the qualification title
+          </strong></a> </td>
+      <td class="govuk-table__cell">Richard Jones, City & Guilds</td>
+      <td class="govuk-table__cell">9:17am 30 June 2024</td>
+
+    </tr>
+    <tr class="govuk-table__row">
+      <td class="govuk-table__cell"><a href="">KSB mapping query</a></td>
+      <td class="govuk-table__cell">Richard Jones, City & Guilds</td>
+      <td class="govuk-table__cell">11:46am 22 May 2024</td>
+    </tr>
+    <tr class="govuk-table__row">
+      <td class="govuk-table__cell"><a href="">Missing provider demand information</a></td>
+      <td class="govuk-table__cell">Richard Jones, City & Guilds</td>
+      <td class="govuk-table__cell">2:34pm 12 May 2024</td>
+    </tr>
+  </tbody>
+</table>
+
+{% endblock %}

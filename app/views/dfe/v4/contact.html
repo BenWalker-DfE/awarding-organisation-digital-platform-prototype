@@ -1,35 +1,36 @@
 {% extends "layouts/main-dfe-internal.html" %}
 
 {% block pageTitle %}
-  Content page template – {{ serviceName }} – GOV.UK Prototype Kit
+Content page template – {{ serviceName }} – GOV.UK Prototype Kit
 {% endblock %}
 
 {% block beforeContent %}
 {% from "govuk/components/phase-banner/macro.njk" import govukPhaseBanner %}
 
 {{ govukPhaseBanner({
-  tag: {
-    text: "Prototype"
-  },
-  html: 'This is a prototype. Content is likely to change rapidly.'
+tag: {
+text: "Prototype"
+},
+html: 'This is a prototype. Content is likely to change rapidly.'
 }) }}
 
 {{ govukBackLink({
-  text: "Back",
-  href: "javascript:window.history.back()"
+text: "Back",
+href: "javascript:window.history.back()"
 }) }}
 {% endblock %}
 
 {% block content %}
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-two-thirds">
-<h1 class="govuk-heading-xl">
-  Create message
-</h1>
-  
-<p class="govuk-body">This message will be sent to the primary contact at the awarding organisation.</p>
-<dl class="govuk-summary-list">
-      
+    <h1 class="govuk-heading-xl">
+      Create message
+    </h1>
+
+    <p class="govuk-body">This message will be sent to the primary contact at the awarding organisation.
+    </p>
+    <dl class="govuk-summary-list">
+
       <div class="govuk-summary-list__row">
         <dt class="govuk-summary-list__key">
           Submission ID
@@ -47,73 +48,65 @@
           [Title]
         </dd>
       </div>
-</dl>
-  
-
-<div class="govuk-form-group">
-  <h2 class="govuk-label-wrapper">
-    <label class="govuk-label govuk-label--m" for="sort">
-      Send message to
-    </label>
-    </h2>
-    <select class="govuk-select govuk-!-margin-bottom-4" id="sort" name="sort">
-      <option value="published" selected>Select name</option>
-      <option value="updated">[First name Last name]</option>
-      <option value="views">[First name Last name]</option>
-      <option value="comments">[First name Last name]</option>
-    </select>
-
-  <h2 class="govuk-label-wrapper">
-    <label class="govuk-label govuk-label--m" for="account-number">
-      Enter subject line
-    </label>
-  </h2>
-  <div id="more-detail-hint" class="govuk-hint">
-This will appear in the email subject line  </div>
-  <input class="govuk-input govuk-input--width-50 govuk-!-margin-bottom-4" id="account-number" name="accountNumber" type="text" spellcheck="false" aria-describedby="account-number-hint" inputmode="numeric">
-
-  <h2 class="govuk-label-wrapper">
-    <label class="govuk-label govuk-label--m" for="more-detail">
-      Enter message
-    </label>
-  </h2>
-  <div id="more-detail-hint" class="govuk-hint">
-    Write your message in this box
-  </div>
-  <textarea class="govuk-textarea" id="more-detail" name="moreDetail" rows="5" aria-describedby="more-detail-hint"></textarea>
-</div>
-
-<div class="govuk-button-group">
-  <a href="contact2.html"><button type="submit" class="govuk-button" data-module="govuk-button">
-    Save and review
-  </button></a>
-  <a href="application-overview.html"><button type="submit" class="govuk-button govuk-button--secondary" data-module="govuk-button">
-    Save and exit
-  </button></a>
-</div>
-</div>
-<div class="govuk-grid-row">
-  <div class="govuk-grid-column-one-third">
-    <h2 class="govuk-heading-m">Related checks</h2> 
-    <p class="govuk-body">Checks open in a new tab.</p>
+    </dl>
 
 
-    <p class="govuk-body"><a href="initial-check4.html" rel="noreferrer noopener" target="_blank"><strong>Check:</strong> [Description]</a></p> 
-    <p class="govuk-body"><strong>Outcome:</strong>
-     <strong class="govuk-tag govuk-tag--red govuk-!-margin-bottom-3">
-      Fail
-    </strong>
-    </p>
-   
-    <p class="govuk-body"><a href="initial-check6.html" rel="noreferrer noopener" target="_blank"><strong>Check:</strong> [Description]</a></p> 
-    <p class="govuk-body"><strong>Outcome:</strong>
-      <strong class="govuk-tag govuk-tag--green">
-        Pass
-    </strong>
-    </p>
-  
-   
+    <div class="govuk-form-group">
+      <h2 class="govuk-label-wrapper">
+        <label class="govuk-label govuk-label--m" for="sort">
+          Send message to
+        </label>
+      </h2>
+      <label class="govuk-label" for="sort">
+        Richard Jones, City & Guilds
+      </label>
+      </br>
+
+      <h2 class="govuk-label-wrapper">
+        <label class="govuk-label govuk-label--m" for="account-number">
+          Enter subject line
+        </label>
+      </h2>
+      <div id="more-detail-hint" class="govuk-hint">
+        This will appear in the email subject line </div>
+      <input class="govuk-input govuk-input--width-50 govuk-!-margin-bottom-4" id="account-number" name="accountNumber"
+        type="text" spellcheck="false" aria-describedby="account-number-hint" inputmode="numeric">
+
+      <h2 class="govuk-label-wrapper">
+        <label class="govuk-label govuk-label--m" for="more-detail">
+          Enter message
+        </label>
+      </h2>
+      <div id="more-detail-hint" class="govuk-hint">
+        Write your message in this box
+      </div>
+      <textarea class="govuk-textarea" id="more-detail" name="moreDetail" rows="5"
+        aria-describedby="more-detail-hint"></textarea>
     </div>
+
+    <div class="govuk-button-group">
+      <a href="contact2.html"><button type="submit" class="govuk-button" data-module="govuk-button">
+          Review message
+        </button></a>
+      <a href="messages.html"><button type="submit" class="govuk-button govuk-button--secondary"
+          data-module="govuk-button">
+          Save draft and exit
+        </button></a>
+    </div>
+  </div>
+
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-one-third">
+      <h2 class="govuk-heading-m">Related links</h1>
+        <p><a href="initial-check.html" target="_blank">Document check</a> (opens in new tab)
+        </p>
+        <p><a href="application-questions.html" target="_blank">Review</a> (opens in new tab)
+        </p>
+
+    </div>
+  </div>
+
 </div>
 </div>
 {% endblock %}
