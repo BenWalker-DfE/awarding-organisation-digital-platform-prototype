@@ -1,0 +1,93 @@
+{% extends "layouts/main-dfe-internal.html" %}
+
+{% block pageTitle %}
+Content page template – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block beforeContent %}
+{% from "govuk/components/phase-banner/macro.njk" import govukPhaseBanner %}
+
+{{ govukPhaseBanner({
+tag: {
+text: "Prototype"
+},
+html: 'This is a prototype. Content is likely to change rapidly.'
+}) }}
+
+{{ govukBackLink({
+text: "Back",
+href: "javascript:window.history.back()"
+}) }}
+{% endblock %}
+
+{% block content %}
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    <h1 class="govuk-heading-xl">
+      Message received
+    </h1>
+
+    <dl class="govuk-summary-list">
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          Message subject:
+        </dt>
+        <dd class="govuk-summary-list__value">
+          Query about the qualification title
+        </dd>
+      </div>
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          Received:
+        </dt>
+        <dd class="govuk-summary-list__value">
+          9:17am 30 June 2024
+        </dd>
+      </div>
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          From:
+        </dt>
+        <dd class="govuk-summary-list__value">
+          Richard Jones, City & Guilds
+        </dd>
+      </div>
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          Submission ID
+        </dt>
+        <dd class="govuk-summary-list__value">
+          [XXXXXX]
+        </dd>
+      </div>
+
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          Qualification title
+        </dt>
+        <dd class="govuk-summary-list__value">
+          Design, Surveying and Planning for Construction
+        </dd>
+      </div>
+    </dl>
+
+    <p class="govuk-body">We have checked and can confirm that the title should be [updated title]. Many thanks.</p>
+
+
+    <div class="govuk-button-group">
+      <a href="message2.html"><button type="submit" class="govuk-button" data-module="govuk-button">
+          Reply
+        </button></a>
+
+      <a href="messages.html"><button type="submit" class="govuk-button govuk-button--secondary"
+          data-module="govuk-button">
+          Cancel
+        </button></a>
+    </div>
+  </div>
+</div>
+
+
+</div>
+</div>
+{% endblock %}
