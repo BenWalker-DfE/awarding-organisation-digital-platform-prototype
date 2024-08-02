@@ -62,7 +62,18 @@ html: 'This is a prototype. Content is likely to change rapidly.'
           <option value="zak:wi">Zak Sharp</option>
           <option value="lee:zen">Lee Shen</option>
         </select>
+        <div class="non-tech-level-container">
+          <label class="govuk-label govuk-label--s" for="choose-provider style=" style="padding-top: 20px">
+            Level
+          </label>
+          <select class="govuk-select search-provider-name" name="choose-provider" id="choose-provider">
+            <option value="empty" aria-label="Please enter a provider name"></option>
+            <option value="10000536">Level 2</option>
+            <option value="">Level 3</option>
 
+
+          </select>
+        </div>
         <div class="route-container">
           <label class="govuk-label govuk-label--s search-ukprn" for="choose-route" style="padding-top: 20px">
             Route
@@ -102,23 +113,12 @@ html: 'This is a prototype. Content is likely to change rapidly.'
             <option value="5">ST0343: Veterinary nurse</option>
           </select>
         </div>
-        <div class="non-tech-level-container">
-          <label class="govuk-label govuk-label--s" for="choose-provider style=" style="padding-top: 20px">
-            Level
-          </label>
-          <select class="govuk-select search-provider-name" name="choose-provider" id="choose-provider">
-            <option value="empty" aria-label="Please enter a provider name"></option>
-            <option value="10000536">Level 2</option>
-            <option value="">Level 3</option>
 
-
-          </select>
-        </div>
 
 
         <fieldset class="govuk-fieldset">
           <legend class="govuk-fieldset__legend govuk-fieldset__legend--s govuk-!-margin-bottom-0">
-            <h4 class="govuk-fieldset__heading govuk-heading-s govuk-!-margin-top-5">
+            <h4 class="govuk-fieldset__heading govuk-!-margin-top-7">
               Status
             </h4>
           </legend>
@@ -189,7 +189,7 @@ html: 'This is a prototype. Content is likely to change rapidly.'
 
     <aside role="complementary">
       <div class="record-count-v4">
-        <h2 class="govuk-heading-m">
+        <h2 class="govuk-heading-s">
           Viewing 1 - 10 of 134 applications
         </h2>
       </div>
@@ -203,7 +203,8 @@ html: 'This is a prototype. Content is likely to change rapidly.'
         </thead>
         <tbody class="govuk-table__body">
           <tr class="govuk-table__row">
-            <td class="govuk-table__cell"><a href="">Pearson BTEC Level 3 Technical Occupational Entry for Early Years
+            <td class="govuk-table__cell"><a href="application-overview.html">Pearson BTEC Level 3 Technical
+                Occupational Entry for Early Years
                 Educator (Diploma)</a></td>
             <td class="govuk-table__cell">Pearson Edexcel</td>
             <td class="govuk-table__cell"><strong class="govuk-tag govuk-tag--yellow">
@@ -228,7 +229,7 @@ html: 'This is a prototype. Content is likely to change rapidly.'
                 Recalibrating Advanced Driver Assistance System (ADAS) Components (Award)</a></td>
             <td class="govuk-table__cell">Institute of Motor Industry</td>
             <td class="govuk-table__cell"><strong class="govuk-tag govuk-tag--light-blue">
-                Document checklist
+                Document check
               </strong></td>
           </tr>
           <tr class="govuk-table__row">
