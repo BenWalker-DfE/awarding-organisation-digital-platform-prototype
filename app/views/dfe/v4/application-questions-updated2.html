@@ -1,22 +1,22 @@
 {% extends "layouts/main-dfe-internal.html" %}
 
 {% block pageTitle %}
-  Content page template – {{ serviceName }} – GOV.UK Prototype Kit
+Content page template – {{ serviceName }} – GOV.UK Prototype Kit
 {% endblock %}
 
 {% block beforeContent %}
 {% from "govuk/components/phase-banner/macro.njk" import govukPhaseBanner %}
 
 {{ govukPhaseBanner({
-  tag: {
-    text: "Prototype"
-  },
-  html: 'This is a prototype. Content is likely to change rapidly.'
+tag: {
+text: "Prototype"
+},
+html: 'This is a prototype. Content is likely to change rapidly.'
 }) }}
 
 {{ govukBackLink({
-  text: "Back",
-  href: "javascript:window.history.back()"
+text: "Back",
+href: "javascript:window.history.back()"
 }) }}
 {% endblock %}
 
@@ -26,173 +26,190 @@
 
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-two-thirds">
-   
-  <h1 class="govuk-heading-xl">
-   Review
-  </h1>
 
-  <dl class="govuk-summary-list govuk-!-margin-bottom-9">
-    <div class="govuk-summary-list__row">
-      <dt class="govuk-summary-list__key govuk-!-width-two-thirds">
-        Common funding approval criteria
-      </dt>
-      <dd class="govuk-summary-list__value">
-       <strong> Outcome</strong>
-      </dd>
+    <h1 class="govuk-heading-xl">
+      Review
+    </h1>
 
-    </div>
-    
-    <div class="govuk-summary-list__row">
-      <dt class="govuk-summary-list__key govuk-!-width-one-half">
-        <a class="govuk-link" href="questions2.html">1: The qualification must be within your scope of recognition</a>
-      </dd> 
-      <dd class="govuk-summary-list__value">
-        <strong class="govuk-tag govuk-tag--red">
-           Fail
-         </strong>
-               
-       </dd>
-    </div>
-    
-    <div class="govuk-summary-list__row">
-      <dt class="govuk-summary-list__key">
-        <a class="govuk-link" href="questions4.html">2: The qualification must be available for delivery nationally in England from 1 August 2025</a>
-      </dd>
-      <dd class="govuk-summary-list__value">
-        <strong class="govuk-tag govuk-tag--green">
-           Pass
-         </strong>
-               
-       </dd>
-    </div>
+    <dl class="govuk-summary-list govuk-!-margin-bottom-9">
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key govuk-!-width-two-thirds">
+          Common funding approval criteria
+        </dt>
+        <dd class="govuk-summary-list__value">
+          <strong> Outcome</strong>
+        </dd>
 
-    <div class="govuk-summary-list__row">
-      <dt class="govuk-summary-list__key">
-        <a class="govuk-link" href="#">3: The qualification must be suitable for the student age groups</a>
-      </dt>
-    </div>
+      </div>
 
-    <div class="govuk-summary-list__row">
-      <dt class="govuk-summary-list__key">
-        <a class="govuk-link" href="#">4: The qualification must be at the correct level for the qualification offer</a>
-      </dt>
-    </div>
-    <div class="govuk-summary-list__row">
-      <dt class="govuk-summary-list__key">
-        <a class="govuk-link" href="#">5: The qualification must be in an appropriate sector subject area (SSA)</a>
-      </dt>
-    </div>
-    <div class="govuk-summary-list__row">
-      <dt class="govuk-summary-list__key">
-        <a class="govuk-link" href="#">6: The qualification must not have had, or be in scope to have, funding approval removed</a>
-      </dt>
-      <dd class="govuk-summary-list__value">
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key govuk-!-width-one-half">
+          <a class="govuk-link" href="questions2.html">1: The qualification must be within your scope of recognition</a>
+          </dd>
+        <dd class="govuk-summary-list__value">
+          <strong class="govuk-tag govuk-tag--red">
+            Fail
+          </strong>
 
-      </dd>
-    </div>
-  
-    <div class="govuk-summary-list__row">
-      <dt class="govuk-summary-list__key">
-        <a class="govuk-link" href="#">7: The qualification has evidence of demand </a>
-      </dt>
-    </div>
-</dl>
+        </dd>
+      </div>
 
-<dl class="govuk-summary-list govuk-!-margin-bottom-9">
-  <div class="govuk-summary-list__row">
-    <dt class="govuk-summary-list__key govuk-!-width-two-thirds">
-      Qualification type funding criteria
-    </dt>
-    <dd class="govuk-summary-list__value">
-     <strong> Outcome</strong>
-    </dd>
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          <a class="govuk-link" href="questions4.html">2: The qualification must be available for delivery nationally in
+            England from 1 August 2025</a>
+          </dd>
+        <dd class="govuk-summary-list__value">
+          <strong class="govuk-tag govuk-tag--green">
+            Pass
+          </strong>
 
-  </div>
-  
-  <div class="govuk-summary-list__row">
-    <dt class="govuk-summary-list__key govuk-!-width-one-half">
-      <a class="govuk-link" href="">Criteria 1: Qualification is within a Specified subject area (SSA)
-      </a>
-    </dd>
-  </div>
-  
-  <div class="govuk-summary-list__row">
-    <dt class="govuk-summary-list__key">
-      <a class="govuk-link" href="#">Criteria 2: Qualification is an appropriate size</a>
-    </dd>
-  </div>
+        </dd>
+      </div>
 
-  <div class="govuk-summary-list__row">
-    <dt class="govuk-summary-list__key">
-      <a class="govuk-link" href="#">Criteria 3: Qualification supports progression to Higher Education</a>
-    </dt>
-  </div>
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          <a class="govuk-link" href="#">3: The qualification must be suitable for the student age groups</a>
+        </dt>
+      </div>
 
-  <div class="govuk-summary-list__row">
-    <dt class="govuk-summary-list__key">
-      <a class="govuk-link" href="#">Criteria 4: Qualification is necessary</a>
-    </dt>
-  </div>
-  <div class="govuk-summary-list__row">
-    <dt class="govuk-summary-list__key">
-      <a class="govuk-link" href="#">Criteria 5: Qualification meets Ofqual regulatory requirements</a>
-    </dt>
-  </div>
-  <div class="govuk-summary-list__row">
-    <dt class="govuk-summary-list__key">
-      <a class="govuk-link" href="#">Criteria 6: Qualfication has an appropriate title</a>
-    </dt>
-  </div>
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          <a class="govuk-link" href="#">4: The qualification must be at the correct level for the qualification
+            offer</a>
+        </dt>
+      </div>
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          <a class="govuk-link" href="#">5: The qualification must be in an appropriate sector subject area (SSA)</a>
+        </dt>
+      </div>
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          <a class="govuk-link" href="#">6: The qualification must not have had, or be in scope to have, funding
+            approval removed</a>
+        </dt>
+        <dd class="govuk-summary-list__value">
 
-  <div class="govuk-summary-list__row">
-    <dt class="govuk-summary-list__key">
-      <a class="govuk-link" href="#">Criteria 7: Mandatory content</a>
-    </dt>
-  </div>
-</dl>
+        </dd>
+      </div>
 
-<dl class="govuk-summary-list govuk-!-margin-bottom-9">
-  <div class="govuk-summary-list__row">
-    <dt class="govuk-summary-list__key govuk-!-width-two-thirds">
-      Other criteria
-    </dt>
-    <dd class="govuk-summary-list__value">
-     <strong> Outcome</strong>
-    </dd>
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          <a class="govuk-link" href="#">7: The qualification has evidence of demand </a>
+        </dt>
+      </div>
+    </dl>
 
-  </div>
-  
-  <div class="govuk-summary-list__row">
-    <dt class="govuk-summary-list__key govuk-!-width-one-half">
-      <a class="govuk-link" href="">Other contextual or background information</a>
-    </dd>
-  </div>
-  
-  <div class="govuk-summary-list__row">
-    <dt class="govuk-summary-list__key govuk-!-width-one-half">
-      <a class="govuk-link" href="">Exceptions only</a>
-    </dd>
-  </div>
+    <dl class="govuk-summary-list govuk-!-margin-bottom-9">
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key govuk-!-width-two-thirds">
+          Qualification type funding criteria
+        </dt>
+        <dd class="govuk-summary-list__value">
+          <strong> Outcome</strong>
+        </dd>
 
-  <div class="govuk-summary-list__row">
-    <dt class="govuk-summary-list__key govuk-!-width-one-half">
-      <a class="govuk-link" href="">Level 3 and in England</a>
-    </dd>
-  </div>
+      </div>
 
-  <div class="govuk-summary-list__row">
-    <dt class="govuk-summary-list__key govuk-!-width-one-half">
-      <a class="govuk-link" href="">Multiple qualifications in a suite</a>
-    </dd>
-  </div>
-</dl>
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key govuk-!-width-one-half">
+          <a class="govuk-link" href="">Criteria 1: Qualification is within a Specified subject area (SSA)
+          </a>
+          </dd>
+      </div>
+
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          <a class="govuk-link" href="#">Criteria 2: Qualification is an appropriate size</a>
+          </dd>
+      </div>
+
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          <a class="govuk-link" href="#">Criteria 3: Qualification supports progression to Higher Education</a>
+        </dt>
+      </div>
+
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          <a class="govuk-link" href="#">Criteria 4: Qualification is necessary</a>
+        </dt>
+      </div>
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          <a class="govuk-link" href="#">Criteria 5: Qualification meets Ofqual regulatory requirements</a>
+        </dt>
+      </div>
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          <a class="govuk-link" href="#">Criteria 6: Qualfication has an appropriate title</a>
+        </dt>
+      </div>
+
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          <a class="govuk-link" href="#">Criteria 7: Mandatory content</a>
+        </dt>
+      </div>
+    </dl>
+
+    <dl class="govuk-summary-list govuk-!-margin-bottom-9">
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key govuk-!-width-two-thirds">
+          Other criteria
+        </dt>
+        <dd class="govuk-summary-list__value">
+          <strong> Outcome</strong>
+        </dd>
+
+      </div>
+
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key govuk-!-width-one-half">
+          <a class="govuk-link" href="">Other contextual or background information</a>
+          </dd>
+      </div>
+
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key govuk-!-width-one-half">
+          <a class="govuk-link" href="">Exceptions only</a>
+          </dd>
+      </div>
+
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key govuk-!-width-one-half">
+          <a class="govuk-link" href="">Level 3 and in England</a>
+          </dd>
+      </div>
+
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key govuk-!-width-one-half">
+          <a class="govuk-link" href="">Multiple qualifications in a suite</a>
+          </dd>
+      </div>
+    </dl>
 
 
     <a href="application-overview-updated2.html"><button type="submit" class="govuk-button" data-module="govuk-button">
-      Return to application overview
-    </button>
-  </a>
+        Return to application overview
+      </button>
+    </a>
+  </div>
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-one-third">
+      <h2 class="govuk-heading-m">Related links</h1>
+        <p><a href="" target="_blank">Application form</a> (opens in new tab)
+        </p>
+        <p><a href="" target="_blank">[Latest specification]</a> (opens in new tab)
+        </p>
+        <p><a href="messages.html">Messages</a>
+        </p>
+        <p><a href=""">Uploaded documents</a>
+      </p>
   </div>
 </div>
+
 
 {% endblock %}
