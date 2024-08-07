@@ -1,194 +1,199 @@
 {% extends "layouts/main-dfe.html" %}
 
 {% block pageTitle %}
-  Content page template – {{ serviceName }} – GOV.UK Prototype Kit
+Content page template – {{ serviceName }} – GOV.UK Prototype Kit
 {% endblock %}
 
 {% block beforeContent %}
 {% from "govuk/components/phase-banner/macro.njk" import govukPhaseBanner %}
 
 {{ govukPhaseBanner({
-  tag: {
-    text: "Prototype"
-  },
-  html: 'This is a prototype. Content is likely to change rapidly.'
+tag: {
+text: "Prototype"
+},
+html: 'This is a prototype. Content is likely to change rapidly.'
 }) }}
 {% endblock %}
 
 {% block content %}
 
-  <div class="govuk-grid-row">
-    <div class="govuk-grid-column-full-width">
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-full-width">
 
-     
 
-      <h1 class="govuk-heading-l">
-        Applications
-      </h1>
 
-      <a href="check1.html"><button type="submit" class="govuk-button govuk-button--secondary" data-module="govuk-button">
+    <h1 class="govuk-heading-l">
+      Applications
+    </h1>
+
+    <a href="check1.html"><button type="submit" class="govuk-button govuk-button--secondary" data-module="govuk-button">
         Start new application
       </button></a>
 
-      <div class="govuk-form-group">
-        <h2 class="govuk-label-wrapper">
-          <label class="govuk-label govuk-label--m" for="event-name">
-            Search by submission ID, qualification title or owner name
-          </label>
-        </h2>
-        <input class="govuk-input govuk-input--width-20 search-change-log" id="event-name" name="eventName" type="text">
-         <div class="govuk-button-group govuk-!-margin-top-2">
-          <button class="govuk-button search-button-change-log" data-module="govuk-button">
-           Search  
-          </button> 
-          <button class="govuk-button govuk-button--secondary govuk-!-margin-right-3 search-button-change-log-clear" data-module="govuk-button">
-          Clear search  
-         </button>
+    <div class="govuk-form-group">
+      <h2 class="govuk-label-wrapper">
+        <label class="govuk-label govuk-label--s" for="event-name">
+          You can search by submission ID, keywords in the qualification title or by name
+        </label>
+      </h2>
+      <input class="govuk-input govuk-input--width-30 search-change-log" id="event-name" name="eventName" type="text">
+      <div class="govuk-button-group govuk-!-margin-top-2">
+        <button class="govuk-button search-button-change-log" data-module="govuk-button">
+          Search
+        </button>
+        <button class="govuk-button govuk-button--secondary govuk-!-margin-right-3 search-button-change-log-clear"
+          data-module="govuk-button">
+          Clear search
+        </button>
       </div>
-      </div>
-
-
-
-              <table class="govuk-table">
-                <thead class="govuk-table__head">
-                  <tr class="govuk-table__row">
-                      <th scope="col" class="govuk-table__header">Submission ID</th>
-                      <th scope="col" class="govuk-table__header">Qualification title</th>
-                      <th scope="col" class="govuk-table__header">Owner</th>
-                      <th scope="col" class="govuk-table__header">Status</th>
-                    </tr>
-                  </thead>
-                  <tbody class="govuk-table__body">
-                   
-                  <tr class="govuk-table__row">
-                    <td class="govuk-table__cell"><a href="application-overview-new-message.html">[XXXXXX]</a></td>
-                    <td class="govuk-table__cell">Design, Surveying and Planning for Construction</td>
-                    <td class="govuk-table__cell">[Name]</td>
-                    <td class="govuk-table__cell">
-                      <strong class="govuk-tag govuk-tag--yellow">
-                        New message
-                      </strong>
-                    </td>                  
-                  </tr>
-                  <tr class="govuk-table__row">
-                    <td class="govuk-table__cell"><a href="">[XXXXXX]</a></td>
-                    <td class="govuk-table__cell">[Qualification title]</td>
-                    <td class="govuk-table__cell">[Name]</td>
-                    <td class="govuk-table__cell"><strong class="govuk-tag govuk-tag--yellow">
-                      New message
-                    </strong></td>
-                  </tr>
-                  <tr class="govuk-table__row">
-                    <td class="govuk-table__cell"><a href="">[XXXXXX]</a></td>
-                    <td class="govuk-table__cell"></td>
-                    <td class="govuk-table__cell">[Name]</td>
-                    <td class="govuk-table__cell">
-                      <strong class="govuk-tag govuk-tag--grey">
-                        Draft
-                      </strong>
-                    </td>                  
-                  </tr>
-                  <tr class="govuk-table__row">
-                    <td class="govuk-table__cell"><a href="">[XXXXXX]</a></td>
-                    <td class="govuk-table__cell">[Qualification title]</td>
-                    <td class="govuk-table__cell">[Name]</td>
-                    <td class="govuk-table__cell"><strong class="govuk-tag govuk-tag--light-blue">
-                     In review
-                    </strong></td>
-                  </tr>
-                  <tr class="govuk-table__row">
-                    <td class="govuk-table__cell"><a href="">[XXXXXX]</a></td>
-                    <td class="govuk-table__cell">[Qualification title]</td>
-                    <td class="govuk-table__cell">[Name]</td>
-                    <td class="govuk-table__cell"><strong class="govuk-tag govuk-tag--light-blue">
-                      In review
-                    </strong></td>
-                  </tr>
-                  <tr class="govuk-table__row">
-                    <td class="govuk-table__cell"><a href="">[XXXXXX]</a></td>
-                    <td class="govuk-table__cell">[Qualification title]</td>
-                    <td class="govuk-table__cell">[Name]</td>
-                    <td class="govuk-table__cell"><strong class="govuk-tag govuk-tag--light-blue">
-                      In review
-                    </strong></td>
-                  </tr>
-                  <tr class="govuk-table__row">
-                    <td class="govuk-table__cell"><a href="">[XXXXXX]</a></td>
-                    <td class="govuk-table__cell">[Qualification title]</td>
-                    <td class="govuk-table__cell">[Name]</td>
-                    <td class="govuk-table__cell"><strong class="govuk-tag govuk-tag--grey">
-                      Withdrawn
-                    </strong></td>
-                  </tr>
-                  <tr class="govuk-table__row">
-                    <td class="govuk-table__cell"><a href="">[XXXXXX]</a></td>
-                    <td class="govuk-table__cell">[Qualification title]</td>
-                    <td class="govuk-table__cell">[Name]</td>
-                    <td class="govuk-table__cell"><strong class="govuk-tag govuk-tag--green">
-                      Approved
-                    </strong></td>
-                  </tr>
-                  <tr class="govuk-table__row">
-                    <td class="govuk-table__cell"><a href="">[XXXXXX]</a></td>
-                    <td class="govuk-table__cell">[Qualification title]</td>
-                    <td class="govuk-table__cell">[Name]</td>
-                    <td class="govuk-table__cell"><strong class="govuk-tag govuk-tag--red">
-                      Rejected
-                    </strong></td>
-                  </tr>
-                  <tr class="govuk-table__row">
-                    <td class="govuk-table__cell"><a href="">[XXXXXX]</a></td>
-                    <td class="govuk-table__cell">[Qualification title]</td>
-                    <td class="govuk-table__cell">[Name]</td>
-                    <td class="govuk-table__cell"><strong class="govuk-tag govuk-tag--green">
-                      Approved
-                    </strong></td>
-                  </tr>
-                </tbody>
-              </table>
-           
-              <nav class="govuk-pagination" aria-label="Pagination">
-                <ul class="govuk-pagination__list">
-                  <li class="govuk-pagination__item govuk-pagination__item--current">
-                    <a class="govuk-link govuk-pagination__link" href="#" aria-label="Page 1" aria-current="page">
-                      1
-                    </a>
-                  </li>
-                  <li class="govuk-pagination__item">
-                    <a class="govuk-link govuk-pagination__link" href="#" aria-label="Page 2">
-                      2
-                    </a>
-                  </li>
-                  <li class="govuk-pagination__item">
-                    <a class="govuk-link govuk-pagination__link" href="#" aria-label="Page 3">
-                      3
-                    </a>
-                  </li>
-                </ul>
-                <div class="govuk-pagination__next" style="padding-right:620px">
-                  <a class="govuk-link govuk-pagination__link" href="#" rel="next">
-                    <span class="govuk-pagination__link-title">
-                      Next<span class="govuk-visually-hidden"> page</span>
-                    </span>
-                    <svg class="govuk-pagination__icon govuk-pagination__icon--next" xmlns="http://www.w3.org/2000/svg" height="13" width="15" aria-hidden="true" focusable="false" viewBox="0 0 15 13">
-                      <path d="m8.107-0.0078125-1.4136 1.414 4.2926 4.293h-12.986v2h12.896l-4.1855 3.9766 1.377 1.4492 6.7441-6.4062-6.7246-6.7266z"></path>
-                    </svg>
-                  </a>
-                </div>
-                <div class="govuk-form-group">
-                  <select class="govuk-select applications-per-page" id="sort" name="sort">
-                    <option value="published" selected>10</option>
-                    <option value="updated">25</option>
-                    <option value="views">50</option>
-                  </select>              
-                  <label class="govuk-label govuk-!-display-inline" for="sort">
-                    Applications per page </label>
-                </div>
-              </nav>
-
-          
-        </div>
     </div>
+
+
+
+    <table class="govuk-table">
+      <thead class="govuk-table__head">
+        <tr class="govuk-table__row">
+          <th scope="col" class="govuk-table__header">Submission ID</th>
+          <th scope="col" class="govuk-table__header">Qualification title</th>
+          <th scope="col" class="govuk-table__header">Owner</th>
+          <th scope="col" class="govuk-table__header">Status</th>
+        </tr>
+      </thead>
+      <tbody class="govuk-table__body">
+
+        <tr class="govuk-table__row">
+          <td class="govuk-table__cell"><a href="application-overview-new-message.html">[XXXXXX]</a></td>
+          <td class="govuk-table__cell"><a href="application-overview-new-message.html">Design, Surveying and Planning
+              for Construction</a></td>
+          <td class="govuk-table__cell">[Name]</td>
+          <td class="govuk-table__cell">
+            <strong class="govuk-tag govuk-tag--yellow">
+              New message
+            </strong>
+          </td>
+        </tr>
+        <tr class="govuk-table__row">
+          <td class="govuk-table__cell"><a href="">[XXXXXX]</a></td>
+          <td class="govuk-table__cell"><a href="">[Qualification title]</a></td>
+          <td class="govuk-table__cell">[Name]</td>
+          <td class="govuk-table__cell"><strong class="govuk-tag govuk-tag--yellow">
+              New message
+            </strong></td>
+        </tr>
+        <tr class="govuk-table__row">
+          <td class="govuk-table__cell"><a href="">[XXXXXX]</a></td>
+          <td class="govuk-table__cell"></td>
+          <td class="govuk-table__cell">[Name]</td>
+          <td class="govuk-table__cell">
+            <strong class="govuk-tag govuk-tag--grey">
+              Draft
+            </strong>
+          </td>
+        </tr>
+        <tr class="govuk-table__row">
+          <td class="govuk-table__cell"><a href="">[XXXXXX]</a></td>
+          <td class="govuk-table__cell"><a href="">[Qualification title]</a></td>
+          <td class="govuk-table__cell">[Name]</td>
+          <td class="govuk-table__cell"><strong class="govuk-tag govuk-tag--light-blue">
+              In review
+            </strong></td>
+        </tr>
+        <tr class="govuk-table__row">
+          <td class="govuk-table__cell"><a href="">[XXXXXX]</a></td>
+          <td class="govuk-table__cell"><a href="">[Qualification title]</a></td>
+          <td class="govuk-table__cell">[Name]</td>
+          <td class="govuk-table__cell"><strong class="govuk-tag govuk-tag--light-blue">
+              In review
+            </strong></td>
+        </tr>
+        <tr class="govuk-table__row">
+          <td class="govuk-table__cell"><a href="">[XXXXXX]</a></td>
+          <td class="govuk-table__cell"><a href="">[Qualification title]</a></td>
+          <td class="govuk-table__cell">[Name]</td>
+          <td class="govuk-table__cell"><strong class="govuk-tag govuk-tag--light-blue">
+              In review
+            </strong></td>
+        </tr>
+        <tr class="govuk-table__row">
+          <td class="govuk-table__cell"><a href="">[XXXXXX]</a></td>
+          <td class="govuk-table__cell"><a href="">[Qualification title]</a></td>
+          <td class="govuk-table__cell">[Name]</td>
+          <td class="govuk-table__cell"><strong class="govuk-tag govuk-tag--grey">
+              Withdrawn
+            </strong></td>
+        </tr>
+        <tr class="govuk-table__row">
+          <td class="govuk-table__cell"><a href="">[XXXXXX]</a></td>
+          <td class="govuk-table__cell"><a href="">[Qualification title]</a></td>
+          <td class="govuk-table__cell">[Name]</td>
+          <td class="govuk-table__cell"><strong class="govuk-tag govuk-tag--green">
+              Approved
+            </strong></td>
+        </tr>
+        <tr class="govuk-table__row">
+          <td class="govuk-table__cell"><a href="">[XXXXXX]</a></td>
+          <td class="govuk-table__cell"><a href="">[Qualification title]</a></td>
+          <td class="govuk-table__cell">[Name]</td>
+          <td class="govuk-table__cell"><strong class="govuk-tag govuk-tag--red">
+              Rejected
+            </strong></td>
+        </tr>
+        <tr class="govuk-table__row">
+          <td class="govuk-table__cell"><a href="">[XXXXXX]</a></td>
+          <td class="govuk-table__cell"><a href="">[Qualification title]</a></td>
+          <td class="govuk-table__cell">[Name]</td>
+          <td class="govuk-table__cell"><strong class="govuk-tag govuk-tag--green">
+              Approved
+            </strong></td>
+        </tr>
+      </tbody>
+    </table>
+
+    <nav class="govuk-pagination" aria-label="Pagination">
+      <ul class="govuk-pagination__list">
+        <li class="govuk-pagination__item govuk-pagination__item--current">
+          <a class="govuk-link govuk-pagination__link" href="#" aria-label="Page 1" aria-current="page">
+            1
+          </a>
+        </li>
+        <li class="govuk-pagination__item">
+          <a class="govuk-link govuk-pagination__link" href="#" aria-label="Page 2">
+            2
+          </a>
+        </li>
+        <li class="govuk-pagination__item">
+          <a class="govuk-link govuk-pagination__link" href="#" aria-label="Page 3">
+            3
+          </a>
+        </li>
+      </ul>
+      <div class="govuk-pagination__next" style="padding-right:620px">
+        <a class="govuk-link govuk-pagination__link" href="#" rel="next">
+          <span class="govuk-pagination__link-title">
+            Next<span class="govuk-visually-hidden"> page</span>
+          </span>
+          <svg class="govuk-pagination__icon govuk-pagination__icon--next" xmlns="http://www.w3.org/2000/svg"
+            height="13" width="15" aria-hidden="true" focusable="false" viewBox="0 0 15 13">
+            <path
+              d="m8.107-0.0078125-1.4136 1.414 4.2926 4.293h-12.986v2h12.896l-4.1855 3.9766 1.377 1.4492 6.7441-6.4062-6.7246-6.7266z">
+            </path>
+          </svg>
+        </a>
+      </div>
+      <div class="govuk-form-group">
+        <select class="govuk-select applications-per-page" id="sort" name="sort">
+          <option value="published" selected>10</option>
+          <option value="updated">25</option>
+          <option value="views">50</option>
+        </select>
+        <label class="govuk-label govuk-!-display-inline" for="sort">
+          Applications per page </label>
+      </div>
+    </nav>
+
+
   </div>
+</div>
+</div>
 
 {% endblock %}
