@@ -8,15 +8,15 @@ Question page template – {{ serviceName }} – GOV.UK Prototype Kit
 {% from "govuk/components/phase-banner/macro.njk" import govukPhaseBanner %}
 
 {{ govukPhaseBanner({
-  tag: {
-    text: "Prototype"
-  },
-  html: 'This is a prototype. Content is likely to change rapidly.'
+tag: {
+text: "Prototype"
+},
+html: 'This is a prototype. Content is likely to change rapidly.'
 }) }}
 
 {{ govukBackLink({
-  text: "Back",
-  href: "javascript:window.history.back()"
+text: "Back",
+href: "javascript:window.history.back()"
 }) }}
 
 {% endblock %}
@@ -25,45 +25,48 @@ Question page template – {{ serviceName }} – GOV.UK Prototype Kit
 
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-two-thirds">
-      <form action="/nationalv4" method="post">
-          <fieldset class="govuk-fieldset" aria-describedby="national-hint">
-            <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
-              <span class="govuk-caption-xl">Eligibility</span>
-              <h1 class="govuk-fieldset__heading">
-                Can the qualification be delivered nationally?            </h1></legend>
-                <p class="govuk-body">
-                  To deliver a qualification nationally, it must not be restricted to one provider of education or training or one employer.
-                </p>
-            
-            <div class="govuk-radios govuk-radios" data-module="govuk-radios">
-                  <div class="govuk-radios__item">
-                    <input class="govuk-radios__input" id="national" name="national" type="radio" value="yes">
-                    <label class="govuk-label govuk-radios__label" for="yes">
-                      Yes
-                    </label>
-                  </div>
-                  <div class="govuk-radios__item">
-                    <input class="govuk-radios__input" id="national" name="national" type="radio" value="no">
-                    <label class="govuk-label govuk-radios__label" for="no">
-                      No
-                    </label>
-                  </div>
-                </div>
-              </fieldset>
+    <form action="/nationalv4" method="post">
+      <fieldset class="govuk-fieldset" aria-describedby="national-hint">
+        <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+          <span class="govuk-caption-xl">Eligibility</span>
+          <h1 class="govuk-fieldset__heading">
+            Can the qualification be delivered nationally? </h1>
+        </legend>
+        <p class="govuk-body">
+          To deliver a qualification nationally, it must be available from more than one education or training provider
+          or more than one employer.
+        </p>
+
+        <div class="govuk-radios govuk-radios" data-module="govuk-radios">
+          <div class="govuk-radios__item">
+            <input class="govuk-radios__input" id="national" name="national" type="radio" value="yes">
+            <label class="govuk-label govuk-radios__label" for="yes">
+              Yes
+            </label>
+          </div>
+          <div class="govuk-radios__item">
+            <input class="govuk-radios__input" id="national" name="national" type="radio" value="no">
+            <label class="govuk-label govuk-radios__label" for="no">
+              No
+            </label>
+          </div>
+        </div>
+      </fieldset>
 
 
-          
 
-      
+
+
       <div class="govuk-button-group">
-        <button name="button" value="primary" type="submit" class="govuk-button govuk-!-margin-top-7" data-module="govuk-button">
+        <button name="button" value="primary" type="submit" class="govuk-button govuk-!-margin-top-7"
+          data-module="govuk-button">
           Continue
         </button>
 
       </div>
-    </div>
-    </form>
   </div>
+  </form>
+</div>
 </div>
 
 {% endblock %}

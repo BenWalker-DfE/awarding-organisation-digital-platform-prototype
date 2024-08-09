@@ -1,45 +1,46 @@
 {% extends "layouts/main-dfe.html" %}
 
 {% block pageTitle %}
-  Confirmation page template – {{ serviceName }} – GOV.UK Prototype Kit
+Confirmation page template – {{ serviceName }} – GOV.UK Prototype Kit
 {% endblock %}
 
 {% block content %}
 
-  <div class="govuk-grid-row">
-    <div class="govuk-grid-column-two-thirds">
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
 
-      {{ govukPanel({
-        titleText: "Application has been submitted",
-        html: "Qualification funding applied for [Title] 
-           
-        Submission ID [ID]"
-      }) }}
+    {{ govukPanel({
+    titleText: "Application has been submitted",
+    html: "Qualification funding applied for [Title]
 
-      <p>
-        We have sent you a confirmation email.
-      </p>
+    Submission ID [ID]"
+    }) }}
 
-      <h2 class="govuk-heading-m">
-        What happens next
-      </h2>
+    <p>
+      We have sent you a confirmation email.
+    </p>
 
-      <p>
-        Once we've reviewed your application, we'll email the outcome to you. If any of your answers need clarification, we'll send you a notification by email.
-      </p>
+    <h2 class="govuk-heading-m">
+      What happens next
+    </h2>
+    <p>You can expect your application to start being reviewed within 2 weeks from the date of submission.</p>
+    <p>
+      Once we've reviewed your application, we'll email the outcome to you. If any of your answers need clarification,
+      we'll send you a notification by email.
+    </p>
 
-      <p>
-        <a href="#">
-          What did you think of this service?</a> (takes 60 seconds)
-      </p>
+    <p>
+      <a href="#">
+        What did you think of this service?</a> (takes 60 seconds)
+    </p>
 
-      <div class="govuk-button-group">
-        <a href="dashboard-updated.html" role="button" class="govuk-button" data-module="govuk-button">
-          Return to Applications
-        </a>
-      </div>
-
+    <div class="govuk-button-group">
+      <a href="dashboard-updated.html" role="button" class="govuk-button" data-module="govuk-button">
+        Return to applications
+      </a>
     </div>
+
   </div>
+</div>
 
 {% endblock %}

@@ -1,58 +1,132 @@
 {% extends "layouts/main-dfe.html" %}
 
 {% block pageTitle %}
-  Content page template – {{ serviceName }} – GOV.UK Prototype Kit
+Content page template – {{ serviceName }} – GOV.UK Prototype Kit
 {% endblock %}
 
 {% block beforeContent %}
 {% from "govuk/components/phase-banner/macro.njk" import govukPhaseBanner %}
 
 {{ govukPhaseBanner({
-  tag: {
-    text: "Prototype"
-  },
-  html: 'This is a prototype. Content is likely to change rapidly.'
+tag: {
+text: "Prototype"
+},
+html: 'This is a prototype. Content is likely to change rapidly.'
 }) }}
 {% endblock %}
 
 {% block content %}
 
- 
 
-     
 
-      <h1 class="govuk-heading-l">
-        Messages
-      </h1>
 
-              <table class="govuk-table">
-                <thead class="govuk-table__head">
-                  <tr class="govuk-table__row">
-                      <th scope="col" class="govuk-table__header">Message title</th>
-                      <th scope="col" class="govuk-table__header">From</th>
-                      <th scope="col" class="govuk-table__header">Sent</th>
-                    </tr>
-                  </thead>
-                  <tbody class="govuk-table__body">
-                   
-                  <tr class="govuk-table__row">
-                    <td class="govuk-table__cell"><a href="message"><strong>      Query about the qualification title
-                    </strong></a> </td>
-                    <td class="govuk-table__cell">Department for Education</td>
-                    <td class="govuk-table__cell">10.25</td>
-                                
-                  </tr>
-                  <tr class="govuk-table__row">
-                    <td class="govuk-table__cell"><a href="">KSB mapping query</a></td>
-                    <td class="govuk-table__cell">IfATE</td>
-                    <td class="govuk-table__cell">10 Jul</td>
-                  </tr>
-                  <tr class="govuk-table__row">
-                    <td class="govuk-table__cell"><a href="">Missing provider demand information</a></td>
-                    <td class="govuk-table__cell">Department for Education</td>
-                    <td class="govuk-table__cell">9 Jul</td>                 
-                  </tr>
-                </tbody>
-              </table>          
+
+<h1 class="govuk-heading-l">
+  Messages
+</h1>
+
+<div class="govuk-button-group">
+  <a href="contact.html"><button type="submit" class="govuk-button" data-module="govuk-button">
+      Create new message
+    </button>
+  </a>
+</div>
+
+
+<div class="govuk-tabs" data-module="govuk-tabs">
+  <h2 class="govuk-tabs__title">
+    Contents
+  </h2>
+  <ul class="govuk-tabs__list">
+    <li class="govuk-tabs__list-item govuk-tabs__list-item--selected">
+      <a class="govuk-tabs__tab" href="#past-day">
+        Inbox
+      </a>
+    </li>
+    <li class="govuk-tabs__list-item">
+      <a class="govuk-tabs__tab" href="#past-week">
+        Sent
+      </a>
+    </li>
+    <li class="govuk-tabs__list-item">
+      <a class="govuk-tabs__tab" href="#past-month">
+        Drafts
+      </a>
+    </li>
+
+  </ul>
+  <div class="govuk-tabs__panel" id="past-day">
+    <h2 class="govuk-heading-l">Inbox</h2>
+    <table class="govuk-table">
+      <thead class="govuk-table__head">
+        <tr class="govuk-table__row">
+          <th scope="col" class="govuk-table__header">Message title</th>
+
+          <th scope="col" class="govuk-table__header">From</th>
+          <th scope="col" class="govuk-table__header">Received</th>
+        </tr>
+      </thead>
+      <tbody class="govuk-table__body">
+        <tr class="govuk-table__row">
+          <td class="govuk-table__cell"><a href="message"><strong> Query about the qualification title
+              </strong></a> </td>
+          <td class="govuk-table__cell"> Department for Education
+          </td>
+          <td class="govuk-table__cell">9:17am 30 June 2024</td>
+        </tr>
+        <tr class="govuk-table__row">
+          <td class="govuk-table__cell"><a href="">Contact details query</a></td>
+          <td class="govuk-table__cell">IfATE
+          </td>
+          <td class="govuk-table__cell">11:46am 22 May 2024</td>
+        </tr>
+
+      </tbody>
+    </table>
+  </div>
+  <div class="govuk-tabs__panel govuk-tabs__panel--hidden" id="past-week">
+    <h2 class="govuk-heading-l">Sent</h2>
+    <table class="govuk-table">
+      <thead class="govuk-table__head">
+        <tr class="govuk-table__row">
+          <th scope="col" class="govuk-table__header">Message title </th>
+          <th scope="col" class="govuk-table__header">To</th>
+          <th scope="col" class="govuk-table__header">Sent</th>
+        </tr>
+      </thead>
+      <tbody class="govuk-table__body">
+        <tr class="govuk-table__row">
+          <td class="govuk-table__cell"><a href="message">Missing provider demand information</a></td>
+          <td class="govuk-table__cell">IfATE</td>
+          <td class="govuk-table__cell">2:34pm 12 May 2024</td>
+        </tr>
+
+      </tbody>
+    </table>
+  </div>
+  <div class="govuk-tabs__panel govuk-tabs__panel--hidden" id="past-month">
+    <h2 class="govuk-heading-l">Drafts</h2>
+    <table class="govuk-table">
+      <thead class="govuk-table__head">
+        <tr class="govuk-table__row">
+          <th scope="col" class="govuk-table__header">Message title</th>
+          <th scope="col" class="govuk-table__header">To</th>
+          <th scope="col" class="govuk-table__header">Last edited</th>
+        </tr>
+      </thead>
+      <tbody class="govuk-table__body">
+        <tr class="govuk-table__row">
+          <td class="govuk-table__cell"><a href="">Missing information about level
+            </a></td>
+          <td class="govuk-table__cell">IfATE</td>
+          <td class="govuk-table__cell">5:10pm 12th July 2024</td>
+        </tr>
+
+      </tbody>
+    </table>
+  </div>
+
+</div>
+
 
 {% endblock %}

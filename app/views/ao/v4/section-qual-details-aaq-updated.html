@@ -1,94 +1,94 @@
-
 {% extends "layouts/main-dfe.html" %}
 
 {% block pageTitle %}
-  Content page template – {{ serviceName }} – GOV.UK Prototype Kit
+Content page template – {{ serviceName }} – GOV.UK Prototype Kit
 {% endblock %}
 
 {% block beforeContent %}
 {% from "govuk/components/phase-banner/macro.njk" import govukPhaseBanner %}
 
 {{ govukPhaseBanner({
-  tag: {
-    text: "Prototype"
-  },
-  html: 'This is a prototype. Content is likely to change rapidly.'
+tag: {
+text: "Prototype"
+},
+html: 'This is a prototype. Content is likely to change rapidly.'
 }) }}
 
 {% from "govuk/components/breadcrumbs/macro.njk" import govukBreadcrumbs %}
 
 {{ govukBreadcrumbs({
-  items: [
-    {
-      text: "Home",
-      href: "dashboard.html"
-    },
-    {
-      text: "Application overview",
-      href: "application-overview-aaq-updated.html"
-    },
-    {
-      text: "Qualification details"
-    }
-  ]
+items: [
+{
+text: "Home",
+href: "dashboard.html"
+},
+{
+text: "Application overview",
+href: "application-overview-aaq-updated.html"
+},
+{
+text: "Qualification details"
+}
+]
 }) }}
 {% endblock %}
 
 {% block content %}
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-two-thirds">
-       <h1 class="govuk-heading-xl">
-        Qualification details
-       </h1>
+    <h1 class="govuk-heading-xl">
+      Qualification details
+    </h1>
+    <p>You must answer each of these questions. Once you have answered, it will show as completed.
+    </p>
 
 
-      
-      
-<dl class="govuk-summary-list">
-        <div class="govuk-summary-list__row">
-          <dt class="govuk-summary-list__key summary-list__key-aodp">
-            <a class="govuk-link" href="question1-aaq.html">Qualification title</a>
-          </dt>
-          <dd class="govuk-summary-list__value" style="text-align:right">
-            <strong class="govuk-tag">
-              Completed
-            </strong>
-          </dd>
-        </div>
-        
-        <div class="govuk-summary-list__row">
-          <dt class="govuk-summary-list__key">
-            <a class="govuk-link" href="question2-aaq.html">Age range</a>
-          </dt>
-          <dd class="govuk-summary-list__value" style="text-align:right">
-            <strong class="govuk-tag">
-              Completed
-            </strong>
-          </dd>
-        </div>
-        <div class="govuk-summary-list__row">
-          <dt class="govuk-summary-list__key">
-            <a class="govuk-link" href="question3-aaq.html">Operational start date</a>
-          </dt>
-          <dd class="govuk-summary-list__value" style="text-align:right">
-            <strong class="govuk-tag">
-              Completed
-            </strong>
-          </dd>
-        </div>
-       
-      </dl>
+
+    <dl class="govuk-summary-list">
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key summary-list__key-aodp">
+          <a class="govuk-link" href="question1-aaq.html">Qualification title</a>
+        </dt>
+        <dd class="govuk-summary-list__value" style="text-align:right">
+          <strong class="govuk-tag">
+            Completed
+          </strong>
+        </dd>
+      </div>
+
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          <a class="govuk-link" href="question2-aaq.html">Age range</a>
+        </dt>
+        <dd class="govuk-summary-list__value" style="text-align:right">
+          <strong class="govuk-tag">
+            Completed
+          </strong>
+        </dd>
+      </div>
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          <a class="govuk-link" href="question3-aaq.html">Operational start date</a>
+        </dt>
+        <dd class="govuk-summary-list__value" style="text-align:right">
+          <strong class="govuk-tag">
+            Completed
+          </strong>
+        </dd>
+      </div>
+
+    </dl>
 
 
-      
 
-      <a href="application-overview-aaq-updated.html"><button type="submit" class="govuk-button" data-module="govuk-button">
+
+    <a href="application-overview-aaq-updated.html"><button type="submit" class="govuk-button"
+        data-module="govuk-button">
         Return to application overview
       </button>
     </a>
-</div>
+  </div>
 
 </div>
 </div>
 {% endblock %}
-

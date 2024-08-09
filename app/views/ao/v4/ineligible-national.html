@@ -8,15 +8,15 @@ Question page template – {{ serviceName }} – GOV.UK Prototype Kit
 {% from "govuk/components/phase-banner/macro.njk" import govukPhaseBanner %}
 
 {{ govukPhaseBanner({
-  tag: {
-    text: "Prototype"
-  },
-  html: 'This is a prototype. Content is likely to change rapidly.'
+tag: {
+text: "Prototype"
+},
+html: 'This is a prototype. Content is likely to change rapidly.'
 }) }}
 
 {{ govukBackLink({
-  text: "Back",
-  href: "javascript:window.history.back()"
+text: "Back",
+href: "javascript:window.history.back()"
 }) }}
 
 {% endblock %}
@@ -31,28 +31,34 @@ Question page template – {{ serviceName }} – GOV.UK Prototype Kit
           <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
             <span class="govuk-caption-xl">Eligibility</span>
             <h1 class="govuk-fieldset__heading">
-              You cannot apply for funding
-             </h1>
-           </legend>
-             <p class="govuk-body">
-              This is because only qualifications that can be offered nationally will be considered for approval. 
-            </p>
-          </div>
-        </div>
-        </fieldset>
+              You cannot apply for funding this time
+            </h1>
+          </legend>
+          <p class="govuk-body">
+            This is because only qualifications that can be offered nationally will be considered for approval.
+          </p>
+          <p class="govuk-body">
+            Find out more about <a
+              href="https://www.gov.uk/guidance/qualifications-funding-approval-manual-2025-to-2026/common-funding-approval-criteria"
+              target="_blank">
+              funding approval criteria</a> (opens in new tab).</p>
       </div>
-      
-      <div class="govuk-button-group">
-        <button name="button" value="primary" type="submit" class="govuk-button" data-module="govuk-button" href="dashboard.html">
-          Return to Applications
-        </button>
-      </div>
-
-
-    </form>
-
-
   </div>
+  </fieldset>
+</div>
+
+<div class="govuk-button-group">
+  <button name="button" value="primary" type="submit" class="govuk-button" data-module="govuk-button"
+    href="dashboard.html">
+    Return to applications
+  </button>
+</div>
+
+
+</form>
+
+
+</div>
 </div>
 
 {% endblock %}
